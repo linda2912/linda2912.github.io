@@ -1,0 +1,12 @@
+*{
+	font-family: "Lato", Sans-serif;
+}
+section{
+	margin: 0 auto;
+	width: 40em;
+}
+body{
+	border-top: 5em solid purple;
+	border-bottom: 5em solid purple;
+	height: 100%;
+}
