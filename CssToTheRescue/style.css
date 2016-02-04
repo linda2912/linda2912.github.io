@@ -3,6 +3,13 @@
 	padding: 0;
 	font-family: "Lato", sans-serif;
 	box-sizing: border-box;
+
+}
+body{
+	background-color: #fff; 
+	background-image: 
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
 }
 
 /*navigatie*/
