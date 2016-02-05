@@ -1,8 +1,8 @@
 # CSS to the Rescue
-A responsive layout working in old browsers.
 
 
-[Weekopdracht 1 ](http://linda2912.github.io/CssToTheRescue/)
+
+[Weekopdracht 1: Responsive layout, Font stack, And old browsers](http://linda2912.github.io/CssToTheRescue/)
 
 ___
 
