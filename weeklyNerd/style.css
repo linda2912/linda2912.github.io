@@ -2,32 +2,24 @@
 	font-family: "Lato", Sans-serif;
 	margin: 0;
 	padding: 0;
-	line-height: 2em;
+	line-height: 1.5em;
 	color: white;
 }
 section{
-	/*margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	margin-top: 4em;
-	line-height: 1.5em;
-	margin-bottom: 5em;*/
 	height: 70vh;
     width: 80vw;
-    -webkit-column-width: 30em;
-       -moz-column-width: 30em;
-            column-width: 30em;
+    -webkit-column-width: 26em;
+       -moz-column-width: 26em;
+            column-width: 26em;
     -webkit-column-gap: 2em;
        -moz-column-gap: 2em;
             column-gap: 2em;
-    margin: 5em;
+    margin: 8em 5em 3em 5em;
 }
 article{
-	/*width: 35em;*/
 	margin: 1em;
 }
 body{
-	/*border-top: 5em solid #34495e;*/
 	background-color: #2c3e50;
 	height: 100%;
 }
@@ -39,6 +31,7 @@ header{
 }
 article h3{
 	color: #1abc9c;
+	line-height: 2em;
 }
 a{
 	text-decoration: none;
@@ -50,9 +43,12 @@ body > article{
 h2{
 	font-size: 3em;
 	margin-bottom: -.5em;
+	line-height: 2em;
+	margin-top: -3em;
 }
 p{
 	font-weight: 200;
+
 }
 .on{
 	color: #1abc9c;
@@ -65,7 +61,39 @@ a:hover{
 a{
 	margin-left: .3em;
 }
+.date{
+	font-size: .8em;
+}
+.img{
+	background: url("arjanWesterdiep.png");
+	background-size: cover;
+	background-position: center;
+	width: 8em;
+	height: 8em;
+	border-radius: 8em;
+	border: .5em solid #34495e;
+	float: left;
+	margin-right: 1em;
+}
 
-
-
-
+.bron{
+	color: #1abc9c;
+	font-weight: 600;
+}
+ul{
+	text-decoration: none;
+	margin-left: 2em;
+	font-weight: 300;
+}
+p{
+	margin: 1em 0;
+	font-weight: 300;
+}
+h5{
+	font-weight: bold;
+	font-size: 1em;
+}
+h4{
+	font-size: 1.2em;
+	margin-top: 2em;
+}
