@@ -80,6 +80,9 @@ a{
 	color: #1abc9c;
 	font-weight: 600;
 }
+.back{
+	margin: 1em;
+}
 ul{
 	text-decoration: none;
 	margin-left: 2em;
@@ -95,5 +98,12 @@ h5{
 }
 h4{
 	font-size: 1.2em;
+	margin-top: 2em;
+}
+.writeBy p{
+	font-size: .8em;
+	margin: 0;
+}
+.writeBy{
 	margin-top: 2em;
 }
