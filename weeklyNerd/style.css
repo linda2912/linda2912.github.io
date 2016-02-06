@@ -63,6 +63,7 @@ a{
 }
 .date{
 	font-size: .8em;
+	margin: 0;
 }
 .img{
 	background: url("arjanWesterdiep.png");
@@ -92,13 +93,18 @@ p{
 	margin: 1em 0;
 	font-weight: 300;
 }
+h1{
+	font-size: 1.5em;
+	margin-top: 1em;
+	color: #1abc9c;
+}
 h5{
 	font-weight: bold;
 	font-size: 1em;
 }
 h4{
-	font-size: 1.2em;
-	margin-top: 2em;
+	font-size: 1em;
+	margin-top: 1em;
 }
 .writeBy p{
 	font-size: .8em;
