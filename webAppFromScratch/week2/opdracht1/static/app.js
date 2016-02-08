@@ -7,17 +7,28 @@
 
 	var app = { // literal object
 		init: function() { 
-			routes.init(); // run the function app.routes.init.
+			routie();
+			// routes.init(); // run the function app.routes.init.
 		}
 	};
 
 	// This ideas comes from Dylan
-	var routes = { //routes function
-		init: function(){
-			window.addEventListener('hashchange', sections.toggle); //when changing the url hash, starts the sections toggle function
-			window.addEventListener('load', sections.toggle); //
-		}
-	};
+	// var routes = { //routes function
+	// 	init: function() {
+	// 		window.addEventListener('hashchange', sections.toggle); //when changing the url hash, starts the sections toggle function
+	// 		window.addEventListener('load', sections.toggle); //
+	// 	}
+
+	// };
+
+	routie({
+	    'home': function() {
+	    	sections.toggle;
+	    },
+	    'frontEndBestPractices': function() {
+	    	sections.toggle;
+	    }
+	});
 
 	var sections = { // toggle between the sections
 		toggle: function() {
@@ -35,6 +46,8 @@
 			}
 		}
 	};
+
+
 
 	app.init(); //run the app
 
