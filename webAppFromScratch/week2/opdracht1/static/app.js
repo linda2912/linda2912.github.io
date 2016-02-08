@@ -11,6 +11,7 @@
 			// routes.init(); // run the function app.routes.init.
 		},
 
+
 		routes: function () {
 			routie({
 			    'home': function() {
@@ -21,10 +22,18 @@
 			    	function loadDoc () { //key jB5D6SNV
 			    		console.log("running loaddoc");
 			    		var xhttp = new XMLHttpRequest();
-			    		console.log(xhttp.open("GET", "http://www.rijksmuseum.nl/api/pages/nl/ontdek-de-collectie/overzicht/rembrandt-harmensz-van-rijn?key=jB5D6SNV&format=jsonp", true));
+			    		console.log(xhttp.open("GET", "https://www.rijksmuseum.nl/api/pages/nl/ontdek-de-collectie/overzicht/rembrandt-harmensz-van-rijn?key=jB5D6SNV&format=json", true));
 			    		console.log(xhttp.send());
+			    		console.log(xhttp.responseText);
+
+			    		xhttp.onreadystatechange = function() {
+						  if (xhttp.readyState == 4 && xhttp.status == 200) {
+						    console.log(xhttp.responseText);
+						  }
+						};
 			    	}
 			    	loadDoc();
+
 			    }
 			});
 		}
@@ -68,7 +77,15 @@
 
 }());
 
+reqwest({
+    url: 'https://www.rijksmuseum.nl/api/pages/nl/ontdek-de-collectie/overzicht/rembrandt-harmensz-van-rijn?key=jB5D6SNV&format=json', 
+    method: 'GET', 
+    success: function (resp) {
+    	qwery('#content').html(resp)
+    	console.log(resp);
+    }
 
+})
 
 
 
