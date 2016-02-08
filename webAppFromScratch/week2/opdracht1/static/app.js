@@ -7,8 +7,26 @@
 
 	var app = { // literal object
 		init: function() { 
-			routie();
+			this.routes();
 			// routes.init(); // run the function app.routes.init.
+		},
+
+		routes: function () {
+			routie({
+			    'home': function() {
+			    	sections.toggle();
+			    },
+			    'frontEndBestPractices': function() {
+			    	sections.toggle();
+			    	function loadDoc () { //key jB5D6SNV
+			    		console.log("running loaddoc");
+			    		var xhttp = new XMLHttpRequest();
+			    		console.log(xhttp.open("GET", "http://www.rijksmuseum.nl/api/pages/nl/ontdek-de-collectie/overzicht/rembrandt-harmensz-van-rijn?key=jB5D6SNV&format=jsonp", true));
+			    		console.log(xhttp.send());
+			    	}
+			    	loadDoc();
+			    }
+			});
 		}
 	};
 
@@ -20,15 +38,6 @@
 	// 	}
 
 	// };
-
-	routie({
-	    'home': function() {
-	    	sections.toggle;
-	    },
-	    'frontEndBestPractices': function() {
-	    	sections.toggle;
-	    }
-	});
 
 	var sections = { // toggle between the sections
 		toggle: function() {
@@ -47,8 +56,22 @@
 		}
 	};
 
+	var hello = {
+		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
+		translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
+	};
+
+	Transparency.render(document.getElementById('template'), hello);
 
 
 	app.init(); //run the app
 
 }());
+
+
+
+
+
+
+
+

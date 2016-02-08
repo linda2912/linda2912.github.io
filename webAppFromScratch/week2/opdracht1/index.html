@@ -5,7 +5,7 @@
 	    <meta name="viewport" content="width=device-width">
 	    <link rel="stylesheet" href="static/style.css">
 	    <title>Web App from Scratch</title>
-	    <script type="text/javascript" src="https://rawgit.com/jgallen23/routie/master/dist/routie.min.js"></script>
+
 	</head>
 
 	<body>
@@ -18,6 +18,12 @@
 		<section id="home" class="invisible">
 			<div class="startScreen">
 				<h3>Startscherm</h3>
+
+				<div id="template">
+					<span data-bind="greeting">You don't have javascript enabled</span>
+					<span data-bind="translation">You should really get javascript, it really ties the room together</span>
+				</div>
+
 			</div>
 		</section>
 		
@@ -44,6 +50,9 @@
 
 	</body>
 
+	<script type="text/javascript" src="https://rawgit.com/jgallen23/routie/master/dist/routie.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/leonidas/transparency/master/dist/transparency.min.js"></script>
+	
 	<script src="static/app.js"></script>
 
 </html>
