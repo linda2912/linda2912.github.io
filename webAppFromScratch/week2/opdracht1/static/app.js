@@ -8,15 +8,12 @@
 	var app = { // literal object
 		init: function() { 
 
-			getData();
-			// this.routes();
-			// routes.init(); // run the function app.routes.init.
+			getData(); // run the function getData
+			
 		},
 
+		routes: function (collection) { 
 
-		routes: function (collection) {
-
-			// console.log('route init');
 			routie({
 			    'home': function() {
 
@@ -30,27 +27,21 @@
 			    'Rijksmuseum': function() {
 
 			    	var data = {
-			    		longTitle: collection.artObjects[1].longTitle,
-						principalOrFirstMaker: collection.artObjects[1].principalOrFirstMaker,
-						webImage: collection.artObjects[1].webImage.url
+			    		title: collection.artObjects[0].title,
+						principalOrFirstMaker: collection.artObjects[0].principalOrFirstMaker,
+						webImage: collection.artObjects[0].webImage.url
 			    	};
 
-			    	// var directives = {
-			    	// 	webImage: {
-			    	// 		src: function(params) {
-				    // 			return this.webImage;
-				    // 		}
-			    	// 	}	
-			    	// };
-			    	var derectives = {
-                        webImage: {
-                            src: function (params) {
-                                return this.webImage;
-                               }
-                           }
-                       };
+			    	var directives = {
+			    		webImage: {
+			    			src: function(params) {
+				    			return this.webImage;
+				    		}
+			    		}	
+			    	};
 
-			    	
+			    	Transparency.render(document.getElementById('art'), data, directives);
+
 			    	sections.toggle(data);
 			    	// main.innerHTML = xhttp.innerHTML;
 			    	// loadDoc();
@@ -135,7 +126,7 @@
 			function(data, xhr) {
 				collection = data;
 
-				// console.log(collection);
+				console.log(collection);
 				// console.log(collection.artObjects[1].webImage.url);
 				//setData(collection);
 				app.routes(collection);
@@ -148,18 +139,6 @@
 	}
 
 	
-	
-
-
-
-	
-
-
-
-
-
-
-
 	// function loadDoc () { //key jB5D6SNV
 
 	// 	// var xhttp = this;

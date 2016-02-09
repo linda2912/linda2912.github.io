@@ -1,7 +1,7 @@
 # Web App From Scratch
 
 
-[Weekopdracht 1: Zet een basisstructuur op voor een single page web app](http://linda2912.github.io/webAppFromScratch/opdracht5/#frontEndBestPractices)
+[week 2: Libraries, Routing, Data & Templating](http://linda2912.github.io/webAppFromScratch/week2/opdracht1)
 
 ___
 
