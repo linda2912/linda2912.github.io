@@ -12,7 +12,7 @@
 		<section class="nav">
 			<ul>
 				<li><a href="#home">Startscherm</a></li>
-				<li><a href="#frontEndBestPractices">Front-End best practices</a></li>
+				<li><a href="#Rijksmuseum">Rijksmuseum</a></li>
 			</ul>	
 		</section>
 		<section id="home" class="invisible">
@@ -27,10 +27,10 @@
 			</div>
 		</section>
 		
-		<section id="frontEndBestPractices" class="invisible">
-			<div class="frontEndBestPractices">
-				<h3>Front-End best practices</h3>
-				<ul>
+		<section id="Rijksmuseum" class="invisible">
+			<div class="Rijksmuseum">
+				<h3>Rijksmuseum API data</h3>
+				<!-- <ul>
 					<li>Don't use global variables/objects</li>
 					<li>Declare variables at top of scope</li>
 					<li>Use short clear meaningful names (English)</li>
@@ -38,7 +38,12 @@
 					<li>camelCase your code if(code != Constructor || CONSTANTS)</li>
 					<li>Place external scripts at the bottom of the page</li>
 					<li>Indent your code</li>
-				</ul>
+				</ul> -->
+				<div id="art">
+					<h1 data-bind="longTitle">Title</h1>
+					<p data-bind="principalOrFirstMaker">klsakcaskvchsvlj</p>
+					<img data-bind="webImage">
+				</div>
 			</div>
 		</section>
 		<section id="error" class='invisible'>
@@ -49,10 +54,10 @@
 		</main>
 
 	</body>
-
+	<script src="static/pegasus.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/jgallen23/routie/master/dist/routie.min.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/leonidas/transparency/master/dist/transparency.min.js"></script>
-	<script src="static/reqwest.min.js"></script>
+	
 	<script src="static/app.js"></script>
 
 </html>
