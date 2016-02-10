@@ -39,13 +39,23 @@
 					<li>Place external scripts at the bottom of the page</li>
 					<li>Indent your code</li>
 				</ul> -->
-				<div id="art">
+
+				<div id="images">
+					<ul id="ul">
+						<li class="imageName">
+							<img data-bind="imagesUrl">
+							<p data-bind="principalOrFirstMaker"></p>
+						</li>
+					</ul>
+				</div>
+
+				<!-- <div id="art">
 					<h2 data-bind="title">Title</h2>
 					
 					<img data-bind="webImage" class="img">
 					<p>Kunstenaar:</p>
 					<p data-bind="principalOrFirstMaker">Artist</p>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<section id="error" class='invisible'>

@@ -8,14 +8,73 @@
 	var app = { // literal object
 		init: function() { 
 
-			getData(); // run the function getData
+			getData.dataRequest(); // run the function getData
 			
 		},
+
 
 		routes: function (collection) { 
 
 			routie({
-			    'home': function() {
+			   //  'home': function() {
+
+			   //  	var data = {
+			   //  		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
+						// translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
+			   //  	};
+
+			   //  	sections.toggle(data);
+			   //  },
+			    'Rijksmuseum': function() {
+			    	// var collectionFirstItem = collection.artObjects[1];
+
+			   //  	var data = {
+			   //  		title: collectionFirstItem.title,
+						// principalOrFirstMaker: collectionFirstItem.principalOrFirstMaker,
+						// webImage: collectionFirstItem.webImage.url
+			   //  	};
+
+
+
+			    	var directives = {
+			    		// webImage: {
+			    		// 	src: function(params) {
+				    	// 		return this.webImage;
+				    	// 	}
+			    		// },
+			    		imagesUrl: {
+			    			src: function(params) {
+				    			return this.imagesUrl;
+				    		}
+			    		}
+
+			    	};
+
+			    	// Transparency.render(document.getElementById('art'), data, directives);
+
+
+			    	
+			    	var data = [];
+
+			    	for (var i = 0; i < collection.artObjects.length; i++) {
+			    		data[i] = {
+			    			imagesUrl: collection.artObjects[i].webImage.url,
+			    			imageName: collection.artObjects[i].title,
+			    			principalOrFirstMaker: collection.artObjects[i].principalOrFirstMaker};
+
+			    	};
+
+			    	
+
+			    	Transparency.render(document.getElementById('ul'), data, directives);
+
+
+
+			    	sections.toggle(data);
+			    	// main.innerHTML = xhttp.innerHTML;
+			    	// loadDoc();
+			    },
+			    '*': function() {
 
 			    	var data = {
 			    		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
@@ -23,28 +82,6 @@
 			    	};
 
 			    	sections.toggle(data);
-			    },
-			    'Rijksmuseum': function() {
-
-			    	var data = {
-			    		title: collection.artObjects[0].title,
-						principalOrFirstMaker: collection.artObjects[0].principalOrFirstMaker,
-						webImage: collection.artObjects[0].webImage.url
-			    	};
-
-			    	var directives = {
-			    		webImage: {
-			    			src: function(params) {
-				    			return this.webImage;
-				    		}
-			    		}	
-			    	};
-
-			    	Transparency.render(document.getElementById('art'), data, directives);
-
-			    	sections.toggle(data);
-			    	// main.innerHTML = xhttp.innerHTML;
-			    	// loadDoc();
 			    }
 			});
 		}
@@ -109,33 +146,36 @@
 	// };
 
 
-	var getData = function() {
+	var getData = {
+
+		dataRequest: function() {
 
 		// console.log('data init');
 		//idea from Maaike
-		var collection = {
-			apiData : []
-		};
-		
-		// var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&f.normalized32Colors.hex=%20%23367614');
-
-		var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
-
-		collectionData.then(
+			var collection = {
+				apiData : []
+			};
 			
-			function(data, xhr) {
-				collection = data;
+			// var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&f.normalized32Colors.hex=%20%23367614');
 
-				console.log(collection);
-				// console.log(collection.artObjects[1].webImage.url);
-				//setData(collection);
-				app.routes(collection);
-			},
-			function(data, xhr) {
-				console.error(data, xhr.status);
-			}
-		);
+			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
 
+			collectionData.then(
+				
+				function(data, xhr) {
+					collection = data;
+
+					console.log(collection);
+					// console.log(collection.artObjects[1].webImage.url);
+					//setData(collection);
+					app.routes(collection);
+				},
+				function(data, xhr) {
+					console.error(data, xhr.status);
+				}
+			);
+
+		}
 	}
 
 	
