@@ -12,71 +12,75 @@
 			
 		},
 
-
 		routes: function (collection) { 
 
 			routie({
-			   //  'home': function() {
+			   
+			    'art': function() {
 
-			   //  	var data = {
-			   //  		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
-						// translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
-			   //  	};
+			    	var data = {
+			    		item: []
+			    	};
 
-			   //  	sections.toggle(data);
-			   //  },
-			    'Rijksmuseum': function() {
-			    	// var collectionFirstItem = collection.artObjects[1];
+			    	for (var i = 0; i < collection.artObjects.length; i++) {
 
-			   //  	var data = {
-			   //  		title: collectionFirstItem.title,
-						// principalOrFirstMaker: collectionFirstItem.principalOrFirstMaker,
-						// webImage: collectionFirstItem.webImage.url
-			   //  	};
+			    		data.item[i] = {
+			    				id: collection.artObjects[i].id,
+			    				imagesUrl: collection.artObjects[i].webImage.url,
+			    				imageName: collection.artObjects[i].title};
 
+			    	};
 
+			    	// data = {
+			    	// 	item : [
+			    	// 		{
+			    	// 			imagesUrl: ...,
+			    	// 			imageName: ...
+			    	// 		},
+			    	// 		{
+			    	// 			imagesUrl: ...,
+			    	// 			imageName: ...
+			    	// 		}
+			    	// 	]
+			    	// }
+			    	console.log(collection.artObjects);
+
+			    	var srcImage = function(params) {
+			    		params.element.setAttribute('src', this.imagesUrl); //voegt src toe en de url
+			    	}
+
+			    	var link = function(params) {
+			    		params.element.setAttribute('href','#info/' + this.id);
+			    	}
 
 			    	var directives = {
-			    		// webImage: {
-			    		// 	src: function(params) {
-				    	// 		return this.webImage;
-				    	// 	}
-			    		// },
-			    		imagesUrl: {
-			    			src: function(params) {
-				    			return this.imagesUrl;
-				    		}
+			    		item: {
+				    		imagesUrl: { 'class': srcImage }, //loopt door de data
+			    			link: {'class':link}
 			    		}
 
 			    	};
 
-			    	// Transparency.render(document.getElementById('art'), data, directives);
-
-
-			    	
-			    	var data = [];
-
-			    	for (var i = 0; i < collection.artObjects.length; i++) {
-			    		data[i] = {
-			    			imagesUrl: collection.artObjects[i].webImage.url,
-			    			imageName: collection.artObjects[i].title,
-			    			principalOrFirstMaker: collection.artObjects[i].principalOrFirstMaker};
-
-			    	};
-
-			    	
-
 			    	Transparency.render(document.getElementById('ul'), data, directives);
 
+			    	sections.toggle(data);
 
+			    },
+			    'info/:id': function(id) {
+			    	var paintingId = id;
+
+
+			    	var data = {
+			    		longTitle: collection.artObjects[1].longTitle
+			    	}
 
 			    	sections.toggle(data);
-			    	// main.innerHTML = xhttp.innerHTML;
-			    	// loadDoc();
 			    },
+
 			    '*': function() {
 
 			    	var data = {
+
 			    		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
 						translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
 			    	};
@@ -87,16 +91,10 @@
 		}
 	};
 
-	
-	// var routes = { //routes function
-	// 	init: function() {
-	// 		window.addEventListener('hashchange', sections.toggle); //when changing the url hash, starts the sections toggle function
-	// 		window.addEventListener('load', sections.toggle); //
-	// 	}
+	// This ideas comes from Dylan Vans
 
-	// };
-	// This ideas comes from Dylan
 	var sections = { // toggle between the sections
+
 		toggle: function(data) {
 			
 			// console.log(data);
@@ -104,9 +102,11 @@
 
 			var hash = window.location.hash; //get the hash on the current url after click and save in a varibale
 
+			hash = hash.replace("#", "");
+
 			if (hash) { 
 				
-				var getHash = document.querySelector(hash); //get the template from the html that matched
+				var getHash = document.getElementById(hash); //get the template from the html that matched
 				
 				if (getHash) { //if there is a hash, put the section in the html
 
@@ -124,102 +124,46 @@
 				window.location.hash = '#home'; // if there is no hash, give the home page
 
 			}
+
+			// var buttons = document.querySelectorAll('.item a');
+
+			// _.forEach(buttons, function(button) {
+			// 	button.addEventListener('click', function(evt) {
+			// 		evt.preventDefault();
+			// 		console.log(evt.currentTarget.value);
+			// 	});
+			// });
 		}
 	};
-
-
-	// // Transparency.render(document.getElementById('template'), hello);
-
-	// var setData = function(collection) {
-
-	// 	// var documentData = {
-	// 	// 	longTitle: collection.artObjects[1].longTitle,
-	// 	// 	principalOrFirstMaker: collection.artObjects[1].principalOrFirstMaker
-
-	// 	// };
-
-	// 	// Transparency.render(document.getElementById('art'), documentData);
-
-	// 	dataContent = collection;
-
-
-	// };
-
 
 	var getData = {
 
 		dataRequest: function() {
 
-		// console.log('data init');
-		//idea from Maaike
+		//this idea comes from Maaike Hek
 			var collection = {
 				apiData : []
 			};
+
 			
-			// var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&f.normalized32Colors.hex=%20%23367614');
-
 			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
-
+			
 			collectionData.then(
 				
-				function(data, xhr) {
-					collection = data;
+				function(data, xhr) { 
 
-					console.log(collection);
-					// console.log(collection.artObjects[1].webImage.url);
-					//setData(collection);
+					collection = data;
 					app.routes(collection);
 				},
+
 				function(data, xhr) {
+
 					console.error(data, xhr.status);
 				}
 			);
 
 		}
 	}
-
-	
-	// function loadDoc () { //key jB5D6SNV
-
-	// 	// var xhttp = this;
-				    		
-	// 	var xhttp = new XMLHttpRequest();
-	// 	xhttp.open("GET", "https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&f.normalized32Colors.hex=%20%23367614", true);
-	// 	// xhttp.send();
-
-	// 	//http://www.html5rocks.com/en/tutorials/async/deferred/
-	// 	xhttp.addEventListener('load', function(){
-	// 		if(xhttp.status === 200) {
-	// 			// alert("we got data: " + xhttp.response);
-	// 			main.innerHTML = xhttp.response.artObjects;
-	// 			console.log(xhttp.response);
-	// 		}
-	// 	},false)
-
-	// 	xhttp.send();
-
-				    		
-	// 	//http://www.w3schools.com/ajax/ajax_xmlhttprequest_send.asp
-	// 	// xhttp.onreadystatechange = function() { 
-	// 	//   if (xhttp.readyState == 4 && xhttp.status == 200) {
-	// 	//     console.log(xhttp.responseText);
-
-	// 	//   }
-	// 	// };
-	// }
-	// loadDoc();
-
-	// function loadDoc() {
-	//   var xhttp = new XMLHttpRequest();
-	//   xhttp.onreadystatechange = function() {
-	//     if (xhttp.readyState == 4 && xhttp.status == 200) {
-	//      document.getElementById("rijksmuseum").innerHTML = xhttp.responseText;
-	//     }
-	//   };
-	//   xhttp.open("GET", "https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&f.normalized32Colors.hex=%20%23367614", true);
-	//   xhttp.send();
-	// }
-
 
 	app.init(); //run the app
 }());

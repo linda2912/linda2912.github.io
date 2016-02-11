@@ -5,16 +5,17 @@
 	    <meta name="viewport" content="width=device-width">
 	    <link rel="stylesheet" href="static/style.css">
 	    <title>Web App from Scratch</title>
-
 	</head>
 
 	<body>
+
 		<section class="nav">
 			<ul>
 				<li><a href="#home">Startscherm</a></li>
-				<li><a href="#Rijksmuseum">Rijksmuseum</a></li>
+				<li><a href="#art">Kunstwerken</a></li>
 			</ul>	
 		</section>
+
 		<section id="home" class="invisible">
 			<div class="startScreen">
 				<h3>Startscherm</h3>
@@ -23,53 +24,50 @@
 					<span data-bind="greeting">You don't have javascript enabled</span>
 					<span data-bind="translation">You should really get javascript, it really ties the room together</span>
 				</div>
-
 			</div>
+
 		</section>
 		
-		<section id="Rijksmuseum" class="invisible">
-			<div class="Rijksmuseum">
-				<h3>Rijksmuseum API data</h3>
-				<!-- <ul>
-					<li>Don't use global variables/objects</li>
-					<li>Declare variables at top of scope</li>
-					<li>Use short clear meaningful names (English)</li>
-					<li>Work in strict mode</li>
-					<li>camelCase your code if(code != Constructor || CONSTANTS)</li>
-					<li>Place external scripts at the bottom of the page</li>
-					<li>Indent your code</li>
-				</ul> -->
-
+		<section id="art" class="invisible">
+			<div class="art">
+				<h3>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</h3>
+				
 				<div id="images">
 					<ul id="ul">
-						<li class="imageName">
+						<li class="item">
+							<a data-bind="link" href="#info"><p data-bind="imageName"></p></a>
 							<img data-bind="imagesUrl">
-							<p data-bind="principalOrFirstMaker"></p>
+							
 						</li>
 					</ul>
 				</div>
-
-				<!-- <div id="art">
-					<h2 data-bind="title">Title</h2>
-					
-					<img data-bind="webImage" class="img">
-					<p>Kunstenaar:</p>
-					<p data-bind="principalOrFirstMaker">Artist</p>
-				</div> -->
 			</div>
 		</section>
+
+		<section id="info" class="invisible">
+			<div class="info">
+				<h1>info</h1>
+				<a href="#art" class="back">terug</a>
+				<p data-bind="longTitle"></p>
+			</div>
+		</section>
+
+		<!-- <section id="#info/nl-SK-C-5"></section> -->
+
 		<section id="error" class='invisible'>
 			error
 		</section>
+
 		<main>
 
 		</main>
 
 	</body>
+
 	<script src="static/pegasus.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/jgallen23/routie/master/dist/routie.min.js"></script>
 	<script type="text/javascript" src="https://rawgit.com/leonidas/transparency/master/dist/transparency.min.js"></script>
-	
+	<script src="static/underscore.js"></script>
 	<script src="static/app.js"></script>
 
 </html>
