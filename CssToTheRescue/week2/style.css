@@ -320,18 +320,22 @@ address{
 	}
 }
 
-@media (min-width: 38em) and (max-width: 53em) {
+@media (min-width: 39em) and (max-width: 53em) {
 	
 	main{
 		width: 60%;
 	}
 }
 
-@media (max-width: 38em) {
+@media (max-width: 39em) {
 	
 	[role="navigation"] {
 		text-align: center;
 	}
+	#popup{
+		left: calc(50% - 10em);
+	}
+
 }
 
 

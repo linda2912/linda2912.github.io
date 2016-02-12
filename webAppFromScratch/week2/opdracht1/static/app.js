@@ -67,11 +67,14 @@
 
 			    },
 			    'info/:id': function(id) {
-			    	var paintingId = id;
+			    	// var paintingId = id;
+			    	
 
-
-			    	var data = {
-			    		longTitle: collection.artObjects[1].longTitle
+			    	var data = {};
+			    	for (var i = 0; i < collection.artObjects.length; i++) {
+			    		if (collection.artObjects[i].id === id) {
+			    			data.longTitle = collection.artObjects[i].longTitle;
+			    		}
 			    	}
 
 			    	sections.toggle(data);
@@ -99,17 +102,13 @@
 			
 			// console.log(data);
 			var _data = data;
-
-			var hash = window.location.hash; //get the hash on the current url after click and save in a varibale
+			var hash = window.location.hash.split('/')[0]; //get the hash on the current url after click and save in a varibale
 
 			hash = hash.replace("#", "");
 
 			if (hash) { 
-				
 				var getHash = document.getElementById(hash); //get the template from the html that matched
-				
 				if (getHash) { //if there is a hash, put the section in the html
-
 					Transparency.render(getHash, _data);
 					main.innerHTML = getHash.innerHTML; 
 
@@ -141,14 +140,11 @@
 		dataRequest: function() {
 
 		//this idea comes from Maaike Hek
-			var collection = {
-				apiData : []
-			};
-
+			var collection = {};
 			
 			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
 			
-			collectionData.then(
+			collectionData.then( //promise
 				
 				function(data, xhr) { 
 
