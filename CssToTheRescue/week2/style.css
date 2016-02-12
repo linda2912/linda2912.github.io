@@ -7,10 +7,7 @@
 }
 body {
 	background-color: #fff; 
-	background-image: 
-	-webkit-linear-gradient(#eee .1em, transparent .1em); 
-	background-image: 
-	linear-gradient(#eee .1em, transparent .1em);
+	background-image: linear-gradient(#eee .1em, transparent .1em); 
 	background-size: 100% 1.2em;
 }
 
@@ -24,10 +21,9 @@ body {
 	top: calc(50% - 14em);
 	box-shadow: 0 0 0 100vmax rgba(0,0,0,.8);
 	z-index: 1;
+	max-width: min-content;
 	max-width: -webkit-min-content;
 	max-width: -moz-min-content;
-	max-width: min-content;
-	/*height: 26em;*/
 }
 
 #popup img {
@@ -44,7 +40,7 @@ body {
 	text-decoration: none;
 	padding: 1.7em 1em;
 	position: absolute;
-	right: calc(0% - 0em);
+	right: 0;
 	z-index: 0;
 }
 #close:hover {
@@ -160,8 +156,7 @@ main > article p {
 
 #password:target{
 	border-left: 1em solid #16a085;
-	-webkit-transition-duration: .6s;
-	        transition-duration: .6s;
+	transition-duration: .6s;
 }
 
 #password {
@@ -202,8 +197,7 @@ main > article p {
 
 #photo-albums:target{
 	border-left: 1em solid #bdc3c7;
-	-webkit-transition-duration: .3s;
-	        transition-duration: .3s;
+	transition-duration: .3s;
 }
 
 #photo-albums img {
@@ -236,11 +230,9 @@ main > article p {
 	line-height: .5em;
 	color: white;
 	min-width: 100%;
-	display: -webkit-flex;
-	-webkit-flex-wrap: wrap;
-	-webkit-justify-content: space-around;
-	    -ms-flex-pack: distribute;
-	        justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	padding: 1em;
 }
 
@@ -271,12 +263,10 @@ address{
 	/*main*/
 
 	main, body {
-		display: -webkit-flex;
-		-webkit-flex-wrap: wrap;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;	
+		display: flex;
+		flex-wrap: wrap;
+		box-pack: center;
+		justify-content: center;
 	}
 	
 	main {
