@@ -65,8 +65,7 @@ a{
 	font-size: .8em;
 	margin: 0;
 }
-.img{
-	background: url("arjanWesterdiep.png");
+#img{
 	background-size: cover;
 	background-position: center;
 	width: 8em;
@@ -75,6 +74,13 @@ a{
 	border: .5em solid #34495e;
 	float: left;
 	margin-right: 1em;
+}
+.img1{
+	background: url("img/arjanWesterdiep.png");
+
+}
+.img2{
+	background: url("img/marrije.jpg");
 }
 
 .bron{
