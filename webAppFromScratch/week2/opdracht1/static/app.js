@@ -125,7 +125,7 @@
 		//this idea comes from Maaike Hek
 			var collection = {};
 
-			// Get the data from the api
+			// Get the data from the api with pagasus library
 			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
 			
 			collectionData.then( //if the request have success, this happens
