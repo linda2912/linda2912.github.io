@@ -23,7 +23,7 @@ body {
 	box-shadow: 0 0 0 100vmax rgba(0,0,0,.8);
 	z-index: 1;
 	max-width: min-content;
-	height: 26em;
+	/*height: 26em;*/
 }
 
 #popup img {
@@ -332,7 +332,11 @@ address{
 		text-align: center;
 	}
 	#popup{
-		left: calc(50% - 10em);
+		left: calc(50% - 8.5em);
+		
+	}
+	#popup img{
+		width: 17em;
 	}
 
 }
