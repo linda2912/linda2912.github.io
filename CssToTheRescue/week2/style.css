@@ -8,6 +8,8 @@
 body {
 	background-color: #fff; 
 	background-image: 
+	-webkit-linear-gradient(#eee .1em, transparent .1em); 
+	background-image: 
 	linear-gradient(#eee .1em, transparent .1em);
 	background-size: 100% 1.2em;
 }
@@ -22,6 +24,8 @@ body {
 	top: calc(50% - 14em);
 	box-shadow: 0 0 0 100vmax rgba(0,0,0,.8);
 	z-index: 1;
+	max-width: -webkit-min-content;
+	max-width: -moz-min-content;
 	max-width: min-content;
 	/*height: 26em;*/
 }
@@ -156,7 +160,8 @@ main > article p {
 
 #password:target{
 	border-left: 1em solid #16a085;
-	transition-duration: .6s;
+	-webkit-transition-duration: .6s;
+	        transition-duration: .6s;
 }
 
 #password {
@@ -185,6 +190,7 @@ main > article p {
 
 #password button:hover {
 	opacity: .7;
+	filter: alpha(opacity=70);
 }
 
 #password legend {
@@ -196,7 +202,8 @@ main > article p {
 
 #photo-albums:target{
 	border-left: 1em solid #bdc3c7;
-	transition-duration: .3s;
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
 }
 
 #photo-albums img {
@@ -205,6 +212,7 @@ main > article p {
 
 #photo-albums img:hover {
 	opacity: .8;
+	filter: alpha(opacity=80);
 }
 
 #photo-albums svg {
@@ -228,9 +236,11 @@ main > article p {
 	line-height: .5em;
 	color: white;
 	min-width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
 	padding: 1em;
 }
 
@@ -261,9 +271,12 @@ address{
 	/*main*/
 
 	main, body {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;	
+		display: -webkit-flex;
+		-webkit-flex-wrap: wrap;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;	
 	}
 	
 	main {
