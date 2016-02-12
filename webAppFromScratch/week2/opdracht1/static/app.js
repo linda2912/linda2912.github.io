@@ -16,79 +16,70 @@
 
 			routie({
 			   
-			    'art': function() {
+			    'art': function() { // when the hash changes to #art do this
 
 			    	var data = {
-			    		item: []
+			    		item: [] //makes an empthy array
 			    	};
 
-			    	for (var i = 0; i < collection.artObjects.length; i++) {
+			    	for (var i = 0; i < collection.artObjects.length; i++) { //loop through the data 
 
-			    		data.item[i] = {
+			    		data.item[i] = { // put the data in de array item
 			    				id: collection.artObjects[i].id,
 			    				imagesUrl: collection.artObjects[i].webImage.url,
 			    				imageName: collection.artObjects[i].title};
 
 			    	};
 
-			    	// data = {
-			    	// 	item : [
-			    	// 		{
-			    	// 			imagesUrl: ...,
-			    	// 			imageName: ...
-			    	// 		},
-			    	// 		{
-			    	// 			imagesUrl: ...,
-			    	// 			imageName: ...
-			    	// 		}
-			    	// 	]
-			    	// }
-			    	console.log(collection.artObjects);
-
 			    	var srcImage = function(params) {
-			    		params.element.setAttribute('src', this.imagesUrl); //voegt src toe en de url
+			    		params.element.setAttribute('src', this.imagesUrl); //add the src arttibute at imagesUrl
 			    	}
 
 			    	var link = function(params) {
-			    		params.element.setAttribute('href','#info/' + this.id);
+			    		params.element.setAttribute('href','#info/' + this.id); // add the href attribute and put the unique id behind it
 			    	}
 
 			    	var directives = {
 			    		item: {
-				    		imagesUrl: { 'class': srcImage }, //loopt door de data
-			    			link: {'class':link}
+				    		imagesUrl: { 'class': srcImage }, //add the image url into the html
+			    			link: {'class':link} //add the link into the html
 			    		}
 
 			    	};
 
-			    	Transparency.render(document.getElementById('ul'), data, directives);
+			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
-			    	sections.toggle(data);
+			    	sections.toggle(data); // run sections.toggle
 
 			    },
 			    'info/:id': function(id) {
-			    	// var paintingId = id;
-			    	
 
-			    	var data = {};
-			    	for (var i = 0; i < collection.artObjects.length; i++) {
-			    		if (collection.artObjects[i].id === id) {
-			    			data.longTitle = collection.artObjects[i].longTitle;
+			    	var data = _.filter(collection.artObjects, function(artObject){ //loop through the data
+			    		if (artObject.id === id) { // if the id's are the same do this
+
+			    			//this code do the same as below:
+			    			// return {
+			    			// 	longTitle: artObject.longTitle
+			    			// }
+
+			    			return {
+			    				longTitle: _.pick(artObject, "longTitle") //add the longTitle into the template
+			    			}
 			    		}
-			    	}
+			    	})
 
-			    	sections.toggle(data);
+			    	sections.toggle(data); // run sections.toggle
 			    },
 
 			    '*': function() {
 
 			    	var data = {
-
-			    		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",
+			    		//replace this text
+			    		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",  
 						translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
 			    	};
 
-			    	sections.toggle(data);
+			    	sections.toggle(data); // run sections.toggle
 			    }
 			});
 		}
@@ -100,14 +91,16 @@
 
 		toggle: function(data) {
 			
-			// console.log(data);
 			var _data = data;
-			var hash = window.location.hash.split('/')[0]; //get the hash on the current url after click and save in a varibale
+			//get the hash on the current url after click and save in a varibale
+			var hash = window.location.hash.split('/')[0]; //get always the first slash
 
-			hash = hash.replace("#", "");
+			hash = hash.replace("#", ""); // remove the #
 
 			if (hash) { 
+
 				var getHash = document.getElementById(hash); //get the template from the html that matched
+				
 				if (getHash) { //if there is a hash, put the section in the html
 					Transparency.render(getHash, _data);
 					main.innerHTML = getHash.innerHTML; 
@@ -115,7 +108,6 @@
 				} else {
 					
 					main.innerHTML = document.querySelector('#error').innerHTML; //give the error page
-
 				}
 
 			} else {
@@ -123,15 +115,6 @@
 				window.location.hash = '#home'; // if there is no hash, give the home page
 
 			}
-
-			// var buttons = document.querySelectorAll('.item a');
-
-			// _.forEach(buttons, function(button) {
-			// 	button.addEventListener('click', function(evt) {
-			// 		evt.preventDefault();
-			// 		console.log(evt.currentTarget.value);
-			// 	});
-			// });
 		}
 	};
 
@@ -141,19 +124,20 @@
 
 		//this idea comes from Maaike Hek
 			var collection = {};
-			
+
+			// Get the data from the api
 			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
 			
-			collectionData.then( //promise
-				
-				function(data, xhr) { 
-
-					collection = data;
-					app.routes(collection);
+			collectionData.then( //if the request have success, this happens
+				//xhr == xml http request
+				function(data, xhr) {  
+					//load the list into data
+					collection = data; 
+					app.routes(collection); //run app.routes and take collection with it
 				},
 
 				function(data, xhr) {
-
+					// error handler
 					console.error(data, xhr.status);
 				}
 			);

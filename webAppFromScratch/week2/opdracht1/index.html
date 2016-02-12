@@ -25,17 +25,16 @@
 					<span data-bind="translation">You should really get javascript, it really ties the room together</span>
 				</div>
 			</div>
-
 		</section>
 		
 		<section id="art" class="invisible">
 			<div class="art">
 				<h3>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</h3>
-				
 				<div id="images">
 					<ul id="ul">
 						<li class="item">
-							<a data-bind="link" href="#info"><p data-bind="imageName"></p></a>
+							<a data-bind="link" >
+								<p data-bind="imageName"></p></a>
 							<img data-bind="imagesUrl">
 							
 						</li>
@@ -46,13 +45,12 @@
 
 		<section id="info" class="invisible">
 			<div class="info">
-				<h1>info</h1>
 				<a href="#art" class="back">terug</a>
+				<h1>Detail information:</h1>
+				
 				<p data-bind="longTitle"></p>
 			</div>
 		</section>
-
-		<!-- <section id="#info/nl-SK-C-5"></section> -->
 
 		<section id="error" class='invisible'>
 			error
