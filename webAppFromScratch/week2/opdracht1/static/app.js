@@ -12,6 +12,7 @@
 			
 		},
 
+		// You can make a seperate object for this ousite the app object = more devided
 		routes: function (collection) { 
 
 			routie({
@@ -47,6 +48,7 @@
 
 			    	};
 
+			    	// You can make a separate render object to call if you want to render a page
 			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
 			    	sections.toggle(data); // run sections.toggle
@@ -102,6 +104,7 @@
 				var getHash = document.getElementById(hash); //get the template from the html that matched
 				
 				if (getHash) { //if there is a hash, put the section in the html
+					// nice one to render you template like this
 					Transparency.render(getHash, _data);
 					main.innerHTML = getHash.innerHTML; 
 
@@ -126,7 +129,7 @@
 			var collection = {};
 
 			// Get the data from the api
-			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
+			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn'); // Nice API!
 			
 			collectionData.then( //if the request have success, this happens
 				//xhr == xml http request
@@ -140,6 +143,11 @@
 					// error handler
 					console.error(data, xhr.status);
 				}
+			);
+
+			collectionData.catch(
+				console.log(error: "error"); // You sould also log your error is this isn't working
+				// you can also rander a special page for this.
 			);
 
 		}
