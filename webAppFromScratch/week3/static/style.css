@@ -1,0 +1,177 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", sans-serif;
+	box-sizing: border-box;
+}
+
+/*navigation*/
+
+.nav li{
+	
+	background-color: #2c3e50;
+	display: block;
+	padding: 1em;
+	
+}
+.nav li:hover{
+	display: block;
+	background-color: #34495e;
+
+}
+.nav a{
+	color: white;
+	text-decoration: none;
+}
+
+.nav{
+	/*position: fixed;*/
+	width: 100%;
+	text-align: center;
+}
+
+/*startscreen*/
+
+.startScreen{
+	background-color: #2980b9;
+	height: 50em;
+	padding-top: 10em;
+	color: white;
+	text-align: center;
+}
+
+.invisible{
+	display: none;
+}
+
+/*artworks*/
+
+.art h3{
+	color: #2c3e50;
+	margin-bottom: 2em; 
+	text-align: center;
+	padding: 2em;
+	font-size: 1.5em;
+}
+
+.art{
+	background-color: #ecf0f1;
+}
+
+#images{
+	font-weight: 600;
+	padding: 1em;
+	margin: 1em;
+	color: #2c3e50;
+}
+
+#images img{
+	width: 100%;
+	margin: .5em 0 2em 0;
+	border: 1em solid #c0392b;
+	max-width: 40em;
+}
+/*#images img:hover{
+	transform: scale(1.1);
+	animation: scale 3s infinite;
+}*/
+
+
+#images ul{
+	list-style: none;
+}
+
+[data-bind="link"]{
+	color: #2c3e50;
+	font-size: 1.5em;
+}
+
+[data-bind="imageName"]{
+	max-width: 25em;
+	text-align: center;
+}
+
+#ul{
+	display: flex;
+	justify-content: center;
+}
+
+/*detail information*/
+
+.info{
+	padding-top: 3em;
+
+}
+
+.info a{
+	background-color: #e74c3c;
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	border-bottom: .5em solid #c0392b;
+	padding: 1em 3em;
+	margin-left: 1em;
+}
+
+.info h1{
+	text-align: center;
+	color: #2c3e50;
+	padding: 2em 0;
+}
+
+.info [data-bind="longTitle"]{
+	text-align: center;
+	font-size: 2em;
+	color: #2c3e50;
+	max-width: 30em;
+	margin: 0 auto;
+}
+#moreInfo{
+	height: 100vh;
+	background-color: grey;
+}
+
+/*Loader*/
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
