@@ -11,6 +11,7 @@
 			getData.dataRequest(); // run the function getData
 			loader.toggle(); 
 			
+			
 		},
 
 		routes: function (collection) { 
@@ -51,6 +52,7 @@
 			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
 			    	sections.toggle(data); // run sections.toggle
+			    	gestures.home();
 
 			    },
 			    'info/:id': function(id) {
@@ -70,14 +72,14 @@
 			    	})
 
 			    	sections.toggle(data); // run sections.toggle
+			    	gestures.info();
 			    },
 
 			    '*': function() {
 
 			    	var data = {
 			    		//replace this text
-			    		greeting: "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn",  
-						translation: "In his house at R'lyeh, dead Cthulhu waits dreaming."
+			    		greeting: "Welcome!"
 			    	};
 
 			    	sections.toggle(data); // run sections.toggle
@@ -159,36 +161,33 @@
 	};
 
 
-	var mobileGestures = {
-		info: function () {
-			var infoPage = document.getElementById('moreInfo');
+	var gestures = {
+		info: function() {
+			var moreInfo = document.getElementById('moreInfo');
 
-			var mc = new Hammer(infoPage);
+			var mc = new Hammer(moreInfo);
 
-			mc.on("panright", function(ev) {
-				infoPage.textContent = "test";
+			mc.on("swiperight", function(ev) {
+				
 				window.location.hash = "art";
+
+			});
+		},
+		home: function() {
+			var art = document.querySelector('.art');
+
+			var mc = new Hammer(art);
+
+			mc.on("swiperight", function(ev) {
+
+				window.location.hash = "#";
 			});
 		}
+		
 
 	};
 
-	// var myElement = document.getElementById('myElement');
-	// var mc = new Hammer(myElement);
 	
-	// mc.on("panleft", function(ev) {
-	// 	myElement.textContent = "tekst";
-	// 	window.location.hash = '#home';
-	// 	// console.log("test");
-
-	// });
-
-	// var infoBack = document.getElementById('moreInfo');
-	// var mc = new Hammer(infoBack);
-	// mc.on("panright", function(ev) {
-	// 	window.location.hash = "art";
-	// });
-
 	app.init(); //run the app
 
 }());

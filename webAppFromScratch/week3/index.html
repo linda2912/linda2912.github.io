@@ -2,15 +2,17 @@
 
 	<head>
 	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width">
 	    <link rel="stylesheet" href="static/style.css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Web App from Scratch</title>
 
     	<script src="static/hammer.min.js"></script>
 		<script src="static/pegasus.js"></script>
 		<script src="static/routie.min.js"></script>
 		<script src="static/transparency.min.js"></script>
-		<script src="static/underscore.js"></script>			
+		<script src="static/underscore.js"></script>
+
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>			
 	</head>
 
 	<body>
@@ -19,7 +21,7 @@
 			<ul>
 				<li><a href="#home">Startscherm</a></li>
 				<li><a href="#art">Kunstwerken</a></li>
-			</ul>	
+			</ul>
 		</section>
 
 		<div class="spinner invisible" >
@@ -33,13 +35,13 @@
 
 				<div id="template">
 					<span data-bind="greeting">You don't have javascript enabled</span>
-					<span data-bind="translation">You should really get javascript, it really ties the room together</span>
+					
 				</div>
 			</div>
 		</section>
 		
 		<section id="art" class="invisible">
-			<div class="art" id="myElement">
+			<div class="art">
 				<h3>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</h3>
 				<div id="images">
 					<ul id="ul">
