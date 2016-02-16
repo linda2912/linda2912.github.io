@@ -9,9 +9,7 @@
 		init: function() { 
 
 			getData.dataRequest(); // run the function getData
-			loader.toggle(); 
-			
-			
+			loader.toggle(); 	
 		},
 
 		routes: function (collection) { 
@@ -67,7 +65,9 @@
 
 			    			return {
 			    				longTitle: _.pick(artObject, "longTitle") //add the longTitle into the template
+			    				
 			    			}
+
 			    		}
 			    	})
 
@@ -163,18 +163,20 @@
 
 	var gestures = {
 		info: function() {
-			var moreInfo = document.getElementById('moreInfo');
-
+			var moreInfo = document.querySelector('main #moreInfo');
+			console.log(moreInfo)
 			var mc = new Hammer(moreInfo);
 
+			console.log(mc)
 			mc.on("swiperight", function(ev) {
-				
+				console.log(ev);
 				window.location.hash = "art";
+
 
 			});
 		},
 		home: function() {
-			var art = document.querySelector('.art');
+			var art = document.querySelector('main .art');
 
 			var mc = new Hammer(art);
 
