@@ -52,6 +52,7 @@
 			    	sections.toggle(data); // run sections.toggle
 			    	gestures.art();
 
+
 			    },
 			    'info/:id': function(id) {
 			    	var data2 ={};
@@ -70,6 +71,7 @@
 			    			// }
 
 			    		}
+			    		
 			    	})
 
 			    	var directives = {
@@ -83,7 +85,8 @@
 			    	Transparency.render(document.getElementById('moreInfo'), data2, directives);
 
 			    	sections.toggle(data2); // run sections.toggle
-			    	gestures.info();
+			    	// gestures.info();
+			    	// gestures.panImg();
 			    },
 
 			    '*': function() {
@@ -92,6 +95,8 @@
 			    		//replace this text
 			    		// greeting: "Welcome! Hier kun je de schilderijen van Rembrandt Harmensz. van Rijn bekijken"
 			    	};
+
+
 
 			    	sections.toggle(data); // run sections.toggle
 			    	gestures.home();
@@ -168,11 +173,6 @@
 		}
 	};
 
-	// var localStorage = {
-	// 	save: function() {
-	// 		localStorage.setItem("imagesUrl", JSON.stringify(imagesUrl));
-	// 	}
-	// }
 
 	var loader = { 
 		toggle: function() {
@@ -200,17 +200,33 @@
 
 				window.location.hash = "#";
 			});
-		},
-		info: function() {
-			var moreInfo = document.querySelector('main #moreInfo');
-
-			var mc = new Hammer(moreInfo);
-
-			mc.on("swiperight", function(ev) {
-				window.location.hash = "art";
-			});
-			
 		}
+		// info: function() {
+		// 	var moreInfo = document.querySelector('main #moreInfo');
+
+		// 	var mc = new Hammer(moreInfo);
+
+		// 	mc.on("swiperight", function(ev) {
+		// 		window.location.hash = "art";
+		// 	});
+			
+		// }
+		// panImg: function() {
+		// 	var panImg = document.querySelector('main .imgScroll img');
+
+		// 	// create a simple instance
+		// 	// by default, it only adds horizontal recognizers
+		// 	var mc = new Hammer(panImg);
+
+		// 	// let the pan gesture support all directions.
+		// 	// this will block the vertical scrolling on a touch-device while on the element
+		// 	mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+		// 	// listen to events...
+		// 	mc.on("panleft panright panup pandown tap press", function(ev) {
+		// 	    panImg.textContent = ev.type +" gesture detected.";
+		// 	});
+		// }
 	};
 	
 	app.init(); //run the app
