@@ -117,14 +117,14 @@
 	margin-top: -1px;
 	animation: slide .5s ease;
 }
-@keyframes slide{
+/*@keyframes slide{
 	0%{
 		transform: scaleY(0);
 	}
 	100%{
 		transform: scaleY(1);
 	}
-}
+}*/
 
 #ul{
 	display: flex;
@@ -179,11 +179,12 @@
 }
 .infoBlock{
 	display: flex;
-	align-items: stretch;
+	align-items: center;
 	position: fixed;
 	z-index: 1;
-	background-color: white;
+	background-color: rgba(0, 0, 0, .5);
 	font-size: .8em;
+	color: white;
 }
 .back{
 	background-color: tomato;
@@ -207,18 +208,6 @@
 	font-size: 1.2em;
 	padding: .5em;
 }
-/*.info{
-	animation: fade 1s ease;
-}
-@keyframes fade{
-	0%{
-		transform: scale(0.8);
-	}
-	100%{
-		transform: scale(1);
-	}
-}*/
-
 
 /*Loader*/
 
