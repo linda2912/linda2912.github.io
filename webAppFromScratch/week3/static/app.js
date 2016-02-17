@@ -90,7 +90,7 @@
 
 			    	var data = {
 			    		//replace this text
-			    		greeting: "Welcome!"
+			    		// greeting: "Welcome! Hier kun je de schilderijen van Rembrandt Harmensz. van Rijn bekijken"
 			    	};
 
 			    	sections.toggle(data); // run sections.toggle

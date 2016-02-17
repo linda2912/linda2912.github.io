@@ -19,7 +19,7 @@
 
 		<section class="nav">
 			<ul>
-				<li><a href="#home">Startscherm</a></li>
+				<li><a href="#home">Home</a></li>
 				<li><a href="#art">Kunstwerken</a></li>
 			</ul>
 		</section>
@@ -31,39 +31,50 @@
 
 		<section id="home" class="invisible">
 			<div class="startScreen">
-				<!-- <h3>Startscherm</h3> -->
 
 				<div id="template">
-					<span data-bind="greeting">You don't have javascript enabled</span>
+					<!-- <span data-bind="greeting">You don't have javascript enabled</span> -->
+					
+					<h2>Welkom!</h2>
+					<p>Bekijk nu de schilderijen van Rembrandt Harmensz. van Rijn</p>
+					<a href="#art" class="button" >Bekijk zijn werk</a>
 				</div>
-				<button>Bekijk het werk van Rembrandt Harmensz. van Rijn</button>
+				
 			</div>
 		</section>
 		
 		<section id="art" class="invisible">
 			<div class="art">
 				<h3>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</h3>
+				<img src="img/pincel.png" class="icon">
 				<div id="images">
-					<ul id="ul">
-						<li class="item">
+					<div id="ul">
+						<div class="item">
 							<a data-bind="link" >
-								<p data-bind="imageName"></p></a>
+								<p data-bind="imageName"></p>
+							</a>
 							<img data-bind="imagesUrl">
 							
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="info" class="invisible">
 			<div class="info" id="moreInfo">
-				<!-- <img data-bind="imagesUrl"> -->
-				<a href="#art" class="back">terug</a>
-				<h1>Detail information:</h1>
+
+				<div class="infoBlock">
+					<a href="#art" class="back">
+						<img src="img/back.png">
+					</a>
+					<p data-bind="longTitle"></p>
+				</div>
 				
-				<p data-bind="longTitle"></p>
-				<img data-bind="img">
+				<div class="imgScroll">
+					<img data-bind="img">
+				</div>
+				
 			</div>
 		</section>
 

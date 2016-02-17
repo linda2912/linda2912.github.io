@@ -8,37 +8,66 @@
 /*navigation*/
 
 .nav li{
-	
-	background-color: #2c3e50;
-	display: block;
-	padding: 1em;
-	
+	background-color: black;
 }
 .nav li:hover{
 	display: block;
-	background-color: #34495e;
-
+	background-color: tomato;
 }
 .nav a{
 	color: white;
 	text-decoration: none;
+	display: block;
+	padding: 1em;
 }
 
 .nav{
-	/*position: fixed;*/
+	position: fixed;
 	width: 100%;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 /*startscreen*/
 
 .startScreen{
 	background: url("http://lh5.ggpht.com/H-KfOaNgW2an_g0kODWKua5BELckMTr7zauQZCbnOZ69fyNlr67uavKaDmvSawg8j6TB88abmtAjNbcMjbOdU94zuzM=s0");
-	background-position: 
-	height: 50em;
-	padding-top: 10em;
+	background-position: center;
+	background-size: cover;
+	height:100vh;
+	min-height:100vh;
+	/*padding-top: 10em;*/
 	color: white;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.button{
+	background-color: tomato;
+	margin: 1em;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	padding: 1em;
+	height: 3em;
+	text-decoration: none;
+}
+.button:hover{
+	background-color: black;
+}
+#template{
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 20em;
+	
+}
+#template h2{
+	margin: 1em 0;
 }
 
 .invisible{
@@ -47,44 +76,42 @@
 
 /*artworks*/
 
-.art h3{
-	color: #2c3e50;
-	margin-bottom: 2em; 
-	text-align: center;
+.icon{
+	width: 2em;
+	margin: 0 auto;
+	display: block;
+	box-sizing: content-box;
 	padding: 2em;
-	font-size: 1.5em;
 }
 
-.art{
-	background-color: #ecf0f1;
+.art h3{
+	padding-top: 5em;
+	margin: 0 2em;
+	text-align: center;
+	font-size: 2em;
+
+}
+#images a{
+	text-decoration: none;
+
+}
+#images p:hover{
+	background-color: tomato;
 }
 
-#images{
-	font-weight: 600;
+#images p{
+	color: white;
+	font-size: 1em;
 	padding: 1em;
-	margin: 1em;
-	color: #2c3e50;
+	font-weight: 700;
+	background-color: black;
+	font-size: 1em;
 }
 
 #images img{
 	width: 100%;
-	margin: .5em 0 2em 0;
-	border: 1em solid #c0392b;
-	max-width: 40em;
-}
-
-#images ul{
-	list-style: none;
-}
-
-[data-bind="link"]{
-	color: #2c3e50;
-	font-size: 1.5em;
-}
-
-[data-bind="imageName"]{
-	max-width: 25em;
-	text-align: center;
+	margin-bottom: 2em;
+	
 }
 
 #ul{
@@ -94,38 +121,44 @@
 
 /*detail information*/
 
-.info{
-	padding-top: 3em;
-
+.imgScroll > img{
+	display: inline-block;
 }
-
-.back{
-	background-color: #e74c3c;
-	color: white;
-	text-decoration: none;
-	font-weight: 700;
-	border-bottom: .5em solid #c0392b;
-	padding: 1em 3em;
-	margin-left: 1em;
+.imgScroll{
+	overflow: auto;
+	width: 100vw;
+	height: 80vh;
+	position: relative;
+}
+.infoBlock{
+	padding-top: 6.27em;
+	display: flex;
+	align-items: stretch;
 	
-}
 
-.info h1{
-	text-align: center;
-	color: #2c3e50;
-	padding: 2em 0;
+}
+.back{
+	background-color: tomato;
+	padding: 1em;
+	min-height: 100%;
+
+}
+.back img{
+	width: 2em;
+}
+.back:hover{
+	background-color: black;
+
+}
+.infoBlock a{
+	display: flex;
+	align-items: center;
 }
 
 .info [data-bind="longTitle"]{
-	text-align: center;
-	font-size: 2em;
-	color: #2c3e50;
 	max-width: 30em;
-	margin: 0 auto;
-}
-#moreInfo{
-	height: 100vh;
-	
+	font-size: 1.2em;
+	padding: .5em;
 }
 
 /*Loader*/
@@ -174,11 +207,11 @@
 
 /*transitions*/
 
-div:not(:target) {
-	animation: transparancy 1s ease;
+.startScreen {
+	animation: test 1s ease;
 }
 
-@keyframes transparancy {
+@keyframes test {
 	0% {
 		opacity: 0;
 		
