@@ -181,6 +181,7 @@
 	position: fixed;
 	z-index: 1;
 	background-color: white;
+	font-size: .8em;
 }
 .back{
 	background-color: tomato;
