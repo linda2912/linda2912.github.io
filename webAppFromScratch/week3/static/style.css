@@ -64,8 +64,17 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 20em;
-	
+	animation: popup .5s ease;
 }
+@keyframes popup{
+	0%, 50%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
 #template h2{
 	margin: 1em 0;
 }
@@ -74,6 +83,7 @@
 	display: none;
 }
 
+
 /*artworks*/
 
 .icon{
@@ -81,16 +91,9 @@
 	margin: 0 auto;
 	display: block;
 	box-sizing: content-box;
-	padding: 2em;
+	padding-right: .5em;
 }
 
-.art h3{
-	padding-top: 5em;
-	margin: 0 2em;
-	text-align: center;
-	font-size: 2em;
-
-}
 #images a{
 	text-decoration: none;
 
@@ -118,6 +121,26 @@
 	display: flex;
 	justify-content: center;
 }
+.artBlock a img{
+	background-color: black;
+	padding: 1em;
+	width: 2em;
+	height: 2em;
+	box-sizing: content-box;
+}
+.artBlock a img:hover{
+	background-color: tomato;
+}
+.artBlock p{
+	padding: .7em;
+	font-size: 1.1em;
+}
+
+.artBlock{
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+}
 
 /*detail information*/
 
@@ -127,21 +150,17 @@
 .imgScroll{
 	overflow: auto;
 	width: 100vw;
-	height: 80vh;
+	height: 100vh;
 	position: relative;
 }
 .infoBlock{
-	padding-top: 6.27em;
 	display: flex;
 	align-items: stretch;
-	
-
 }
 .back{
 	background-color: tomato;
 	padding: 1em;
 	min-height: 100%;
-
 }
 .back img{
 	width: 2em;

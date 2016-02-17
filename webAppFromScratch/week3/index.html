@@ -17,12 +17,12 @@
 
 	<body>
 
-		<section class="nav">
+		<!-- <section class="nav">
 			<ul>
 				<li><a href="#home">Home</a></li>
 				<li><a href="#art">Kunstwerken</a></li>
 			</ul>
-		</section>
+		</section> -->
 
 		<div class="spinner invisible" >
 			<div class="double-bounce1"></div>
@@ -45,8 +45,15 @@
 		
 		<section id="art" class="invisible">
 			<div class="art">
-				<h3>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</h3>
-				<img src="img/pincel.png" class="icon">
+				<div class="artBlock">
+					<a href="#">
+						<img src="img/home.png">
+					</a>
+					<p>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</p>
+					<img src="img/pincel.png" class="icon">
+				</div>
+				
+				
 				<div id="images">
 					<div id="ul">
 						<div class="item">
@@ -70,7 +77,7 @@
 					</a>
 					<p data-bind="longTitle"></p>
 				</div>
-				
+
 				<div class="imgScroll">
 					<img data-bind="img">
 				</div>
