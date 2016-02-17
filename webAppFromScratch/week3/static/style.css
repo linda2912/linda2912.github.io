@@ -33,7 +33,8 @@
 /*startscreen*/
 
 .startScreen{
-	background: url(../img/rembrandt.jpg);
+	background: url("http://lh5.ggpht.com/H-KfOaNgW2an_g0kODWKua5BELckMTr7zauQZCbnOZ69fyNlr67uavKaDmvSawg8j6TB88abmtAjNbcMjbOdU94zuzM=s0");
+	background-position: 
 	height: 50em;
 	padding-top: 10em;
 	color: white;

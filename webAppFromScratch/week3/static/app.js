@@ -54,24 +54,35 @@
 
 			    },
 			    'info/:id': function(id) {
-
+			    	var data2 ={};
 			    	var data = _.filter(collection.artObjects, function(artObject){ //loop through the data
 			    		if (artObject.id === id) { // if the id's are the same do this
 
 			    			//this code do the same as below:
-			    			// return {
-			    			// 	longTitle: artObject.longTitle
-			    			// }
-
-			    			return {
-			    				longTitle: _.pick(artObject, "longTitle") //add the longTitle into the template
-			    				
+			    			data2 = {
+			    				longTitle: artObject.longTitle,
+			    				img: artObject.webImage.url
 			    			}
+
+			    			// return {
+			    			// 	longTitle: _.pick(artObject, "longTitle"), //add the longTitle into the template
+			    			// 	img:_.pick(artObject.webImage, "url")
+			    			// }
 
 			    		}
 			    	})
 
-			    	sections.toggle(data); // run sections.toggle
+			    	var directives = {
+						img: {
+					    	src: function(params) {
+					      		return this.img;
+					    	}
+					  	}
+					};
+
+			    	Transparency.render(document.getElementById('moreInfo'), data2, directives);
+
+			    	sections.toggle(data2); // run sections.toggle
 			    	gestures.info();
 			    },
 
@@ -84,6 +95,7 @@
 
 			    	sections.toggle(data); // run sections.toggle
 			    	gestures.home();
+			    	
 			    }
 			});
 		}
@@ -96,6 +108,7 @@
 		toggle: function(data) {
 			
 			var _data = data;
+			console.log(_data);
 			//get the hash on the current url after click and save in a varibale
 			var hash = window.location.hash.split('/')[0]; //get always the first slash
 
@@ -155,11 +168,11 @@
 		}
 	};
 
-	var localStorage = {
-		saveToLocalStorage: function() {
-			localStorage.setItem("imagesUrl", JSON.stringify(imagesUrl));
-		}
-	}
+	// var localStorage = {
+	// 	save: function() {
+	// 		localStorage.setItem("imagesUrl", JSON.stringify(imagesUrl));
+	// 	}
+	// }
 
 	var loader = { 
 		toggle: function() {
