@@ -50,7 +50,7 @@
 			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
 			    	sections.toggle(data); // run sections.toggle
-			    	gestures.home();
+			    	gestures.art();
 
 			    },
 			    'info/:id': function(id) {
@@ -83,6 +83,7 @@
 			    	};
 
 			    	sections.toggle(data); // run sections.toggle
+			    	gestures.home();
 			    }
 			});
 		}
@@ -154,6 +155,12 @@
 		}
 	};
 
+	var localStorage = {
+		saveToLocalStorage: function() {
+			localStorage.setItem("imagesUrl", JSON.stringify(imagesUrl));
+		}
+	}
+
 	var loader = { 
 		toggle: function() {
 			document.querySelector('.spinner').classList.toggle('invisible');
@@ -162,20 +169,16 @@
 
 
 	var gestures = {
-		info: function() {
-			var moreInfo = document.querySelector('main #moreInfo');
-			console.log(moreInfo)
-			var mc = new Hammer(moreInfo);
+		home: function() {
+			var home = document.querySelector('main .startScreen');
+			
+			var mc = new Hammer(home);
 
-			console.log(mc)
-			mc.on("swiperight", function(ev) {
-				console.log(ev);
+			mc.on("swipeleft", function(ev) {
 				window.location.hash = "art";
-
-
 			});
 		},
-		home: function() {
+		art: function() {
 			var art = document.querySelector('main .art');
 
 			var mc = new Hammer(art);
@@ -184,11 +187,18 @@
 
 				window.location.hash = "#";
 			});
+		},
+		info: function() {
+			var moreInfo = document.querySelector('main #moreInfo');
+
+			var mc = new Hammer(moreInfo);
+
+			mc.on("swiperight", function(ev) {
+				window.location.hash = "art";
+			});
+			
 		}
-		
-
 	};
-
 	
 	app.init(); //run the app
 
