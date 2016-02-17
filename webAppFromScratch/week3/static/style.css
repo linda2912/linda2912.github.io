@@ -179,7 +179,7 @@
 }
 .infoBlock{
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	position: fixed;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, .5);
