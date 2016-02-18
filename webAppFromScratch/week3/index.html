@@ -11,6 +11,7 @@
 		<script src="static/routie.min.js"></script>
 		<script src="static/transparency.min.js"></script>
 		<script src="static/underscore.js"></script>
+		<script src="static/gestures.js"></script>
 
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>			
 	</head>
@@ -33,8 +34,6 @@
 			<div class="startScreen">
 
 				<div id="template">
-					<!-- <span data-bind="greeting">You don't have javascript enabled</span> -->
-					
 					<h2>Welkom!</h2>
 					<p>Bekijk de schilderijen van Rembrandt Harmensz. van Rijn</p>
 					<a href="#art" class="button" >Bekijk zijn werk</a>
@@ -50,17 +49,19 @@
 						<img src="img/home.png">
 					</a>
 					<p>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</p>
-					<!-- <img src="img/pincel.png" class="icon"> -->
 				</div>
 				
 				
 				<div id="images">
 					<div id="ul">
 						<div class="item">
-							<a data-bind="link" >
-								<p data-bind="imageName"></p>
-							</a>
-							<img data-bind="imagesUrl">
+							<div class="itemBox">
+								<a data-bind="link" >
+									<p data-bind="imageName"></p>
+									<img data-bind="imagesUrl">
+									<img src="img/search.png" class="search">
+								</a>
+							</div>
 							
 						</div>
 					</div>

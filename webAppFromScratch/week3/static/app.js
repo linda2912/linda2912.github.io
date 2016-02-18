@@ -50,7 +50,7 @@
 			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
 			    	sections.toggle(data); // run sections.toggle
-			    	gestures.art();
+			    	gestures.art(); //run 
 
 
 			    },
@@ -99,7 +99,9 @@
 
 
 			    	sections.toggle(data); // run sections.toggle
+			    	// gestures.homePage();
 			    	gestures.home();
+
 			    	
 			    }
 			});
@@ -181,53 +183,7 @@
 	};
 
 
-	var gestures = {
-		home: function() {
-			var home = document.querySelector('main .startScreen');
-			
-			var mc = new Hammer(home);
-
-			mc.on("swipeleft", function(ev) {
-				window.location.hash = "art";
-			});
-		},
-		art: function() {
-			var art = document.querySelector('main .art');
-
-			var mc = new Hammer(art);
-
-			mc.on("swiperight", function(ev) {
-
-				window.location.hash = "#";
-			});
-		}
-		// info: function() {
-		// 	var moreInfo = document.querySelector('main #moreInfo');
-
-		// 	var mc = new Hammer(moreInfo);
-
-		// 	mc.on("swiperight", function(ev) {
-		// 		window.location.hash = "art";
-		// 	});
-			
-		// }
-		// panImg: function() {
-		// 	var panImg = document.querySelector('main .imgScroll img');
-
-		// 	// create a simple instance
-		// 	// by default, it only adds horizontal recognizers
-		// 	var mc = new Hammer(panImg);
-
-		// 	// let the pan gesture support all directions.
-		// 	// this will block the vertical scrolling on a touch-device while on the element
-		// 	mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-		// 	// listen to events...
-		// 	mc.on("panleft panright panup pandown tap press", function(ev) {
-		// 	    panImg.textContent = ev.type +" gesture detected.";
-		// 	});
-		// }
-	};
+	
 	
 	app.init(); //run the app
 
