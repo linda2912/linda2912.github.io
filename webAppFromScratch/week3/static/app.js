@@ -55,6 +55,7 @@
 
 			    },
 			    'info/:id': function(id) {
+			    	// 'data2' kun je beter een duidelijkere naam geven. artObject?
 			    	var data2 ={};
 			    	var data = _.filter(collection.artObjects, function(artObject){ //loop through the data
 			    		if (artObject.id === id) { // if the id's are the same do this
@@ -82,6 +83,7 @@
 					  	}
 					};
 
+				// Deze functie wordt voor elke pagina herhaald, je zou hier 1 functie voor kunnen maken en dan de wisslende elementen als parameters mee geven
 			    	Transparency.render(document.getElementById('moreInfo'), data2, directives);
 
 			    	sections.toggle(data2); // run sections.toggle
@@ -113,7 +115,7 @@
 	var sections = { // toggle between the sections
 
 		toggle: function(data) {
-			
+			// Je hoeft hier niet een nieuw object voor de data aan te maken, je kunt gewoon overal waar '_data' staat 'data' van maken
 			var _data = data;
 			console.log(_data);
 			//get the hash on the current url after click and save in a varibale
@@ -168,6 +170,10 @@
 
 				function(data, xhr) {
 					// error handler
+					
+					// Als het data ophalen mislukt ziet de gebruiker niks
+					// misschien kun je nog een functie toevoegen dat er een melding komt voor de gebruiker. alert?
+					alert("Excuse! Er is wat mis gegaan met het ophalen van de data. Controleer of je op een goede internetverbinding zit en herlaad de pagina.");
 					console.error(data, xhr.status);
 				}
 			);
