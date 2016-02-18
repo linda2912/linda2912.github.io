@@ -8,8 +8,8 @@
 	var app = { // literal object
 		init: function() { 
 
-			getData.dataRequest(); // run the function getData
-			loader.toggle(); 	
+			getData.dataRequest(); // run the function dataRequest in getData
+			loader.toggle(); // activate the loader
 		},
 
 		routes: function (collection) { 
@@ -28,7 +28,6 @@
 			    				id: collection.artObjects[i].id,
 			    				imagesUrl: collection.artObjects[i].webImage.url,
 			    				imageName: collection.artObjects[i].title};
-
 			    	};
 
 			    	var srcImage = function(params) {
@@ -44,65 +43,47 @@
 				    		imagesUrl: { 'class': srcImage }, //add the image url into the html
 			    			link: {'class':link} //add the link into the html
 			    		}
-
 			    	};
 
 			    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
 
 			    	sections.toggle(data); // run sections.toggle
-			    	gestures.art(); //run 
-
+			    	gestures.art(); //run the gesture art
 
 			    },
+
 			    'info/:id': function(id) {
-			    	var data2 ={};
-			    	var data = _.filter(collection.artObjects, function(artObject){ //loop through the data
+
+			    	var detail = {};
+			    	var data = _.filter(collection.artObjects, function(artObject) { //loop through the data
 			    		if (artObject.id === id) { // if the id's are the same do this
 
-			    			//this code do the same as below:
-			    			data2 = {
-			    				longTitle: artObject.longTitle,
-			    				img: artObject.webImage.url
+			    			detail = {
+			    				longTitle: artObject.longTitle, //get the longTitle of the matching ID 
+			    				img: artObject.webImage.url //get the img url of the matching ID
 			    			}
-
-			    			// return {
-			    			// 	longTitle: _.pick(artObject, "longTitle"), //add the longTitle into the template
-			    			// 	img:_.pick(artObject.webImage, "url")
-			    			// }
-
 			    		}
-			    		
 			    	})
 
 			    	var directives = {
 						img: {
-					    	src: function(params) {
-					      		return this.img;
+					    	src: function(params) { //add the src into the html img attribute
+					      		return this.img; //add the img url into the html img attribute
 					    	}
 					  	}
 					};
 
-			    	Transparency.render(document.getElementById('moreInfo'), data2, directives);
+			    	Transparency.render(document.getElementById('moreInfo'), detail, directives); //render the template
 
-			    	sections.toggle(data2); // run sections.toggle
-			    	// gestures.info();
-			    	// gestures.panImg();
+			    	sections.toggle(detail); // run sections.toggle
 			    },
 
 			    '*': function() {
 
-			    	var data = {
-			    		//replace this text
-			    		// greeting: "Welcome! Hier kun je de schilderijen van Rembrandt Harmensz. van Rijn bekijken"
-			    	};
-
-
+			    	var data = {};
 
 			    	sections.toggle(data); // run sections.toggle
-			    	// gestures.homePage();
-			    	gestures.home();
-
-			    	
+			    	gestures.home(); // run the gesture home
 			    }
 			});
 		}
@@ -110,23 +91,21 @@
 
 	// This ideas comes from Dylan Vans
 
-	var sections = { // toggle between the sections
+	var sections = { 
 
-		toggle: function(data) {
-			
-			var _data = data;
-			console.log(_data);
+		toggle: function(data) { // toggle between the sections
+
 			//get the hash on the current url after click and save in a varibale
 			var hash = window.location.hash.split('/')[0]; //get always the first slash
 
-			hash = hash.replace("#", ""); // remove the #
+			hash = hash.replace("#", ""); // remove the hash
 
 			if (hash) { 
 
 				var getHash = document.getElementById(hash); //get the template from the html that matched
 				
 				if (getHash) { //if there is a hash, put the section in the html
-					Transparency.render(getHash, _data);
+					Transparency.render(getHash, data);
 					main.innerHTML = getHash.innerHTML; 
 
 				} else {
@@ -137,7 +116,6 @@
 			} else {
 				
 				window.location.hash = '#home'; // if there is no hash, give the home page
-
 			}
 		}
 	};
@@ -152,52 +130,32 @@
 			// Get the data from the api with pagasus library
 			var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
 			
-			// loader.toggle(); 
-
 			collectionData.then( //if the request have success, this happens
 
 				//xhr == xml http request
 				function(data, xhr) {  
 
 					//load the list into data
-
 					collection = data; 
 					app.routes(collection); //run app.routes and take collection with it
-					loader.toggle(); 
+					loader.toggle(); // when the data is complete, disactivate the loader
 				},
 
 				function(data, xhr) {
 					// error handler
+					alert("Onze excuses! Er is iets mis gegaan bij het laden van de pagina. Controleer de internetverbinding en herlaad de pagina.");
 					console.error(data, xhr.status);
 				}
 			);
-
 		}
 	};
-
 
 	var loader = { 
-		toggle: function() {
-			document.querySelector('.spinner').classList.toggle('invisible');
+		toggle: function() { // toggle the loader by adding and removing the class invisible
+			document.querySelector('.spinner').classList.toggle('invisible'); 
 		}
 	};
-
-
-	
 	
 	app.init(); //run the app
 
 }());
-
-
-
-
-
-
-
-
-
-
-
-
-

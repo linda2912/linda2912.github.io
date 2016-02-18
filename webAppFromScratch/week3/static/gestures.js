@@ -23,6 +23,3 @@ var gestures = (function(){
 		}
 		
 }());
-
-
-
