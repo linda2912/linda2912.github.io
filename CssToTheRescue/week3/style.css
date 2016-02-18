@@ -3,7 +3,6 @@
 	padding: 0;
 	font-family: "Lato", sans-serif;
 	box-sizing: border-box;
-
 }
 body {
 	background-color: #fff; 
@@ -244,6 +243,9 @@ main > article p {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+/*.filter-effects figure{
+	margin: .5em;
+}*/
 .filter-effects img{
 	max-width: 6em;
 	max-height: 6em;
@@ -342,6 +344,9 @@ input[type="checkbox"]:disabled + label::before {
 	box-shadow: none;
 	color: #555;
 	cursor: not-allowed;
+}
+#check{
+	max-width: 10em;
 }
 
 /*photo album*/
