@@ -4,15 +4,16 @@
 	font-family: "Lato", sans-serif;
 	box-sizing: border-box;
 }
-body {
+/*body {
 	background-color: #fff; 
 	background-image: linear-gradient(#eee .1em, transparent .1em); 
 	background-size: 100% 1.2em;
-}
-
-/*:focus {
-	border-bottom: .5em solid #2c3e50;
 }*/
+
+body { 
+background-image: url(images/1.png),url(images/2.png), url(images/3.png); 
+padding:0; margin:0; height: 100%; 
+}
 
 :disabled, [disabled], [aria-disabled="true"] {
 	cursor: not-allowed;
@@ -94,7 +95,7 @@ input[type="checkbox"] + label::before {
 }
 input[type="checkbox"]:checked + label::before {
 	content: '\2713';
-	background: #2c3e50;
+	background: #1abc9c;
 }
 input[type="checkbox"]:focus + label::before {
 	box-shadow: 0 0 .1em .1em #58a;
@@ -260,6 +261,8 @@ main > article p {
 	margin: 0 auto;
 	display: block;
 	width: min-content;
+	border: none;
+	font-size: 1em;
 }
 
 [role="button"]:hover,
@@ -382,7 +385,6 @@ main > article p {
 	display: flex;
 	flex-wrap: wrap;
 	background-color: white;
-	/*justify-content: space-around;*/
 }
 #find-friends header {
 	width: 100%;
@@ -392,6 +394,7 @@ main > article p {
 }
 #find-friends img{
 	width: 8em;
+	height: 8em;
 }
 
 /*loader*/
