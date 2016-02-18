@@ -378,6 +378,10 @@ main > article p {
 #photo-albums h2 {
 	color: #2c3e50;
 }
+#photo-albums figcaption{
+	margin: -.5em 0 1em 0;
+
+}
 
 
 /*find friends*/
