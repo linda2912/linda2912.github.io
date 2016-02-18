@@ -7,21 +7,23 @@
 
 /*navigation*/
 
-.nav li{
+.nav li {
 	background-color: black;
 }
-.nav li:hover{
+
+.nav li:hover {
 	display: block;
 	background-color: tomato;
 }
-.nav a{
+
+.nav a {
 	color: white;
 	text-decoration: none;
 	display: block;
 	padding: 1em;
 }
 
-.nav{
+.nav {
 	position: fixed;
 	width: 100%;
 	text-align: center;
@@ -30,7 +32,7 @@
 
 /*startscreen*/
 
-.startScreen{
+.startScreen {
 	background: url("http://lh5.ggpht.com/H-KfOaNgW2an_g0kODWKua5BELckMTr7zauQZCbnOZ69fyNlr67uavKaDmvSawg8j6TB88abmtAjNbcMjbOdU94zuzM=s0");
 	background-position: center;
 	background-size: cover;
@@ -41,9 +43,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }
-.button{
+
+.button {
 	background-color: tomato;
 	margin: 1em;
 	border: none;
@@ -54,10 +56,12 @@
 	height: 3em;
 	text-decoration: none;
 }
-.button:hover{
+
+.button:hover {
 	background-color: black;
 }
-#template{
+
+#template {
 	background-color: rgba(0, 0, 0, 0.5);
 	display: flex;
 	flex-wrap: wrap;
@@ -65,38 +69,41 @@
 	width: 20em;
 	animation: popup .5s ease;
 }
-@keyframes popup{
-	0%, 50%{
+
+@keyframes popup{ 
+	0%, 50% {
 		transform: scale(0);
 	}
-	100%{
+	100% {
 		transform: scale(1);
 	}
 }
 
-#template h2{
+#template h2 {
 	margin: 1em 0;
 }
 
-.invisible{
+.invisible {
 	display: none;
 }
 
 
 /*artworks*/
-.art{
+
+.art {
 	animation: fade 1s ease;
 }
-@keyframes fade{
-	0%{
+
+@keyframes fade {
+	0% {
 		opacity: 0;
 	}
-	100%{
+	100% {
 		opacity: 1;
 	}
 }
 
-.icon{
+.icon {
 	width: 2em;
 	margin: 0 auto;
 	display: block;
@@ -104,15 +111,16 @@
 	padding-right: .5em;
 }
 
-#images a{
+#images a {
 	text-decoration: none;
 
 }
-#images p:hover{
+
+#images p:hover {
 	background-color: tomato;
 }
 
-#images p{
+#images p {
 	color: white;
 	font-size: 1em;
 	padding: 1em;
@@ -121,7 +129,7 @@
 	font-size: 1em;
 }
 
-[data-bind="imagesUrl"]{
+[data-bind="imagesUrl"] {
 	width: 100%;
 	margin-bottom: 2em;
 	animation: slide .5s ease;
@@ -129,11 +137,12 @@
 	display: block;
 }
 
-#ul{
+#ul {
 	display: flex;
 	justify-content: center;
 }
-.artBlock a img{
+
+.artBlock a img {
 	background-color: black;
 	padding: 1em;
 	width: 2em;
@@ -141,22 +150,24 @@
 	box-sizing: content-box;
 	margin-right: .7em;
 }
-.artBlock a img:hover{
+
+.artBlock a img:hover {
 	background-color: tomato;
 }
-.artBlock p{
+
+.artBlock p {
 	margin-left: 1.5em;
 	font-size: 1.1em;
 }
 
-.artBlock{
+.artBlock {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1em;
 }
-.search{
 
+.search {
 	max-width: 2em;
 	padding: 1em;
 	box-sizing: content-box;
@@ -166,35 +177,36 @@
 	position: absolute;
 	right: 0;
 }
-.search:hover{
+
+.search:hover {
 	background-color: black;
 }
 
 /*detail information*/
 
-.imgScroll > img{
+.imgScroll > img {
 	transform-origin: left top;
 	animation: zoomImg 1s ease;
 	width: 1500px;
 }
-@keyframes zoomImg{
-	0%{
+
+@keyframes zoomImg {
+	0% {
 		transform: scale(0);
-		
 	}
-	100%{
-		transform: scale(1);
-		
+	100% {
+		transform: scale(1);	
 	}
 }
-.imgScroll{
+
+.imgScroll {
 	overflow: scroll;
 	width: 100vw;
 	height: 100vh;
 	position: relative;
-
 }
-.infoBlock{
+
+.infoBlock {
 	display: flex;
 	align-items: stretch;
 	position: fixed;
@@ -203,24 +215,27 @@
 	font-size: .8em;
 	color: white;
 }
-.back{
+
+.back {
 	background-color: tomato;
 	padding: 1em;
 	min-height: 100%;
 }
-.back img{
+
+.back img {
 	width: 2em;
 }
-.back:hover{
-	background-color: black;
 
+.back:hover {
+	background-color: black;
 }
-.infoBlock a{
+
+.infoBlock a {
 	display: flex;
 	align-items: center;
 }
 
-.info [data-bind="longTitle"]{
+.info [data-bind="longTitle"] {
 	max-width: 30em;
 	font-size: 1.2em;
 	padding: .5em;
@@ -231,7 +246,6 @@
 .spinner {
   width: 40px;
   height: 40px;
-
   position: relative;
   margin: 100px auto;
 }
@@ -245,7 +259,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  
+ 
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
@@ -270,43 +284,35 @@
   }
 }
 
-
-@media (min-width: 36em){
+@media (min-width: 36em) {
 	.artBlock {
 		justify-content: flex-start;
 	}
-	.artBlock p{
+
+	.artBlock p {
 		font-size: 130%;
 	}
-	.item{
+
+	.item {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		align-content: flex-start;
 		height: 100vh;
 		margin-left: -70%;
-
 	}
-	.itemBox{
+
+	.itemBox {
 		width: 15em;
 		margin: 1em;
 	}
-	#images img{
+	#images img {
 		margin-bottom: 1em;
 	}
 
-	.search{
+	.search {
 		position: relative;
 		margin-top: -4em;
 		max-width: 1em;
 	}
-
 }
-
-
-
-
-
-
-
-
