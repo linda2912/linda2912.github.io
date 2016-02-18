@@ -393,8 +393,8 @@ main > article p {
 	margin: .5em;
 }
 #find-friends img{
-	width: 8em;
-	height: 8em;
+	width: 6em;
+	height: 6em;
 }
 
 /*loader*/
@@ -511,6 +511,11 @@ address{
 	#password {
 		margin-bottom: 1em;
 	}	
+/*	find-friends*/
+	#find-friends img{
+		width: 8em;
+		height: 8em;
+	}
 }
 
 @media (min-width: 32em) and (max-width: 47em) {
@@ -538,9 +543,7 @@ address{
 	#popup img{
 		width: 17em;
 	}
-	#find-friends img{
-		width: 6em;
-	}
+	
 }
 
 
