@@ -241,23 +241,22 @@ main > article p {
 .filter-effects{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
 }
-/*.filter-effects figure{
+.filter-effects figure{
 	margin: .5em;
-}*/
+}
 .filter-effects img{
-	max-width: 6em;
-	max-height: 6em;
+	width: 6em;
+	height: 6em;
 	border-radius: 4em;
 }
 .filter-effects img:hover{
 	border: .3em solid #1abc9c;
 }
 .filter-effects > header{
-	min-width: 100%;
 	color: #1abc9c;
 	margin: 1em;
+	width: 100vw;
 }
 .filter-effects figcaption{
 	font-size: .8em;
@@ -344,9 +343,6 @@ input[type="checkbox"]:disabled + label::before {
 	box-shadow: none;
 	color: #555;
 	cursor: not-allowed;
-}
-#check{
-	max-width: 10em;
 }
 
 /*photo album*/
