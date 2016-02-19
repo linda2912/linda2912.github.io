@@ -148,8 +148,6 @@
 			);
 		}
 	};
-
-	
 	
 	app.init(); //run the app
 
