@@ -14,6 +14,13 @@
 		routes: function (collection) { 
 
 			routie({
+				
+				'home': function() {
+			    	var data = {};
+
+			    	sections.toggle(data); // run sections.toggle
+			    	gestures.home(); // run the gesture home
+			    },
 			   
 			    'art': function() { // when the hash changes to #art do this
 
@@ -79,10 +86,8 @@
 
 			    '*': function() {
 
-			    	var data = {};
+			    	window.location.hash = ('#home');
 
-			    	sections.toggle(data); // run sections.toggle
-			    	gestures.home(); // run the gesture home
 			    }
 			});
 		}
