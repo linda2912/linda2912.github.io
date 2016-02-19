@@ -14,9 +14,11 @@
 		routes: function (collection) { 
 
 			routie({
-				
+
 				'home': function() {
-			    	var data = {};
+			    	var data = { 
+			    		greeting: "Welkom!"
+			    	};
 
 			    	sections.toggle(data); // run sections.toggle
 			    	gestures.home(); // run the gesture home
