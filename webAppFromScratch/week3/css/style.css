@@ -36,13 +36,59 @@
 	background: url("http://lh5.ggpht.com/H-KfOaNgW2an_g0kODWKua5BELckMTr7zauQZCbnOZ69fyNlr67uavKaDmvSawg8j6TB88abmtAjNbcMjbOdU94zuzM=s0");
 	background-position: center;
 	background-size: cover;
-	height:100vh;
-	min-height:100vh;
+	height: 100vh;
+	min-height: 100vh;
 	color: white;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	animation: slideShow 100s ease-in-out infinite;
+}
+@keyframes slideShow {
+
+	
+	15% { 
+		background: url("http://lh6.ggpht.com/EcRbIeCJDvhPrCvIapeonP-VAWdGUwJNBuIq5DqY9d9O-1DNtvrxOYQCFOlpLvuDcOqynNafPpcJXzI7KXDvV1Eqnw=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	30% { 
+		background: url("http://lh5.ggpht.com/nhR4HlWt_rsB6k9LafDI8Nhg7HEoN01xc2UQBvDnQngX6rC6NjK6Th7i7TT5yFvZiEDQmV-qntbNGe_1oKH6XhUXAIqP=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	40% { 
+		background: url("http://lh4.ggpht.com/DlP_bLkDQc79U0QVNhsU2gL8CIqR_vxeK2tecy5aXLq-GlrSBc9o_AWeyEkmgwFBWNoKpqyss51KJHOJF_EGcnbh6Q=s0");
+		background-position: center;
+		background-size: cover; 
+	}
+	50% { 
+		background: url("http://lh6.ggpht.com/i5Br0_j9y56Mf55HsfuYlAAGKAbONWYkRHJr3sWhPXTzFGVrrwHdgvtYG5cS0ZlJllBXLAxZz-HLc23LfuBuHqyfLW8g=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	60% { 
+		background: url("http://lh3.ggpht.com/lpW3AsF97FNyL-fpK9Pao0Zf3aqUENuzJTUCyRaQOXAjqYXAWcVOvsD1mfM8ui6aF1fNw2ywZzcJsiqKJVuivsFib2l9=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	70% { 
+		background: url("http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	80% { 
+		background: url("http://lh3.ggpht.com/x6w-qgW0yv8tc6QtaazDyWK2wlW3gsLiQ0W1jD4QCBYXgFMPUmeiFaV_leU4gkKcQIIk0DsOrN79-ud8DRCZ2PWqtIg=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	90% { 
+		background: url("http://lh3.ggpht.com/eENsvvpxhDzqxFf_HFPeHpAD4AH7Pp7zwymufb5m7FaZOKv8IqgLChY4b_LtN6-q3HSrtPmZdIjVkSsVXk61eLXtRkw=s0"); 
+		background-position: center;
+		background-size: cover;
+	}
+	
 }
 
 .button {
@@ -67,12 +113,15 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 20em;
-	animation: popup .5s ease;
+	animation: popup .5s ease-in-out;
 }
 
 @keyframes popup{ 
 	0%, 50% {
 		transform: scale(0);
+	}
+	80% {
+		transform: scale(1.2);
 	}
 	100% {
 		transform: scale(1);

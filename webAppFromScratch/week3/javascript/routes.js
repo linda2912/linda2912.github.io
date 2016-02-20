@@ -6,7 +6,7 @@ var route = (function() {
 
 			routie({
 
-				'home': function() {
+				'home': function() { // when the hash changes to #home, replace the greeting
 			    	
 			    	var data = { 
 			    		greeting: "Welkom!"
@@ -18,17 +18,17 @@ var route = (function() {
 			   
 			    'art': function() { // when the hash changes to #art do this
 
-			    	sections.renderArt(collection);
-			    	gestures.art(); //run the gesture art
+			    	sections.renderArt(collection); //run renderArt in sections
+			    	gestures.art(); //run art in gestures
 
 			    },
 
-			    'info/:id': function(id) {
+			    'info/:id': function(id) { // when the hash changes to #id/some-id, run renderInfo in sections
 
 			  		sections.renderInfo(id, collection);
 			    },
 
-			    '*': function() {
+			    '*': function() { // when there is no hash, go to #home
 
 			    	window.location.hash = ('#home');
 

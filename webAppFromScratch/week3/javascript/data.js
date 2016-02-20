@@ -3,8 +3,8 @@ var getData = (function() {
 	return {
 
 		dataRequest: function() {
-
-		//this idea comes from Maaike Hek
+			
+		//I first looked at Maaike her code to see how she did this
 			var collection = {};
 
 			// Get the data from the api with pagasus library
@@ -17,6 +17,9 @@ var getData = (function() {
 
 					//load the list into data
 					collection = data; 
+					
+					localStorage.setItem("collection", JSON.stringify(collection));
+					JSON.parse(localStorage.getItem("collection"));
 
 					route.routes(collection); //run app.routes and take collection with it
 					loader.toggle(); // when the data is complete, disactivate the loader

@@ -8,10 +8,10 @@ var sections = (function() {
 			var hash = window.location.hash.split('/')[0]; //get always the first slash
 
 			hash = hash.replace("#", ""); // remove the hash
-			// This ideas comes from Dylan Vans
 
 			var main = document.querySelector('main');
 
+			// if statement idea comes from Dylan Vans
 			if (hash) { 
 
 				var getHash = document.getElementById(hash); //get the template from the html that matched
@@ -30,6 +30,7 @@ var sections = (function() {
 				window.location.hash = '#home'; // if there is no hash, give the home page
 			}
 		},
+
 		renderArt: function(collection) {
 			var data = {
 	    		item: [] //makes an empthy array
@@ -59,7 +60,7 @@ var sections = (function() {
 	    	};
 
 	    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
-	    	sections.toggle(collection);
+	    	sections.toggle(collection); //run sections.toggle and take collection with it
 		},
 
 		renderInfo: function(id, collection) {
@@ -84,7 +85,7 @@ var sections = (function() {
 			};
 
 	    	Transparency.render(document.getElementById('moreInfo'), detail, directives); //render the template
-	    	sections.toggle(detail);
+	    	sections.toggle(detail); //run section.toggle and take detail with it
 		}
 	}
 
