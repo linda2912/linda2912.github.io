@@ -6,7 +6,6 @@ var gestures = (function(){
 			var mc = new Hammer(art); 
 
 			mc.on("swiperight", function(ev) { //if there is a swipe right gesture 
-
 				window.location.hash = "#home"; //change the hash
 			});
 		},
