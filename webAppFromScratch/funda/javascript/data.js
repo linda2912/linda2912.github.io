@@ -4,18 +4,27 @@ var getData = (function() {
 
 		dataRequest: function() {
 
-			if (localStorage.collection == null) {
+			// if (localStorage.collection == null) {
 				//I first looked at Maaike her code to see how she did this
 				var collection = {};
 
+				var urlData = {
+					baseUrl: 'http://partnerapi.funda.nl/feeds/Aanbod.svc',
+					searchQuery: searchQuery.split(' ').join('-'),
+					urlOptions: '&page=1&pagesize=25'
+					request : function() {
+						return pegasus(this.baseUrl + this.searchQuery + this.urlOptions);
+					}
+				};
+
 				// Get the data from the api with pagasus library
-				var collectionData = pegasus('https://www.rijksmuseum.nl/api/nl/collection?key=jB5D6SNV&format=json&type=schilderij&maker=Rembrandt+Harmensz.+van+Rijn');
+				var collectionData = pegasus('http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25');
 				
 				collectionData.then( //if the request have success, this happens
 
 					//xhr == xml http request
 					function(data, xhr) {  
-
+						console.log(data);
 						//load the list into data
 						collection = data; 
 
@@ -31,12 +40,12 @@ var getData = (function() {
 						console.error(data, xhr.status);
 					}		
 				);
-			} else {
-				var collection = JSON.parse(localStorage.collection); 
-				console.log("dit is local storage");
-				route.routes(collection);
-				loader.toggle();
-			}
+			// } else {
+			// 	var collection = JSON.parse(localStorage.collection);
+			// 	console.log("dit is local storage");
+			// 	route.routes(collection);
+			// 	loader.toggle();
+			// }
 			
 			
 		}
