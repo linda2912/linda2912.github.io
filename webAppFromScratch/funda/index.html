@@ -18,11 +18,16 @@
 		<script src="javascript/data.js"></script>
 		<script src="javascript/sections.js"></script>
 		<script src="javascript/routes.js"></script>
+		<script src="javascript/filter.js"></script>
+		<script src="javascript/searchForm.js"></script>
 
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>			
 	</head>
 
 	<body>
+		<header>
+			<img src="img/funda-logo.svg">
+		</header>
 
 		<div class="spinner invisible" >
 			<div class="double-bounce1"></div>
@@ -35,24 +40,129 @@
 				<div id="template">
 					<span data-bind="greeting">You don't have javascript enabled</span>
 					<form>
-						<label class="hidden" for="title">zoek</label>
-						<input type="text" placeholder="zoek" id="searchField"/>
+						<fieldset>
+							<input placeholder="Plaats" id="place" type="text">
+							<select name="km">
+								<option value="0">+ 0 km</option>
+								<option value="1">+ 1 km</option>
+								<option value="2">+ 2 km</option>
+								<option value="5">+ 5 km</option>
+								<option value="10">+ 10 km</option>
+								<option value="15">+ 15 km</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="fromBudget">van</label>
+							<select id="fromBudget">
+								<option value="50.000">€ 50.000</option>
+								<option value="75.000">€ 75.000</option>
+								<option value="100.000">€ 100.000</option>
+								<option value="125.000">€ 125.000</option>
+								<option value="250.000">€ 150.000</option>
+								<option value="175.000">€ 175.000</option>
+								<option value="200.000">€ 200.000</option>
+								<option value="225.000">€ 225.000</option>
+								<option value="250.000">€ 250.000</option>
+								<option value="275.000">€ 275.000</option>
+								<option value="300.000">€ 300.000</option>
+								<option value="350.000">€ 350.000</option>
+								<option value="400.000">€ 400.000</option>
+								<option value="500.000">€ 500.000</option>
+								<option value="+600.000">+ € 600.000</option>
+							</select>
+							<label for="tillBudget">tot</label>
+							<select id="tillBudget">
+								
+								<option value="75.000">€ 75.000</option>
+								<option value="100.000">€ 100.000</option>
+								<option value="125.000">€ 125.000</option>
+								<option value="250.000">€ 150.000</option>
+								<option value="175.000">€ 175.000</option>
+								<option value="200.000">€ 200.000</option>
+								<option value="225.000">€ 225.000</option>
+								<option value="250.000">€ 250.000</option>
+								<option value="275.000">€ 275.000</option>
+								<option value="300.000">€ 300.000</option>
+								<option value="350.000">€ 350.000</option>
+								<option value="400.000">€ 400.000</option>
+								<option value="500.000">€ 500.000</option>
+								<option value="+600.000">+ € 600.000</option>
+							</select>
+						</fieldset>
+						
+						<h3>Waar moet jouw droomhuis aan voldoen?</h3>
+
+						<fieldset id="room" >
+							<label for="rooms">Aantal slaapkamers</label>
+							<select id="rooms">
+								<option value="1">1 kamer</option>
+								<option value="2+">2+ kamers</option>
+								<option value="3+">3+ kamers</option>
+								<option value="4+">4+ kamers</option>
+								<option value="5+">5+ kamers</option>
+							</select>
+						</fieldset>
+
+						<fieldset id="area" >
+							<label for="livingArea">Woonoppervlakte</label>
+							<select id="livingArea">
+								<option value="50">50+ m²</option>
+								<option value="50">75+ m²</option>
+								<option value="50">100+ m²</option>
+								<option value="50">150+ m²</option>
+								<option value="50">250+ m²</option>
+							</select>
+						</fieldset>
+
+						<fieldset id="outside" >
+							<label for="outsideArea">Buitenruimte</label>
+							<select id="outsideArea">
+								<option value="Balkon">Balkon</option>
+								<option value="Dakterras">Dakterras</option>
+								<option value="Tuin">Tuin</option>
+								
+							</select>
+							<label for="plot">Perceeloppervlakte</label>
+							<select id="plot">
+								<option value="50">250+ m²</option>
+								<option value="50">500+ m²</option>
+								<option value="50">1000+ m²</option>
+								<option value="50">2500+ m²</option>
+								<option value="50">5000+ m²</option>
+							</select>
+						</fieldset>
+
+						<div class="filter">
+							<figure class="rooms">
+								<img src="img/rooms.png">
+								<figcaption>Slaapkamers</figcaption>
+							</figure>
+
+							<figure class="area">
+								<img src="img/area.png">
+								<figcaption>Woonoppervlakte</figcaption>
+							</figure>
+							
+							<figure class="tree">
+								<img src="img/tree.png">
+								<figcaption>Buitenruimte</figcaption>
+							</figure>
+							
+							
+						</div>
+
 						<button type="submit" id="searchGo">Search</button>
 					</form>
+
 
 				</div>
 				
 			</div>
 		</section>
 		
-		<section id="art" class="invisible">
+		<section id="results" class="invisible">
 			<div class="art">
-				<div class="artBlock">
-					<a href="#">
-						<img src="img/home.png">
-					</a>
-					<p>Rijksmuseum Kunstwerken van Rembrandt Harmensz. van Rijn</p>
-				</div>
+				<h3>Resultaten</h3>				
 				
 				<div id="images">
 					<div id="ul">
@@ -61,7 +171,6 @@
 								<a data-bind="link" >
 									<p data-bind="Adres"></p>
 									<img data-bind="imageUrl">
-									<img src="img/search.png" class="search">
 								</a>
 							</div>
 						</div>

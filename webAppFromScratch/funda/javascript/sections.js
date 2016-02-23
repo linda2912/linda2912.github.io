@@ -31,7 +31,7 @@ var sections = (function() {
 			}
 		},
 
-		renderArt: function(collection) {
+		renderResults: function(collection) {
 
 	    	// var srcImage = function(params) {
 	    	// 	params.element.setAttribute('src', this.imagesUrl); //add the src arttibute at imagesUrl

@@ -1,6 +1,6 @@
 var gestures = (function(){
 	return { //make it global
-		art: function() { 
+		resultPage: function() { 
 
 			var art = document.querySelector('main .art'); // select the class art in the main
 			var mc = new Hammer(art); 

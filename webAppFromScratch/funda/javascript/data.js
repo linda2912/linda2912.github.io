@@ -2,35 +2,39 @@ var getData = (function() {
 
 	return {
 
-		dataRequest: function() {
+		dataRequest: function(searchQuery) {
 
 			// if (localStorage.collection == null) {
 				//I first looked at Maaike her code to see how she did this
 				var collection = {};
 
 				var urlData = {
-					baseUrl: 'http://partnerapi.funda.nl/feeds/Aanbod.svc',
+					baseUrl: 'http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/',
 					searchQuery: searchQuery.split(' ').join('-'),
-					urlOptions: '&page=1&pagesize=25'
+					urlOptions: '/&page=1&pagesize=25',
 					request : function() {
 						return pegasus(this.baseUrl + this.searchQuery + this.urlOptions);
 					}
 				};
 
 				// Get the data from the api with pagasus library
-				var collectionData = pegasus('http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25');
+				// var collectionData = pegasus('http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25');
 				
-				collectionData.then( //if the request have success, this happens
+
+				var urlRequest = urlData.request();
+				loader.toggle();
+
+				urlRequest.then( //if the request have success, this happens
 
 					//xhr == xml http request
 					function(data, xhr) {  
 						console.log(data);
 						//load the list into data
-						collection = data; 
+						var resultsData = data; 
 
-						localStorage.setItem("collection", JSON.stringify(collection)); //save the data in the local storage
+						// localStorage.setItem("collection", JSON.stringify(collection)); //save the data in the local storage
 
-						route.routes(collection); //run app.routes and take collection with it
+						// route.routes(resultsData); //run app.routes and take collection with it
 						loader.toggle(); // when the data is complete, disactivate the loader
 					},
 

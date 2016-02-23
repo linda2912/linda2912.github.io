@@ -9,17 +9,19 @@ var route = (function() {
 				'home': function() { // when the hash changes to #home, replace the greeting
 			    	
 			    	var data = { 
-			    		greeting: "Zoek je droomhuis!"
+			    		greeting: "Zoek jouw droomhuis!"
 			    	};
 
 			    	sections.toggle(data); // run sections.toggle
+			    	//filter.search();
+			    	searchForm.listner();
 			    	gestures.home(); // run the gesture home
 			    },
 			   
-			    'art': function() { // when the hash changes to #art do this
-
-			    	sections.renderArt(collection); //run renderArt in sections
-			    	gestures.art(); //run art in gestures
+			    'results': function() { // when the hash changes to #art do this
+			    	
+			    	sections.renderResults(collection); //run renderArt in sections
+			    	gestures.resultPage(); //run art in gestures
 
 			    },
 
