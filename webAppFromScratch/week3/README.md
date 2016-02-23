@@ -7,6 +7,7 @@
 
 ##Flowchart
 ![Flowchart](http://linda2912.github.io/webAppFromScratch/week3/flowchart.png)
+![Flowchart](http://linda2912.github.io/webAppFromScratch/week3/flowchart.png)
 
 
 ###### Linda van Dijk
