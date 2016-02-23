@@ -12,7 +12,7 @@
 /*header*/
 
 header img{
-	width: 10em;
+	width: 6em;
 	margin: 0 auto;
 	display: block;
 	padding: .3em;
@@ -28,13 +28,13 @@ header{
 
 
 [data-bind="greeting"]{
-	font-size: 1.5em;
-	margin: .5em;
+	font-size: 1.2em;
+	margin: .5em 0;
 	color: white;
 }
 .startScreen{
 	background-color: #ecf0f1;
-	padding-top: 6em;
+	padding-top: 4em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -43,20 +43,20 @@ header{
 	background-color: #F8B000;
 	padding: 1em;
 	color: white;
-	border-radius: .3em;
+	
 }
 
 fieldset{
 	border: none;
 }
-input{
-	width: 70vw;
+#place{
+	width: 60vw;
 	font-size: 1em;
 	padding: .5em;
 	margin: .5em 0;
 }
 select{
-	font-size: 1.5em;
+	font-size: 1em;
 }
 option{
 	font-size: 2em;
