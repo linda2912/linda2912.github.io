@@ -1,12 +1,9 @@
 # Web App From Scratch
 
 
-[week 3: Libraries, Routing, Data & Templating](http://linda2912.github.io/webAppFromScratch/week3)
+[week 4: Search application Funda](http://linda2912.github.io/webAppFromScratch/funda)
 
 
-
-##Flowchart
-![Flowchart](http://linda2912.github.io/webAppFromScratch/week3/flowchart.png)
 
 
 ###### Linda van Dijk
