@@ -34,7 +34,7 @@ header{
 	font-weight: 600;
 }
 .startScreen{
-	background-color: #ecf0f1;
+	background-color: #fff;
 	padding-top: 4em;
 	display: flex;
 	flex-wrap: wrap;
@@ -125,6 +125,80 @@ figure img{
 #checkboxes{
 	margin-top: 1em;
 }
+
+/*Results*/
+#resultsBlock{
+	width: 100vw;
+	padding: 1em;
+	line-height: 1.5em;
+	background-color: white;
+}
+#resultsBlock h3{
+	font-size: .8em;
+	font-weight: 200;
+	display: block;
+	border-bottom: 2px solid #E8A000;
+	padding: .5em 0;
+	margin-bottom: 1em;
+}
+[data-bind="imageUrl"]{
+	width: 100%;
+	margin-top: 2em;
+}
+.addressPrice{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #bdc3c7;
+}
+[data-bind="Adres"]{
+	font-weight: 700;
+	color: #3888C5;
+}
+[data-bind="Koopprijs"]{
+	font-weight: 700;
+}
+[data-bind="Koopprijs"]:before{
+	content: "€ ";
+}
+[data-bind="Koopprijs"]:after{
+	content: " k.k."
+}
+.address{
+	display: flex;
+}
+[data-bind="Postcode"]{
+	margin: 0 .5em 1em 0;
+}
+[data-bind="Woonoppervlakte"]:after, [data-bind="Perceeloppervlakte"]:after{
+	content: " m²";
+}
+[data-bind="AantalKamers"]:after{
+	content: " kamers";
+}
+.properties{
+	display: flex;
+	background-color: #E8A000;
+	display: flex;
+	justify-content: space-around;
+	padding: 1em;
+	color: white;
+	margin-top: -.4em;
+	margin-bottom: 1em;
+}
+.properties img{
+	max-width: 1.5em;
+	height: 1.5em;
+	margin-right: -1em;
+}
+
+.separation{
+	margin: 0 .5em;
+}
+.slash{
+	margin: 0 .3em;
+}
+
 /*Loader*/
 
 .spinner {

@@ -100,23 +100,7 @@
 
 						<fieldset id="roomFilter" class="invisible">
 							<p>Aantal slaapkamers</p>
-							<!-- <label for="rooms">Aantal slaapkamers</label>
-							<select id="rooms">
-								<option value="1">1 kamer</option>
-								<option value="2+">2+ kamers</option>
-								<option value="3+">3+ kamers</option>
-								<option value="4+">4+ kamers</option>
-								<option value="5+">5+ kamers</option>
-							</select> -->
-							<!-- <div>
-								<input type="radio" name="rooms" value="1" checked>
-								<p>1</p>
-							</div>
-  							<input type="radio" name="rooms" value="2">2 +
-  							<input type="radio" name="rooms" value="3">3 +
-  							<input type="radio" name="rooms" value="3">4 +
-  							<input type="radio" name="rooms" value="3">5 + -->
-
+							
   							<div id="checkboxes">
 							  	<div class="checkboxgroup">
 							    	<label for="my_radio_button_id1">1</label>
@@ -196,13 +180,39 @@
 						<h3>Resultaten</h3>	
 
 						<div class="spinner invisible" >
-					<div class="double-bounce1"></div>
-					<div class="double-bounce2"></div>
-				</div>
+							<div class="double-bounce1"></div>
+							<div class="double-bounce2"></div>
+						</div>
+
 						<div id="results">		
-							<p data-bind="Adres"></p>
-							<p data-bind="Woonplaats"></p>
 							<img data-bind="imageUrl">
+
+							<div class="properties">
+								<img src="img/area.png">
+								<p data-bind="Woonoppervlakte"></p> 
+								<!-- <p class="slash"> / </p> -->
+								<img src="img/tree.png">
+								<p data-bind="Perceeloppervlakte"></p>
+								<!-- <p class="separation">•</p> -->
+								<img src="img/rooms.png">
+								<p data-bind="AantalKamers"></p>
+								
+							</div>
+							
+							<div class="addressPrice">
+								<div>
+									<p data-bind="Adres"></p>
+									<div class="address">
+										<p data-bind="Postcode"></p>
+										<p data-bind="Woonplaats"></p>
+									</div>	
+								</div>
+								<p data-bind="Koopprijs"></p>
+							</div>
+								
+							
+
+							
 						</div>	
 <!-- 						
 						<div id="images">
