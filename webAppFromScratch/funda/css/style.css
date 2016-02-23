@@ -112,10 +112,19 @@ figure img{
 }
 [type="radio"]{
 	width: .5em;
-	margin: .7em;
+	margin: .3em 1em;
 	font-size: 1.5em;
 }
-
+.checkboxgroup {
+  display: inline-block;
+  text-align: center;
+}
+.checkboxgroup label {
+  display: block;
+}
+#checkboxes{
+	margin-top: 1em;
+}
 /*Loader*/
 
 .spinner {
