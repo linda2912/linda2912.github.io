@@ -31,6 +31,7 @@ header{
 	font-size: 1.2em;
 	margin: .5em 0;
 	color: white;
+	font-weight: 600;
 }
 .startScreen{
 	background-color: #ecf0f1;
@@ -53,7 +54,7 @@ fieldset{
 	width: 60vw;
 	font-size: 1em;
 	padding: .5em;
-	margin: .5em 0;
+	margin: .5em .5em .5em 0;
 }
 select{
 	font-size: 1em;
@@ -110,8 +111,9 @@ figure img{
 	transition: all .3s ease-in-out;
 }
 [type="radio"]{
-	width: 1em;
-	margin: .5em;	
+	width: .5em;
+	margin: .7em;
+	font-size: 1.5em;
 }
 
 /*Loader*/
