@@ -4,6 +4,13 @@
 	font-family: "Lato", sans-serif;
 	box-sizing: border-box;
 }
+
+.invisible {
+	display: none;
+}
+
+/*header*/
+
 header img{
 	width: 10em;
 	margin: 0 auto;
@@ -19,51 +26,92 @@ header{
 
 /*startscreen*/
 
-.startScreen {
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	min-height: 100vh;
-	color: white;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
-.invisible {
-	display: none;
-}
 [data-bind="greeting"]{
-	font-size: 2em;
+	font-size: 1.5em;
 	margin: .5em;
+	color: white;
 }
-
-#template {
-	background-color: #F8B000;
+.startScreen{
+	background-color: #ecf0f1;
+	padding-top: 6em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: 30em;
-	animation: popup .5s ease-in-out;
 }
-figure{
+#template {
+	background-color: #F8B000;
+	padding: 1em;
+	color: white;
+	border-radius: .3em;
+}
+
+fieldset{
+	border: none;
+}
+input{
+	width: 70vw;
+	font-size: 1em;
+	padding: .5em;
+	margin: .5em 0;
+}
+select{
+	font-size: 1.5em;
+}
+option{
+	font-size: 2em;
+}
+form > h3{
+	margin: 1em 0;
+}
+#fromBudget, #tillBudget{
+	width: 34.8vw;
+	margin-left: .3em;
+
+}
+[for="fromBudget"], [for="tillBudget"]{
+	margin-left: .5em;
+}
+button{
+	width: 90vw;
+	font-size: 1.5em;
+	padding: .7em;
+	border: none;
 	background-color: #3888C5;
-	font-size: .8em;
-	width: 9em;
-	border-radius: .5em;
-	margin: 1em;
+	color: white; 
+}
+
+
+figure{
+	background-color: #E8A000;
+	font-size: 1em;
+	margin: 1em 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 figure:hover{
-	background-color: #2e7ab2;
+	background-color: #3888C5;
 }
 figure img{
-	width: 4em;
+	width: 2.5em;
+	height: 2.5em;
+	padding: .5em;
+	box-sizing: content-box;
+	transition: all .3s ease-in-out;
 }
 .filter{
 	display: flex;
 	justify-content: space-between;
+}
+.turn{
+	transform: rotate(45deg);
+	transition: all .3s ease-in-out;
+}
+[type="radio"]{
+	width: 1em;
+	margin: .5em;	
 }
 
 /*Loader*/
@@ -79,7 +127,7 @@ figure img{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: tomato;
+  background-color: #3888C5;
   opacity: 0.6;
   position: absolute;
   top: 0;

@@ -6,7 +6,7 @@ var searchForm = (function () {
 				_searchField = document.querySelector('main #place'),
 				_searchQuery = "";
 						
-			console.log(_searchField);
+			// console.log(_searchField);
 
 			_searchForm.onsubmit = function (event) { // listens to the onsubmit function of the form
 				event.preventDefault(); // dont let it do its usual thing bit instead: 

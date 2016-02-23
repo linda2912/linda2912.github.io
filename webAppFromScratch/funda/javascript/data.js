@@ -6,7 +6,7 @@ var getData = (function() {
 
 			// if (localStorage.collection == null) {
 				//I first looked at Maaike her code to see how she did this
-				var collection = {};
+				// var collection = {};
 
 				var urlData = {
 					baseUrl: 'http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/',
@@ -28,9 +28,21 @@ var getData = (function() {
 
 					//xhr == xml http request
 					function(data, xhr) {  
-						console.log(data);
+						
 						//load the list into data
 						var resultsData = data; 
+
+						var directives = {
+						  imageUrl: {
+						    src: function(params) {
+						      return this.FotoLarge;
+						    }
+						  }
+						};
+
+						document.querySelector('main #resultsBlock').classList.remove ("invisible");
+						console.log(resultsData.Objects);
+						Transparency.render(document.querySelector('main #results'), resultsData.Objects, directives); 
 
 						// localStorage.setItem("collection", JSON.stringify(collection)); //save the data in the local storage
 

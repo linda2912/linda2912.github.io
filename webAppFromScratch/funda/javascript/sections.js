@@ -31,7 +31,7 @@ var sections = (function() {
 			}
 		},
 
-		renderResults: function(collection) {
+		renderResults: function(urlRequest) {
 
 	    	// var srcImage = function(params) {
 	    	// 	params.element.setAttribute('src', this.imagesUrl); //add the src arttibute at imagesUrl
@@ -56,7 +56,7 @@ var sections = (function() {
 			  }
 			};
 
-	    	Transparency.render(document.getElementById('ul'), collection.Objects, directives); //render the template
+	    	Transparency.render(document.getElementById('ul'), urlRequest.Objects, directives); //render the template
 	    	sections.toggle(collection); //run sections.toggle and take collection with it
 		},
 

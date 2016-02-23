@@ -25,16 +25,15 @@
 	</head>
 
 	<body>
+
 		<header>
-			<img src="img/funda-logo.svg">
+			<a href="#">
+				<img src="img/funda-logo.svg">
+			</a>	
 		</header>
 
-		<div class="spinner invisible" >
-			<div class="double-bounce1"></div>
-			<div class="double-bounce2"></div>
-		</div>
-
 		<section id="home" class="invisible">
+
 			<div class="startScreen">
 
 				<div id="template">
@@ -51,6 +50,7 @@
 								<option value="15">+ 15 km</option>
 							</select>
 						</fieldset>
+
 						<fieldset>
 							<label for="fromBudget">van</label>
 							<select id="fromBudget">
@@ -92,18 +92,36 @@
 						
 						<h3>Waar moet jouw droomhuis aan voldoen?</h3>
 
-						<fieldset id="room" >
-							<label for="rooms">Aantal slaapkamers</label>
+						<figure class="roomButton">
+							<img src="img/rooms.png">
+							<figcaption>Slaapkamers</figcaption>
+							<img src="img/plus.png" class="roomImg">
+						</figure>
+
+						<fieldset id="roomFilter" class="invisible">
+							<p>Aantal slaapkamers</p>
+							<!-- <label for="rooms">Aantal slaapkamers</label>
 							<select id="rooms">
 								<option value="1">1 kamer</option>
 								<option value="2+">2+ kamers</option>
 								<option value="3+">3+ kamers</option>
 								<option value="4+">4+ kamers</option>
 								<option value="5+">5+ kamers</option>
-							</select>
+							</select> -->
+							<input type="radio" name="rooms" value="1" checked>1
+  							<input type="radio" name="rooms" value="2">2 +
+  							<input type="radio" name="rooms" value="3">3 +
+  							<input type="radio" name="rooms" value="3">4 +
+  							<input type="radio" name="rooms" value="3">5 +
 						</fieldset>
 
-						<fieldset id="area" >
+						<figure class="areaButton">
+							<img src="img/area.png">
+							<figcaption>Woonoppervlakte</figcaption>
+							<img src="img/plus.png" class="areaImg">
+						</figure>
+
+						<fieldset id="areaFilter" class="invisible">
 							<label for="livingArea">Woonoppervlakte</label>
 							<select id="livingArea">
 								<option value="50">50+ m²</option>
@@ -114,13 +132,18 @@
 							</select>
 						</fieldset>
 
-						<fieldset id="outside" >
+						<figure class="oustsideButton">
+							<img src="img/tree.png">
+							<figcaption>Buitenruimte</figcaption>
+							<img src="img/plus.png" class="outsideImg">
+						</figure>
+
+						<fieldset id="outsideFilter" class="invisible">
 							<label for="outsideArea">Buitenruimte</label>
 							<select id="outsideArea">
 								<option value="Balkon">Balkon</option>
 								<option value="Dakterras">Dakterras</option>
 								<option value="Tuin">Tuin</option>
-								
 							</select>
 							<label for="plot">Perceeloppervlakte</label>
 							<select id="plot">
@@ -132,52 +155,42 @@
 							</select>
 						</fieldset>
 
-						<div class="filter">
-							<figure class="rooms">
-								<img src="img/rooms.png">
-								<figcaption>Slaapkamers</figcaption>
-							</figure>
-
-							<figure class="area">
-								<img src="img/area.png">
-								<figcaption>Woonoppervlakte</figcaption>
-							</figure>
-							
-							<figure class="tree">
-								<img src="img/tree.png">
-								<figcaption>Buitenruimte</figcaption>
-							</figure>
-							
-							
-						</div>
-
+			
 						<button type="submit" id="searchGo">Search</button>
 					</form>
-
-
 				</div>
 				
-			</div>
+				<article id="resultsBlock" class="invisible">
+					
+						<h3>Resultaten</h3>	
+
+						<div class="spinner invisible" >
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						<div id="results">		
+							<p data-bind="Adres"></p>
+							<p data-bind="Woonplaats"></p>
+							<img data-bind="imageUrl">
+						</div>	
+<!-- 						
+						<div id="images">
+							<div id="ul">
+								<div class="item">
+									<div class="itemBox">
+										<a data-bind="link" >
+											<p data-bind="Adres"></p>
+											<img data-bind="imageUrl">
+										</a>
+									</div>
+								</div>
+							</div> -->
+					
+				</article>
+				
+			</div>	
 		</section>
 		
-		<section id="results" class="invisible">
-			<div class="art">
-				<h3>Resultaten</h3>				
-				
-				<div id="images">
-					<div id="ul">
-						<div class="item">
-							<div class="itemBox">
-								<a data-bind="link" >
-									<p data-bind="Adres"></p>
-									<img data-bind="imageUrl">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 
 		<section id="info" class="invisible">
 			<div class="info" id="moreInfo">

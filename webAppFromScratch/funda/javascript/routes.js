@@ -2,7 +2,7 @@ var route = (function() {
 
 	return {
 	
-		routes: function (collection) { 
+		routes: function () { 
 
 			routie({
 
@@ -13,14 +13,18 @@ var route = (function() {
 			    	};
 
 			    	sections.toggle(data); // run sections.toggle
-			    	//filter.search();
+			    	filter.search("main .roomButton", "main #roomFilter", "main .roomImg");
+			    	filter.search("main .areaButton", "main #areaFilter", "main .areaImg");
+			    	filter.search("main .oustsideButton", "main #outsideFilter", "main .outsideImg");
 			    	searchForm.listner();
+			    	// sections.renderResults(urlRequest);
 			    	gestures.home(); // run the gesture home
+
 			    },
 			   
 			    'results': function() { // when the hash changes to #art do this
 			    	
-			    	sections.renderResults(collection); //run renderArt in sections
+			    	sections.renderResults(urlRequest); //run renderArt in sections
 			    	gestures.resultPage(); //run art in gestures
 
 			    },
