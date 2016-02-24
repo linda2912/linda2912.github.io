@@ -16,6 +16,7 @@ var route = (function() {
 			    	filter.search("main .roomButton", "main #roomFilter", "main .roomImg");
 			    	filter.search("main .areaButton", "main #areaFilter", "main .areaImg");
 			    	filter.search("main .oustsideButton", "main #outsideFilter", "main .outsideImg");
+			    	
 			    	searchForm.listner();
 			    	// sections.renderResults(urlRequest);
 			    	gestures.home(); // run the gesture home

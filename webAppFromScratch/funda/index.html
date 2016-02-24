@@ -39,9 +39,10 @@
 				<div id="template">
 					<span data-bind="greeting">You don't have javascript enabled</span>
 					<form>
+
 						<fieldset class="placeDistanceBlock">
 							<input placeholder="Plaats" id="place" type="text">
-							<div class="dropdown">
+							<div class="dropdownDistance">
 								<select name="km" class="distance">
 									<option value="0">+ 0 km</option>
 									<option value="1">+ 1 km</option>
@@ -50,12 +51,12 @@
 									<option value="10">+ 10 km</option>
 									<option value="15">+ 15 km</option>
 								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
-							
 						</fieldset>
 
 						<fieldset class="budgetBlock">
-							<div class="dropdownBudget">
+							<div class="dropdownAll">
 								<label for="fromBudget">van</label>
 								<select id="fromBudget">
 									<option value="50.000">€ 50.000</option>
@@ -74,8 +75,9 @@
 									<option value="500.000">€ 500.000</option>
 									<option value="+600.000">+ € 600.000</option>
 								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
-							<div class="dropdownBudget">
+							<div class="dropdownAll">
 								<label for="tillBudget">tot</label>
 								<select id="tillBudget">
 									
@@ -94,64 +96,73 @@
 									<option value="500.000">€ 500.000</option>
 									<option value="+600.000">+ € 600.000</option>
 								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
 						</fieldset>
 						
 						<h3>Gericht zoeken?</h3>
 
 						<figure class="roomButton">
-							<img src="img/rooms.png">
-							<figcaption>Slaapkamers</figcaption>
-							<img src="img/plus.png" class="roomImg">
+							<img src="img/room.svg">
+							<figcaption>Kamers</figcaption>
+							<img src="img/plus.svg" class="roomImg">
 						</figure>
 
 						<fieldset id="roomFilter" class="invisible">
-							<p>Aantal slaapkamers</p>
-							
-  							<div id="checkboxes">
-							  	<div class="checkboxgroup">
-							    	<label for="my_radio_button_id1">1</label>
-							    	<input type="radio" name="radio" id="my_radio_button_id1" value="1" />
-							  	</div>
-
-							 	<div class="checkboxgroup">
-								    <label for="my_radio_button_id2">2 +</label>
-								    <input type="radio" name="radio" id="my_radio_button_id2" value="2" />
-								</div>
-
-								<div class="checkboxgroup">
-								    <label for="my_radio_button_id3">3 +</label>
-								    <input type="radio" name="radio" id="my_radio_button_id3" value="3" />
-								</div>
-
-								<div class="checkboxgroup">
-								    <label for="my_radio_button_id3">4 +</label>
-								    <input type="radio" name="radio" id="my_radio_button_id4" value="3" />
-								</div>
-
-								<div class="checkboxgroup">
-								    <label for="my_radio_button_id3">5 +</label>
-								    <input type="radio" name="radio" id="my_radio_button_id5" value="3" />
-								</div>
-
+							<div class="dropdownAll">
+								<label for="livingArea">Kamer(s)</label>
+								<select id="livingArea">
+									<option value="1">1</option>
+									<option value="2">2 +</option>
+									<option value="3">3 +</option>
+									<option value="4">4 +</option>
+									<option value="5">5 +</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+							<div class="dropdownAll">
+								<label for="livingArea">Slaapkamer(s)</label>
+								<select id="livingArea">
+									<option value="1">1</option>
+									<option value="2">2 +</option>
+									<option value="3">3 +</option>
+									<option value="4">4 +</option>
+									<option value="5">5 +</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
 						</fieldset>
 
 						<figure class="areaButton">
-							<img src="img/area.png">
-							<figcaption>Woonoppervlakte</figcaption>
+							<img src="img/perceel.svg">
+							<figcaption>Oppervlakte</figcaption>
 							<img src="img/plus.png" class="areaImg">
 						</figure>
 
 						<fieldset id="areaFilter" class="invisible">
-							<label for="livingArea">Woonoppervlakte</label>
-							<select id="livingArea">
-								<option value="50">50+ m²</option>
-								<option value="50">75+ m²</option>
-								<option value="50">100+ m²</option>
-								<option value="50">150+ m²</option>
-								<option value="50">250+ m²</option>
-							</select>
+							<div class="dropdownAll">
+								<label for="livingArea">Woonoppervlakte</label>
+								<select id="livingArea">
+									<option value="50">50+ m²</option>
+									<option value="50">75+ m²</option>
+									<option value="50">100+ m²</option>
+									<option value="50">150+ m²</option>
+									<option value="50">250+ m²</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+
+							<div class="dropdownAll">
+								<label for="livingArea">Perceeloppervlakte</label>
+								<select id="livingArea">
+									<option value="50">250+ m²</option>
+									<option value="50">500+ m²</option>
+									<option value="50">1000+ m²</option>
+									<option value="50">2500+ m²</option>
+									<option value="50">5000+ m²</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
 						</fieldset>
 
 						<figure class="oustsideButton">
@@ -161,21 +172,20 @@
 						</figure>
 
 						<fieldset id="outsideFilter" class="invisible">
-							<label for="outsideArea">Buitenruimte</label>
-							<select id="outsideArea">
-								<option value="Balkon">Balkon</option>
-								<option value="Dakterras">Dakterras</option>
-								<option value="Tuin">Tuin</option>
-							</select>
-							<label for="plot">Perceeloppervlakte</label>
-							<select id="plot">
-								<option value="50">250+ m²</option>
-								<option value="50">500+ m²</option>
-								<option value="50">1000+ m²</option>
-								<option value="50">2500+ m²</option>
-								<option value="50">5000+ m²</option>
-							</select>
+							<div class="dropdownAll">
+								<label for="outsideArea">Buitenruimte</label>
+								<select id="outsideArea">
+									<option value="Balkon">Balkon</option>
+									<option value="Dakterras">Dakterras</option>
+									<option value="Tuin">Tuin</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+
+							
 						</fieldset>
+
+
 
 			
 						<button type="submit" id="searchGo">Search</button>
@@ -195,13 +205,13 @@
 							<img data-bind="imageUrl">
 
 							<div class="properties">
-								<img src="img/area.png">
+								<img src="img/area.svg">
 								<p data-bind="Woonoppervlakte"></p> 
 								<!-- <p class="slash"> / </p> -->
-								<img src="img/perceel.png">
+								<img src="img/perceel.svg">
 								<p data-bind="Perceeloppervlakte"></p>
 								<!-- <p class="separation">•</p> -->
-								<img src="img/room.png">
+								<img src="img/room.svg">
 								<p data-bind="AantalKamers"></p>
 								
 							</div>
@@ -221,18 +231,6 @@
 
 							
 						</div>	
-<!-- 						
-						<div id="images">
-							<div id="ul">
-								<div class="item">
-									<div class="itemBox">
-										<a data-bind="link" >
-											<p data-bind="Adres"></p>
-											<img data-bind="imageUrl">
-										</a>
-									</div>
-								</div>
-							</div> -->
 					
 				</article>
 				

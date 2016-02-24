@@ -44,7 +44,18 @@ header{
 	background-color: #F8B000;
 	padding: 1em;
 	color: white;
-	
+	animation: slideTop 1s ease;
+}
+@keyframes slideTop{
+	0% {
+		opacity: 0;
+		transform: translateY(100vh);
+		position: 
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 fieldset{
@@ -53,56 +64,88 @@ fieldset{
 
 /*placeDistanceBlock*/
 
+
 #place{
-	width: 60vw;
+	width: 65vw;
 	font-size: 1em;
-	padding: .67em;
+	padding: .8em;
 	margin: .5em .1em .5em 0;
 	border: none;
 	display: inline-block;
 	font-weight: 300;
 	color: #3888C5;
 
+
+}
+.dropdownImg{
+	width: .8em;
+	margin-left: -.7em;
+	order: 10;
+	
 }
 .distance{
 	padding: 1em 0;
 	border: 1px solid white;
 	cursor: pointer;
 	background-color: white;
-	padding: .5em;
+	padding: .7em 1em .7em .3em;
+	appearance: none;
+	-webkit-appearance: none;
 }
-.dropdown{
+.dropdownDistance{
 	background-color: white;
-	padding: .5em 0;
 	cursor: pointer;
-	width: 30vw;
+	width: 25vw;
 	display: inline-block;
+
 }
 
-.dropdownBudget{
+.dropdownAll{
 	background-color: white;
-	padding: .5em 0;
+	padding: .1em 0;
 	cursor: pointer;
 	width: 45vw;
 	margin: .3em 0;
 	display: inline-block;
 }
-.dropdownBudget:first-of-type{
+
+.dropdownAll:first-of-type{
 	margin-right: .1em;
 }
-.dropdownBudget label{
+.dropdownAll label{
 	color: #3888C5;
+
 }
 
-#fromBudget, #tillBudget{
-	
+#fromBudget, #tillBudget, #livingArea, #outsideArea{
 	margin-left: .3em;
 	border: 1px solid white;
 	background-color: white;
-
+	appearance: none;
+	-webkit-appearance: none;
+	padding: .7em 2em .7em 0;
+	
 }
-[for="fromBudget"], [for="tillBudget"]{
+#roomFilter, #areaFilter, #outsideFilter{
+	animation: slideLeft 1s ease;
+}
+@keyframes slideLeft{
+	0% {
+		transform: translateX(100vw);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+[for="fromBudget"], [for="tillBudget"], [for="livingArea"], [for="outsideArea"]{
 	margin-left: .5em;
+}
+#livingArea{
+	padding: .7em 1em .7em 0;
+}
+#outsideFilter .dropdownAll, #areaFilter .dropdownAll{
+	width: 100%;
 }
 select{
 	font-size: 1em;
@@ -116,12 +159,13 @@ form > h3{
 }
 
 button{
-	width: 90vw;
+	width: 100%;
 	font-size: 1.5em;
 	padding: .7em;
 	border: none;
 	background-color: #3888C5;
 	color: white; 
+	margin-top: 1em;
 }
 
 
@@ -158,17 +202,6 @@ figure img{
 	margin: .3em 1em;
 	font-size: 1.5em;
 }
-.checkboxgroup {
-  display: inline-block;
-  text-align: center;
-}
-.checkboxgroup label {
-  display: block;
-}
-#checkboxes{
-	margin-top: 1em;
-}
-
 
 /*Results*/
 #resultsBlock{
