@@ -13,6 +13,11 @@ var filter = (function() {
 			}
 
 			
+		},
+		up: function() {
+			document.querySelector("main .up").onclick = function() {
+				window.scrollTo(0, -500);
+			}
 		}
 
 	}

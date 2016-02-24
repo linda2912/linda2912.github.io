@@ -50,6 +50,7 @@ var getData = (function() {
 
 						// route.routes(resultsData); //run app.routes and take collection with it
 						loader.toggle(); // when the data is complete, disactivate the loader
+						
 						window.scrollTo(0, 500);
 					},
 
