@@ -50,14 +50,63 @@ header{
 fieldset{
 	border: none;
 }
+
+/*placeDistanceBlock*/
+
 #place{
 	width: 60vw;
 	font-size: 1em;
+	padding: .67em;
+	margin: .5em .1em .5em 0;
+	border: none;
+	display: inline-block;
+	font-weight: 300;
+	color: #3888C5;
+
+}
+.distance{
+	padding: 1em 0;
+	border: 1px solid white;
+	cursor: pointer;
+	background-color: white;
 	padding: .5em;
-	margin: .5em .5em .5em 0;
+}
+.dropdown{
+	background-color: white;
+	padding: .5em 0;
+	cursor: pointer;
+	width: 30vw;
+	display: inline-block;
+}
+
+.dropdownBudget{
+	background-color: white;
+	padding: .5em 0;
+	cursor: pointer;
+	width: 45vw;
+	margin: .3em 0;
+	display: inline-block;
+}
+.dropdownBudget:first-of-type{
+	margin-right: .1em;
+}
+.dropdownBudget label{
+	color: #3888C5;
+}
+
+#fromBudget, #tillBudget{
+	
+	margin-left: .3em;
+	border: 1px solid white;
+	background-color: white;
+
+}
+[for="fromBudget"], [for="tillBudget"]{
+	margin-left: .5em;
 }
 select{
 	font-size: 1em;
+	cursor: pointer;
 }
 option{
 	font-size: 2em;
@@ -65,14 +114,7 @@ option{
 form > h3{
 	margin: 1em 0;
 }
-#fromBudget, #tillBudget{
-	width: 34.8vw;
-	margin-left: .3em;
 
-}
-[for="fromBudget"], [for="tillBudget"]{
-	margin-left: .5em;
-}
 button{
 	width: 90vw;
 	font-size: 1.5em;
@@ -90,6 +132,7 @@ figure{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
 }
 
 figure:hover{
@@ -125,6 +168,7 @@ figure img{
 #checkboxes{
 	margin-top: 1em;
 }
+
 
 /*Results*/
 #resultsBlock{
@@ -181,15 +225,17 @@ figure img{
 	background-color: #E8A000;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	padding: 1em;
 	color: white;
 	margin-top: -.4em;
 	margin-bottom: 1em;
 }
 .properties img{
-	max-width: 1.5em;
-	height: 1.5em;
+	max-width: 2em;
+	height: 2em;
 	margin-right: -1em;
+
 }
 
 .separation{

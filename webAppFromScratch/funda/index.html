@@ -39,55 +39,62 @@
 				<div id="template">
 					<span data-bind="greeting">You don't have javascript enabled</span>
 					<form>
-						<fieldset>
+						<fieldset class="placeDistanceBlock">
 							<input placeholder="Plaats" id="place" type="text">
-							<select name="km">
-								<option value="0">+ 0 km</option>
-								<option value="1">+ 1 km</option>
-								<option value="2">+ 2 km</option>
-								<option value="5">+ 5 km</option>
-								<option value="10">+ 10 km</option>
-								<option value="15">+ 15 km</option>
-							</select>
+							<div class="dropdown">
+								<select name="km" class="distance">
+									<option value="0">+ 0 km</option>
+									<option value="1">+ 1 km</option>
+									<option value="2">+ 2 km</option>
+									<option value="5">+ 5 km</option>
+									<option value="10">+ 10 km</option>
+									<option value="15">+ 15 km</option>
+								</select>
+							</div>
+							
 						</fieldset>
 
-						<fieldset>
-							<label for="fromBudget">van</label>
-							<select id="fromBudget">
-								<option value="50.000">€ 50.000</option>
-								<option value="75.000">€ 75.000</option>
-								<option value="100.000">€ 100.000</option>
-								<option value="125.000">€ 125.000</option>
-								<option value="250.000">€ 150.000</option>
-								<option value="175.000">€ 175.000</option>
-								<option value="200.000">€ 200.000</option>
-								<option value="225.000">€ 225.000</option>
-								<option value="250.000">€ 250.000</option>
-								<option value="275.000">€ 275.000</option>
-								<option value="300.000">€ 300.000</option>
-								<option value="350.000">€ 350.000</option>
-								<option value="400.000">€ 400.000</option>
-								<option value="500.000">€ 500.000</option>
-								<option value="+600.000">+ € 600.000</option>
-							</select>
-							<label for="tillBudget">tot</label>
-							<select id="tillBudget">
-								
-								<option value="75.000">€ 75.000</option>
-								<option value="100.000">€ 100.000</option>
-								<option value="125.000">€ 125.000</option>
-								<option value="250.000">€ 150.000</option>
-								<option value="175.000">€ 175.000</option>
-								<option value="200.000">€ 200.000</option>
-								<option value="225.000">€ 225.000</option>
-								<option value="250.000">€ 250.000</option>
-								<option value="275.000">€ 275.000</option>
-								<option value="300.000">€ 300.000</option>
-								<option value="350.000">€ 350.000</option>
-								<option value="400.000">€ 400.000</option>
-								<option value="500.000">€ 500.000</option>
-								<option value="+600.000">+ € 600.000</option>
-							</select>
+						<fieldset class="budgetBlock">
+							<div class="dropdownBudget">
+								<label for="fromBudget">van</label>
+								<select id="fromBudget">
+									<option value="50.000">€ 50.000</option>
+									<option value="75.000">€ 75.000</option>
+									<option value="100.000">€ 100.000</option>
+									<option value="125.000">€ 125.000</option>
+									<option value="250.000">€ 150.000</option>
+									<option value="175.000">€ 175.000</option>
+									<option value="200.000">€ 200.000</option>
+									<option value="225.000">€ 225.000</option>
+									<option value="250.000">€ 250.000</option>
+									<option value="275.000">€ 275.000</option>
+									<option value="300.000">€ 300.000</option>
+									<option value="350.000">€ 350.000</option>
+									<option value="400.000">€ 400.000</option>
+									<option value="500.000">€ 500.000</option>
+									<option value="+600.000">+ € 600.000</option>
+								</select>
+							</div>
+							<div class="dropdownBudget">
+								<label for="tillBudget">tot</label>
+								<select id="tillBudget">
+									
+									<option value="75.000">€ 75.000</option>
+									<option value="100.000">€ 100.000</option>
+									<option value="125.000">€ 125.000</option>
+									<option value="250.000">€ 150.000</option>
+									<option value="175.000">€ 175.000</option>
+									<option value="200.000">€ 200.000</option>
+									<option value="225.000">€ 225.000</option>
+									<option value="250.000">€ 250.000</option>
+									<option value="275.000">€ 275.000</option>
+									<option value="300.000">€ 300.000</option>
+									<option value="350.000">€ 350.000</option>
+									<option value="400.000">€ 400.000</option>
+									<option value="500.000">€ 500.000</option>
+									<option value="+600.000">+ € 600.000</option>
+								</select>
+							</div>
 						</fieldset>
 						
 						<h3>Gericht zoeken?</h3>
@@ -194,7 +201,7 @@
 								<img src="img/perceel.png">
 								<p data-bind="Perceeloppervlakte"></p>
 								<!-- <p class="separation">•</p> -->
-								<img src="img/rooms.png">
+								<img src="img/room.png">
 								<p data-bind="AantalKamers"></p>
 								
 							</div>
