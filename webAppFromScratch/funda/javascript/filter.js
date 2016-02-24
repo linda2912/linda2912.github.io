@@ -8,10 +8,14 @@ var filter = (function() {
 			document.querySelector(button).onclick = function() {
 				document.querySelector(input).classList.toggle('invisible')
 				document.querySelector(img).classList.toggle('turn')
+				document.querySelector(button).classList.toggle('bold')
+
 			}
+
 			
+		}
+
 	}
-}
 
 	
 }());

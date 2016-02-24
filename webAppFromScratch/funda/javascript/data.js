@@ -24,6 +24,8 @@ var getData = (function() {
 				var urlRequest = urlData.request();
 				loader.toggle();
 
+				
+
 				urlRequest.then( //if the request have success, this happens
 
 					//xhr == xml http request
@@ -48,6 +50,7 @@ var getData = (function() {
 
 						// route.routes(resultsData); //run app.routes and take collection with it
 						loader.toggle(); // when the data is complete, disactivate the loader
+						window.scrollTo(0, 500);
 					},
 
 					function(data, xhr) {

@@ -18,7 +18,7 @@ header img{
 	padding: .3em;
 }
 header{
-	background-color: #F8B000;
+	background-color: #E7F1F5;
 	border-bottom: 2px solid #6EC8E5;
 	position: fixed;
 	width: 100vw;
@@ -35,7 +35,7 @@ header{
 }
 .startScreen{
 	background-color: #fff;
-	padding-top: 4em;
+	padding-top: 2.7em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -68,7 +68,7 @@ fieldset{
 #place{
 	width: 65vw;
 	font-size: 1em;
-	padding: .8em;
+	padding: .9em;
 	margin: .5em .1em .5em 0;
 	border: none;
 	display: inline-block;
@@ -97,7 +97,7 @@ fieldset{
 	cursor: pointer;
 	width: 25vw;
 	display: inline-block;
-
+	padding: .1em 0;
 }
 
 .dropdownAll{
@@ -124,6 +124,7 @@ fieldset{
 	appearance: none;
 	-webkit-appearance: none;
 	padding: .7em 2em .7em 0;
+	cursor: pointer;
 	
 }
 #roomFilter, #areaFilter, #outsideFilter{
@@ -160,28 +161,38 @@ form > h3{
 
 button{
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	padding: .7em;
 	border: none;
 	background-color: #3888C5;
 	color: white; 
-	margin-top: 1em;
+	margin-top: .5em;
+	cursor: pointer;
+}
+button:hover{
+	background-color: #317FAF;
 }
 
 
 figure{
 	background-color: #E8A000;
 	font-size: 1em;
-	margin: 1em 0;
+	margin: .8em 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	cursor: pointer;
 }
-
-figure:hover{
-	background-color: #3888C5;
+.bold{
+	font-weight: 700;
+	padding: .7em 0;
+	transition: .5s all ease;
+	
 }
+figure:hover{
+	background-color: rgba(250,250,250,.2);
+}
+
 figure img{
 	width: 2.5em;
 	height: 2.5em;
@@ -204,6 +215,7 @@ figure img{
 }
 
 /*Results*/
+
 #resultsBlock{
 	width: 100vw;
 	padding: 1em;
