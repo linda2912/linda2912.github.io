@@ -72,8 +72,7 @@ fieldset{
 #place{
 	width: 100%;
 	font-size: 1em;
-	padding: .86em 0 .86em .5em;
-	/*margin: .5em 0 .5em 0;*/
+	padding: .86em 0 .82em .5em;
 	border: none;
 	display: inline-block;
 	font-weight: 300;
@@ -81,13 +80,12 @@ fieldset{
 }
 .search{
 	background-color: white;
-	/*padding: .1em 0;*/
 	cursor: pointer;
 	width: 65%;
 	margin: .5em 0 .5em 0;
-	/*margin: .3em 0;*/
 	display: inline-block;
 	box-sizing: content-box;
+	padding-bottom: .04em;
 }
 
 .dropdownImg{
