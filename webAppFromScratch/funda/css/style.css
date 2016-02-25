@@ -33,6 +33,7 @@ header{
 [data-bind="greeting"]{
 	font-size: 1.2em;
 	margin: .5em 0;
+	padding-bottom: .5em;
 	color: white;
 	font-weight: 600;
 }
@@ -82,7 +83,7 @@ fieldset{
 	background-color: white;
 	cursor: pointer;
 	width: 63.8%;
-	margin: .5em 0 .5em 0;
+	margin: .7em 0 .5em 0;
 	display: inline-block;
 	box-sizing: content-box;
 	border: 1px solid white;
@@ -113,7 +114,7 @@ fieldset{
 	float: right;
 	display: inline-block;
 	padding: .1em 0;
-	margin-top: .45em;
+	margin-top: .7em;
 }
 
 .dropdownAll{
