@@ -8,6 +8,9 @@
 .invisible {
 	display: none;
 }
+.background {
+	background-color: rgba(250,250,250,.2);
+}
 
 /*header*/
 
@@ -67,14 +70,24 @@ fieldset{
 
 
 #place{
-	width: 65%;
+	width: 100%;
 	font-size: 1em;
 	padding: .86em 0 .86em .5em;
-	margin: .5em 0 .5em 0;
+	/*margin: .5em 0 .5em 0;*/
 	border: none;
 	display: inline-block;
 	font-weight: 300;
 	color: #3888C5;
+}
+.search{
+	background-color: white;
+	/*padding: .1em 0;*/
+	cursor: pointer;
+	width: 65%;
+	margin: .5em 0 .5em 0;
+	/*margin: .3em 0;*/
+	display: inline-block;
+	box-sizing: content-box;
 }
 
 .dropdownImg{
@@ -90,7 +103,7 @@ fieldset{
 	border: 1px solid white;
 	cursor: pointer;
 	background-color: white;
-	padding: .7em 0em .7em .3em;
+	padding: .7em .4em .7em .5em;
 	appearance: none;
 	-webkit-appearance: none;
 }
@@ -114,6 +127,7 @@ fieldset{
 	display: inline-block;
 	box-sizing: content-box;
 }
+
 .budgetBlock .dropdownAll:last-of-type{
 	float: right;
 }
