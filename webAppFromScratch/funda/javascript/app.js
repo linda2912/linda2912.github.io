@@ -6,9 +6,9 @@
 		
 		init: function() { 
 
-			// getData.dataRequest(); // run the function dataRequest in getData
-			route.routes();
-			//loader.toggle(); // activate the loader
+			route.routes(); //run route.routes
+			//searchForm.urlListner();
+
 		}
 	};
 

@@ -42,17 +42,17 @@
 
 						<fieldset class="placeDistanceBlock">
 							<div class="search">
-								<input placeholder="Plaats" id="place" type="text">
+								<input placeholder="Plaats" id="place" type="text" name="place"> 
 							</div>
 							
 							<div class="dropdownDistance">
-								<select name="km" class="distance">
-									<option value="0">+ 0 km</option>
-									<option value="1">+ 1 km</option>
-									<option value="2">+ 2 km</option>
-									<option value="5">+ 5 km</option>
-									<option value="10">+ 10 km</option>
-									<option value="15">+ 15 km</option>
+								<select name="km" class="distance" name="distance">
+									<option value="0" selected>+ 0 km</option>
+									<option value="+1">+ 1 km</option>
+									<option value="+2">+ 2 km</option>
+									<option value="+5">+ 5 km</option>
+									<option value="+10">+ 10 km</option>
+									<option value="+15">+ 15 km</option>
 								</select>
 								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
@@ -61,49 +61,50 @@
 						<fieldset class="budgetBlock">
 							<div class="dropdownAll">
 								<label for="fromBudget">van</label>
-								<select id="fromBudget">
-									<option value="50.000">€ 50.000</option>
-									<option value="75.000">€ 75.000</option>
-									<option value="100.000">€ 100.000</option>
-									<option value="125.000">€ 125.000</option>
-									<option value="250.000">€ 150.000</option>
-									<option value="175.000">€ 175.000</option>
-									<option value="200.000">€ 200.000</option>
-									<option value="225.000">€ 225.000</option>
-									<option value="250.000">€ 250.000</option>
-									<option value="275.000">€ 275.000</option>
-									<option value="300.000">€ 300.000</option>
-									<option value="350.000">€ 350.000</option>
-									<option value="400.000">€ 400.000</option>
-									<option value="500.000">€ 500.000</option>
-									<option value="+600.000">+ € 600.000</option>
+								<select id="fromBudget" name="priceMin">
+									<option value="50000" selected>€ 50.000</option>
+									<option value="75000">€ 75.000</option>
+									<option value="100000">€ 100.000</option>
+									<option value="125000">€ 125.000</option>
+									<option value="250000">€ 150.000</option>
+									<option value="175000">€ 175.000</option>
+									<option value="200000">€ 200.000</option>
+									<option value="225000">€ 225.000</option>
+									<option value="250000">€ 250.000</option>
+									<option value="275000">€ 275.000</option>
+									<option value="300000">€ 300.000</option>
+									<option value="350000">€ 350.000</option>
+									<option value="400000">€ 400.000</option>
+									<option value="500000">€ 500.000</option>
+									<option value="+600000">+ € 600.000</option>
 								</select>
 								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
 							<div class="dropdownAll">
 								<label for="tillBudget">tot</label>
-								<select id="tillBudget">
+								<select id="tillBudget" name="priceMax">
 									
-									<option value="75.000">€ 75.000</option>
-									<option value="100.000">€ 100.000</option>
-									<option value="125.000">€ 125.000</option>
-									<option value="250.000">€ 150.000</option>
-									<option value="175.000">€ 175.000</option>
-									<option value="200.000">€ 200.000</option>
-									<option value="225.000">€ 225.000</option>
-									<option value="250.000">€ 250.000</option>
-									<option value="275.000">€ 275.000</option>
-									<option value="300.000">€ 300.000</option>
-									<option value="350.000">€ 350.000</option>
-									<option value="400.000">€ 400.000</option>
-									<option value="500.000">€ 500.000</option>
-									<option value="+600.000">+ € 600.000</option>
+									<option value="75000" selected>€ 75.000</option>
+									<option value="100000">€ 100.000</option>
+									<option value="125000">€ 125.000</option>
+									<option value="250000">€ 150.000</option>
+									<option value="175000">€ 175.000</option>
+									<option value="200000">€ 200.000</option>
+									<option value="225000">€ 225.000</option>
+									<option value="250000">€ 250.000</option>
+									<option value="275000">€ 275.000</option>
+									<option value="300000">€ 300.000</option>
+									<option value="350000">€ 350.000</option>
+									<option value="400000">€ 400.000</option>
+									<option value="500000">€ 500.000</option>
+									<option value="+600000">+ € 600.000</option>
 								</select>
 								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
 						</fieldset>
 						
 						<h3>Gericht zoeken?</h3>
+
 						<div class="specific">
 
 							<figure class="roomButton">
@@ -115,23 +116,23 @@
 							<fieldset id="roomFilter" class="invisible">
 								<div class="dropdownAll">
 									<label for="rooms">Kamer(s)</label>
-									<select id="rooms" class="roomSelect">
-										<option value="1">1</option>
-										<option value="2">2 +</option>
-										<option value="3">3 +</option>
-										<option value="4">4 +</option>
-										<option value="5">5 +</option>
+									<select id="rooms" class="roomSelect" name="rooms">
+										<option value="1+" selected >1</option>
+										<option value="2+">2 +</option>
+										<option value="3+">3 +</option>
+										<option value="4+">4 +</option>
+										<option value="5+">5 +</option>
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
 								<div class="dropdownAll">
 									<label for="sleepingRooms">Slaapkamer(s)</label>
-									<select id="sleepingRooms">
-										<option value="1">1</option>
-										<option value="2">2 +</option>
-										<option value="3">3 +</option>
-										<option value="4">4 +</option>
-										<option value="5">5 +</option>
+									<select id="sleepingRooms" name="sleepingRooms">
+										<option value="1+" selected>1</option>
+										<option value="2+">2 +</option>
+										<option value="3+">3 +</option>
+										<option value="4+">4 +</option>
+										<option value="5+">5 +</option>
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
@@ -146,24 +147,24 @@
 							<fieldset id="areaFilter" class="invisible">
 								<div class="dropdownAll">
 									<label for="livingArea">Woonoppervlakte</label>
-									<select id="livingArea">
-										<option value="50">50+ m²</option>
-										<option value="50">75+ m²</option>
-										<option value="50">100+ m²</option>
-										<option value="50">150+ m²</option>
-										<option value="50">250+ m²</option>
+									<select id="livingArea" name="livingArea">
+										<option value="50" selected>50+ m²</option>
+										<option value="75">75+ m²</option>
+										<option value="100">100+ m²</option>
+										<option value="150">150+ m²</option>
+										<option value="250">250+ m²</option>
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
 
 								<div class="dropdownAll">
 									<label for="perceelArea">Perceeloppervlakte</label>
-									<select id="perceelArea">
-										<option value="50">250+ m²</option>
-										<option value="50">500+ m²</option>
-										<option value="50">1000+ m²</option>
-										<option value="50">2500+ m²</option>
-										<option value="50">5000+ m²</option>
+									<select id="perceelArea" name="percelArea">
+										<option value="250" selected>250+ m²</option>
+										<option value="500">500+ m²</option>
+										<option value="1000">1000+ m²</option>
+										<option value="2500">2500+ m²</option>
+										<option value="5000">5000+ m²</option>
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
@@ -178,17 +179,17 @@
 							<fieldset id="outsideFilter" class="invisible">
 								<div class="dropdownAll">
 									<label for="outsideArea">Buitenruimte</label>
-									<select id="outsideArea">
-										<option value="Balkon">Balkon</option>
-										<option value="Dakterras">Dakterras</option>
-										<option value="Tuin">Tuin</option>
+									<select id="outsideArea" name="outside">
+										<option value="balkon" selected>Balkon </option>
+										<option value="dakterras">Dakterras</option>
+										<option value="tuin">Tuin</option>
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
 							</fieldset>
 						</div>
 
-						<button type="submit" id="searchGo">Zoek</button>
+						<button role="button" type="submit" id="searchGo">Zoek</button>
 					</form>
 				</div>
 

@@ -143,7 +143,13 @@ fieldset{
 	padding-left: .5em;
 }
 
-#fromBudget, #tillBudget, #livingArea, #outsideArea, #rooms, #sleepingRooms, #perceelArea{
+#fromBudget, 
+#tillBudget, 
+#livingArea, 
+#outsideArea, 
+#rooms, 
+#sleepingRooms, 
+#perceelArea {
 	margin-left: .3em;
 	border: 1px solid white;
 	background-color: white;
@@ -181,7 +187,8 @@ fieldset{
 	padding: .7em 0em .7em 0;
 }
 
-#outsideFilter .dropdownAll, #areaFilter .dropdownAll{
+#outsideFilter .dropdownAll, 
+#areaFilter .dropdownAll{
 	width: 100%;
 }
 
@@ -323,12 +330,15 @@ figure img{
 [data-bind="Postcode"]{
 	margin: 0 .5em 1em 0;
 }
-[data-bind="Woonoppervlakte"]:after, [data-bind="Perceeloppervlakte"]:after{
+[data-bind="Woonoppervlakte"]:after, 
+[data-bind="Perceeloppervlakte"]:after{
 	content: " m²";
 }
+
 [data-bind="AantalKamers"]:after{
 	content: " kamers";
 }
+
 .properties{
 	display: flex;
 	background-color: #E8A000;
@@ -416,24 +426,30 @@ figure img{
 
 
 @media (min-width: 40em) {
-	figure{
-		width: 32%;
-	}
+
 	.specific{
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 	.specific figure{
+		width: 32%;
 		order: 1;
 	}
 	.specific fieldset{
 		order: 2;
+		width: 100%;
 	}
-	#areaFilter .dropdownAll{
-		width: 20em;
+	
+	.specific #areaFilter .dropdownAll,
+	.specific #roomFilter .dropdownAll,
+	.specific #outsideFilter .dropdownAll {
+		width: 49%;
 	}
 
+	.specific #areaFilter .dropdownAll:last-of-type{
+		float: right;
+	}
 
 }
 

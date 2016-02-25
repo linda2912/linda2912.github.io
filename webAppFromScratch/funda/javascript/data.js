@@ -4,10 +4,6 @@ var getData = (function() {
 
 		dataRequest: function(searchQuery) {
 
-			// if (localStorage.collection == null) {
-				//I first looked at Maaike her code to see how she did this
-				// var collection = {};
-
 				var urlData = {
 					baseUrl: 'http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/',
 					searchQuery: searchQuery.split(' ').join('-'),
@@ -24,10 +20,10 @@ var getData = (function() {
 				var urlRequest = urlData.request();
 				loader.toggle();
 
-				
+				console.log("test");
 
 				urlRequest.then( //if the request have success, this happens
-
+					
 					//xhr == xml http request
 					function(data, xhr) {  
 						
