@@ -25,6 +25,7 @@ header{
 	border-bottom: 2px solid #6EC8E5;
 	position: fixed;
 	width: 100vw;
+	z-index: 20;
 }
 
 /*startscreen*/
@@ -400,6 +401,7 @@ figure img{
 	box-sizing: content-box;
 	cursor: pointer;
 	animation: up 1s infinite ease-in-out;
+	margin-top: 4em;
 }
 @keyframes up{
 	0%, 100%{
@@ -481,7 +483,29 @@ figure img{
 	}
 
 }
-
+@media (min-width: 50em){
+	#template{
+		width: 20em;
+		min-height: 100vh;
+		max-height: 52em;
+	}
+	.specific figure{
+		width: 100%;
+		order: unset;
+	}
+	.specific fieldset{
+		order: unset;
+	}
+	#resultsBlock{
+		width: 60%;
+		max-width: 40em;
+	}
+	.specific #areaFilter .dropdownAll,
+	.specific #roomFilter .dropdownAll,
+	.specific #outsideFilter .dropdownAll {
+		width: 100%;
+	}
+}
 
 
 
