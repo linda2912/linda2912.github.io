@@ -38,6 +38,9 @@ var searchForm = (function () {
 			if (searchForm.answers.place === "") {
 				searchForm.answers.place = "heel-nederland" + "/";
 			}
+			if (searchForm.answers.priceMin === "") {
+				searchForm.answers.priceMin = "0";
+			}
 
 			for (var i = 0; i < fieldsets.length; i++) {
 				fieldsets[i].onchange = function (event) {
@@ -46,18 +49,21 @@ var searchForm = (function () {
 					switch (event.target.name) {
 						case "place":
 							searchForm.answers.place = event.target.value + "/";
-							if (searchForm.answers.place === "") {
-								searchForm.answers.place = "heel-nederland" + "/";
-							}
 							break;
 						case "distance":
-							searchForm.answers.distance = event.target.value + "/";
+							searchForm.answers.distance = event.target.value + "km/";
 							break;
 						case "priceMin":
-							searchForm.answers.priceMin = event.target.value + "/";
+							searchForm.answers.priceMin = event.target.value;
+							
 							break;
 						case "priceMax":
-							searchForm.answers.priceMax = event.target.value + "/";
+							if (event.target.value === "+") {
+								searchForm.answers.priceMax = event.target.value + "/";
+							}
+							else {
+								searchForm.answers.priceMax = "-" + event.target.value + "/";
+							}
 							break;
 						case "rooms":
 							searchForm.answers.rooms = event.target.value + "kamers/";
@@ -67,13 +73,12 @@ var searchForm = (function () {
 							if(searchForm.answers.sleepingRooms === undefined) {
 								searchForm.answers.sleepingRooms = "1+slaapkamers";
 							}
-							console.log(event.target.value);
 							break;
 						case "livingArea":
 							searchForm.answers.livingArea = event.target.value + "woonopp/";
 							break;
 						case "percelArea":
-							searchForm.answers.percelArea = event.target.value + "/";
+							searchForm.answers.percelArea = event.target.value + "perceelopp/";
 							break;
 						case "outside":
 							searchForm.answers.outside = event.target.value + "/";
@@ -90,6 +95,7 @@ var searchForm = (function () {
 			if(searchForm.answers.sleepingRooms === undefined) {
 				searchForm.answers.sleepingRooms = "1+slaapkamers";
 			}
+
 			var form = document.querySelector('main form');
 
 			form.onsubmit = function(event) {

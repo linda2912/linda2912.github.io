@@ -20,7 +20,7 @@ var getData = (function() {
 				var urlRequest = urlData.request();
 				loader.toggle();
 
-				console.log("test");
+				
 
 				urlRequest.then( //if the request have success, this happens
 					

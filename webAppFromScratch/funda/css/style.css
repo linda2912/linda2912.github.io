@@ -89,24 +89,6 @@ fieldset{
 	border: 1px solid white;
 }
 
-.dropdownImg{
-	width: .8em;
-	float: right;
-	padding-top: 1em;
-	margin-right: 1em;
-	box-sizing: content-box;
-}
-
-.distance{
-	padding: 1em 0;
-	border: 1px solid white;
-	cursor: pointer;
-	background-color: white;
-	padding: .7em .4em .7em .5em;
-	appearance: none;
-	-webkit-appearance: none;
-}
-
 .dropdownDistance{
 	background-color: white;
 	cursor: pointer;
@@ -115,6 +97,7 @@ fieldset{
 	display: inline-block;
 	padding: .1em 0;
 	margin-top: .7em;
+	position: relative;
 }
 
 .dropdownAll{
@@ -125,6 +108,7 @@ fieldset{
 	margin: .3em 0;
 	display: inline-block;
 	box-sizing: content-box;
+	position: relative;
 }
 
 .budgetBlock .dropdownAll:last-of-type{
@@ -140,7 +124,10 @@ fieldset{
 
 .dropdownAll label{
 	color: #3888C5;
-	padding-left: .5em;
+	padding: .7em 0 0 .7em;
+	overflow: hidden;
+    pointer-events: none;
+    position: absolute;
 }
 
 #fromBudget, 
@@ -149,14 +136,56 @@ fieldset{
 #outsideArea, 
 #rooms, 
 #sleepingRooms, 
-#perceelArea {
-	margin-left: .3em;
+#perceelArea,
+.distance {
 	border: 1px solid white;
 	background-color: white;
 	appearance: none;
 	-webkit-appearance: none;
-	padding: .7em .5em .7em 0;
-	cursor: pointer;	
+	padding: .7em 0;
+	cursor: pointer;
+	overflow: visible;
+	z-index: 1;
+	width: 100%;
+}
+#fromBudget,
+#tillBudget{
+	padding-left: 3em;
+}
+#rooms{
+	padding-left: 5.5em;
+}
+#sleepingRooms{
+	padding-left: 7.5em;
+}
+#livingArea{
+	padding-left: 10em;
+}
+#perceelArea{
+	padding-left: 10.5em;
+}
+#outsideArea{
+	padding-left: 8em;
+}
+.distance{
+	padding-left: .6em;
+}
+.dropdownImg{
+	/*position: absolute;
+	width: .8em;
+	z-index: 2;
+	box-sizing: content-box;
+	pointer-events: none;*/
+	position: absolute;
+    width: 1em;
+    height: 1em;
+    right: .6em;
+    bottom: .75em;
+    z-index: 2;
+    pointer-events: none;
+}
+.leftSelect{
+	right: 1rem;
 }
 
 #roomFilter, #areaFilter, #outsideFilter{
@@ -171,7 +200,7 @@ fieldset{
 		transform: translateX(0);
 	}
 }
-#rooms{
+/*#rooms{
 	padding: .7em 2em .7em 0;
 }
 #livingArea{
@@ -185,7 +214,7 @@ fieldset{
 }
 #sleepingRooms{
 	padding: .7em 0em .7em 0;
-}
+}*/
 
 #outsideFilter .dropdownAll, 
 #areaFilter .dropdownAll{
