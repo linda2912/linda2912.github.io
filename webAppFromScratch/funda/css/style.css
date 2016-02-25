@@ -72,7 +72,7 @@ fieldset{
 #place{
 	width: 100%;
 	font-size: 1em;
-	padding: .86em 0 .82em .5em;
+	padding: .8em 0 .8em .5em;
 	border: none;
 	display: inline-block;
 	font-weight: 300;
@@ -85,7 +85,7 @@ fieldset{
 	margin: .5em 0 .5em 0;
 	display: inline-block;
 	box-sizing: content-box;
-	padding-bottom: .04em;
+	border: 1px solid white;
 }
 
 .dropdownImg{
