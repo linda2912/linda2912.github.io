@@ -14,13 +14,14 @@
 
 /*header*/
 
-header img{
+header img {
 	width: 6em;
 	margin: 0 auto;
 	display: block;
 	padding: .3em;
+	transition: .5s ease-in-out all;
 }
-header{
+header {
 	background-color: #E7F1F5;
 	border-bottom: 2px solid #6EC8E5;
 	position: fixed;
@@ -30,29 +31,32 @@ header{
 
 /*startscreen*/
 
-
-[data-bind="greeting"]{
+[data-bind="greeting"] {
 	font-size: 1.2em;
 	margin: .5em 0;
 	padding-bottom: .5em;
 	color: white;
 	font-weight: 600;
 }
-.startScreen{
+
+.startScreen {
 	background-color: #fff;
 	padding-top: 2.65em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 #template {
 	width: 100vw;
 	background-color: #F8B000;
 	padding: 1em;
 	color: white;
 	animation: slideTop 1s ease;
+
 }
-@keyframes slideTop{
+
+@keyframes slideTop {
 	0% {
 		opacity: 0;
 		transform: translateY(100vh);
@@ -64,14 +68,13 @@ header{
 	}
 }
 
-fieldset{
+fieldset {
 	border: none;
 }
 
-/*place Distance Block*/
+/*place and Distance Block*/
 
-
-#place{
+#place {
 	width: 100%;
 	font-size: 1em;
 	padding: .82em 0 .82em .5em;
@@ -80,7 +83,8 @@ fieldset{
 	font-weight: 300;
 	color: #3888C5;
 }
-.search{
+
+.search {
 	background-color: white;
 	cursor: pointer;
 	width: 63.8%;
@@ -90,7 +94,7 @@ fieldset{
 	border: 1px solid white;
 }
 
-.dropdownDistance{
+.dropdownDistance {
 	background-color: white;
 	cursor: pointer;
 	width: 33.5%;
@@ -101,7 +105,7 @@ fieldset{
 	position: relative;
 }
 
-.dropdownAll{
+.dropdownAll {
 	background-color: white;
 	padding: .1em 0;
 	cursor: pointer;
@@ -112,18 +116,18 @@ fieldset{
 	position: relative;
 }
 
-.budgetBlock .dropdownAll:last-of-type{
+.budgetBlock .dropdownAll:last-of-type {
 	float: right;
 }
-#roomFilter .dropdownAll:last-of-type{
+#roomFilter .dropdownAll:last-of-type {
 	float: right;
 }
 
-.dropdownAll:first-of-type{
+.dropdownAll:first-of-type {
 	margin-right: 1%;
 }
 
-.dropdownAll label{
+.dropdownAll label {
 	color: #3888C5;
 	padding: .7em 0 0 .7em;
 	overflow: hidden;
@@ -143,40 +147,43 @@ fieldset{
 	background-color: white;
 	appearance: none;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 	padding: .7em 0;
 	cursor: pointer;
 	overflow: visible;
 	z-index: 1;
 	width: 100%;
 }
+
 #fromBudget,
-#tillBudget{
+#tillBudget {
 	padding-left: 3em;
 }
-#rooms{
+ #rooms {
 	padding-left: 5.5em;
 }
-#sleepingRooms{
+
+#sleepingRooms {
 	padding-left: 7.5em;
 }
-#livingArea{
+
+#livingArea {
 	padding-left: 10em;
 }
-#perceelArea{
+
+#perceelArea {
 	padding-left: 10.5em;
 }
-#outsideArea{
+
+#outsideArea {
 	padding-left: 8em;
 }
-.distance{
+
+.distance {
 	padding-left: .6em;
 }
-.dropdownImg{
-	/*position: absolute;
-	width: .8em;
-	z-index: 2;
-	box-sizing: content-box;
-	pointer-events: none;*/
+
+.dropdownImg {
 	position: absolute;
     width: 1em;
     height: 1em;
@@ -185,15 +192,16 @@ fieldset{
     z-index: 2;
     pointer-events: none;
 }
-.leftSelect{
+
+.leftSelect {
 	right: 1rem;
 }
 
-#roomFilter, #areaFilter, #outsideFilter{
+#roomFilter, #areaFilter, #outsideFilter {
 	animation: slideLeft 1s ease;
 }
 
-@keyframes slideLeft{
+@keyframes slideLeft {
 	0% {
 		transform: translateX(-100vw);
 	}
@@ -201,41 +209,26 @@ fieldset{
 		transform: translateX(0);
 	}
 }
-/*#rooms{
-	padding: .7em 2em .7em 0;
-}
-#livingArea{
-	padding: .7em 6em .7em 0;
-}
-#perceelArea{
-	padding: .7em 5em .7em 0;
-}
-#outsideArea{
-	padding: .7em 8em .7em 0;
-}
-#sleepingRooms{
-	padding: .7em 0em .7em 0;
-}*/
 
 #outsideFilter .dropdownAll, 
-#areaFilter .dropdownAll{
+#areaFilter .dropdownAll {
 	width: 100%;
 }
 
-select{
+select {
 	font-size: 1em;
 	cursor: pointer;
 }
 
-option{
-	font-size: 2em;
+option {
+	font-size: 1em;
 }
 
-form > h3{
+form > h3 {
 	margin: 1em 0;
 }
 
-button{
+button {
 	width: 100%;
 	font-size: 1.3em;
 	padding: .7em;
@@ -245,11 +238,11 @@ button{
 	margin-top: .5em;
 	cursor: pointer;
 }
-button:hover{
+button:hover {
 	background-color: #317FAF;
 }
 
-figure{
+figure {
 	background-color: #E8A000;
 	font-size: 1em;
 	margin: .8em 0;
@@ -259,16 +252,16 @@ figure{
 	cursor: pointer;
 }
 
-.bold{
+.bold {
 	font-weight: 700;
 	transition: .5s all ease;
 }
 
-figure:hover{
+figure:hover {
 	background-color: rgba(250,250,250,.2);
 }
 
-figure img{
+figure img {
 	width: 2.5em;
 	height: 2.5em;
 	padding: .5em;
@@ -276,17 +269,17 @@ figure img{
 	transition: all .3s cubic-bezier(.42,1.71,1,1);
 }
 
-.filter{
+.filter {
 	display: flex;
 	justify-content: space-between;
 }
 
-.turn{
+.turn {
 	transform: rotate(45deg);
 	transition: all .3s cubic-bezier(.42,1.71,1,1);
 }
 
-[type="radio"]{
+[type="radio"] {
 	width: .5em;
 	margin: .3em 1em;
 	font-size: 1.5em;
@@ -294,28 +287,27 @@ figure img{
 
 /*Results*/
 
-#resultsBlock{
+#resultsBlock {
 	width: 100vw;
 	padding: 1em 1em 0 1em;
 	line-height: 1.5em;
 	background-color: white;
 	
 }
-#results{
+#results {
 	animation: results .5s ease;
 }
 
-@keyframes results{
+@keyframes results {
 	0% {
-		/*opacity: 0;*/
 		transform: scale(.6);
 	}
 	100% {
-		/*opacity: 1;*/
 		transform: scale(1);
 	}
 }
-#resultsBlock h3{
+
+#resultsBlock h3 {
 	font-size: .8em;
 	font-weight: 200;
 	display: block;
@@ -324,52 +316,61 @@ figure img{
 	margin-bottom: 1em;
 }
 
-
-[data-bind="imageUrl"]{
+[data-bind="imageUrl"] {
 	width: 100%;
 	margin-top: 1.7em;
 }
-[data-bind="imageUrl"]:first-of-type{
+
+[data-bind="imageUrl"]:first-of-type {
 	margin-top: 1em;
 }
-.addressPrice{
+
+.addressPrice {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #bdc3c7;
 }
-.addressPrice:last-of-type{
+
+.addressPrice:last-of-type {
 	border-bottom: none;
 }
-[data-bind="Adres"]{
+
+[data-bind="Adres"] {
 	font-weight: 700;
 	color: #3888C5;
 }
-[data-bind="Koopprijs"]{
+
+[data-bind="Koopprijs"] {
 	font-weight: 700;
 }
-[data-bind="Koopprijs"]:before{
+
+[data-bind="Koopprijs"]:before {
 	content: "€ ";
 }
-[data-bind="Koopprijs"]:after{
+
+[data-bind="Koopprijs"]:after {
 	content: " k.k."
 }
-.address{
+
+.address {
 	display: flex;
 }
-[data-bind="Postcode"]{
+
+[data-bind="Postcode"] {
 	margin: 0 .5em 1em 0;
 }
+
 [data-bind="Woonoppervlakte"]:after, 
-[data-bind="Perceeloppervlakte"]:after{
+[data-bind="Perceeloppervlakte"]:after {
 	content: " m²";
 }
 
-[data-bind="AantalKamers"]:after{
+[data-bind="AantalKamers"]:after {
 	content: " kamers";
 }
 
-.properties{
+.properties {
 	display: flex;
 	background-color: #E8A000;
 	display: flex;
@@ -381,18 +382,18 @@ figure img{
 	margin-bottom: .7em;
 }
 
-.properties img{
+.properties img {
 	max-width: 2em;
 	height: 2em;
 	margin-right: .2em;	
 }
 
-.properties div{
+.properties div {
 	display: flex;
 	align-items: center;
 }
 
-.up{
+.up {
 	width: 2em;
 	padding: 1em;
 	margin: 0 auto;
@@ -403,15 +404,17 @@ figure img{
 	animation: up 1s infinite ease-in-out;
 	margin-top: 4em;
 }
-@keyframes up{
-	0%, 100%{
-		transform: translateY(-1em);
 
+@keyframes up {
+	0%, 100% {
+		transform: translateY(-1em);
+ 
 	}
-	50%{
+	50% {
 		transform: translateY(0);
 	}
 }
+
 /*Loader*/
 
 .spinner {
@@ -455,19 +458,20 @@ figure img{
   }
 }
 
-
 @media (min-width: 40em) {
 
-	.specific{
+	.specific {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 	}
-	.specific figure{
+	
+	.specific figure {
 		width: 32%;
 		order: 1;
 	}
-	.specific fieldset{
+	
+	.specific fieldset {
 		order: 2;
 		width: 100%;
 	}
@@ -478,33 +482,57 @@ figure img{
 		width: 49%;
 	}
 
-	.specific #areaFilter .dropdownAll:last-of-type{
+	.specific #areaFilter .dropdownAll:last-of-type {
 		float: right;
 	}
 
 }
-@media (min-width: 50em){
-	#template{
-		width: 20em;
+@media (min-width: 50em) {
+	
+	#template {
+		width: 21.5em;
 		min-height: 100vh;
 		max-height: 52em;
+		margin-top: 3em;
 	}
-	.specific figure{
+	
+	.specific figure {
 		width: 100%;
 		order: unset;
 	}
-	.specific fieldset{
+	
+	.specific fieldset {
 		order: unset;
 	}
-	#resultsBlock{
-		width: 60%;
+	
+	#resultsBlock {
+		width: 55%;
 		max-width: 40em;
+		margin-top: 2em;
 	}
+	
 	.specific #areaFilter .dropdownAll,
 	.specific #roomFilter .dropdownAll,
 	.specific #outsideFilter .dropdownAll {
 		width: 100%;
 	}
+	
+	header img {
+		padding: .8em;
+		width: 8em;
+		transition: .5s ease-in-out all;
+	}
+	
+	@keyframes slideLeft {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		
+		}
+	}
+
 }
 
 

@@ -9,21 +9,16 @@ var getData = (function() {
 					searchQuery: searchQuery.split(' ').join('-'),
 					urlOptions: '/&page=1&pagesize=25',
 					request : function() {
-						return pegasus(this.baseUrl + this.searchQuery + this.urlOptions);
+						return pegasus(this.baseUrl + this.searchQuery + this.urlOptions); //return the url
 					}
 				};
 
-				// Get the data from the api with pagasus library
-				// var collectionData = pegasus('http://funda.kyrandia.nl/feeds/Aanbod.svc/json/e2d60e885b8742d4b0648300e3703bd7/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25');
-				
-
 				var urlRequest = urlData.request();
+
 				loader.toggle();
 
-				
-
 				urlRequest.then( //if the request have success, this happens
-					
+
 					//xhr == xml http request
 					function(data, xhr) {  
 						
@@ -38,16 +33,13 @@ var getData = (function() {
 						  }
 						};
 
-						document.querySelector('main #resultsBlock').classList.remove ("invisible");
-						console.log(resultsData.Objects);
-						Transparency.render(document.querySelector('main #results'), resultsData.Objects, directives); 
+						document.querySelector('main #resultsBlock').classList.remove ("invisible"); //show the results in the homepage
 
-						// localStorage.setItem("collection", JSON.stringify(collection)); //save the data in the local storage
+						Transparency.render(document.querySelector('main #results'), resultsData.Objects, directives); //add the data into the results on the homepage
 
-						// route.routes(resultsData); //run app.routes and take collection with it
 						loader.toggle(); // when the data is complete, disactivate the loader
 						
-						window.scrollTo(0, 500);
+						window.scrollTo(0, 500); //scroll down to 500px
 					},
 
 					function(data, xhr) {
@@ -56,14 +48,6 @@ var getData = (function() {
 						console.error(data, xhr.status);
 					}		
 				);
-			// } else {
-			// 	var collection = JSON.parse(localStorage.collection);
-			// 	console.log("dit is local storage");
-			// 	route.routes(collection);
-			// 	loader.toggle();
-			// }
-			
-			
 		}
 	}
 }());

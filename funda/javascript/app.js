@@ -7,7 +7,6 @@
 		init: function() { 
 
 			route.routes(); //run route.routes
-			//searchForm.urlListner();
 
 		}
 	};

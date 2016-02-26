@@ -37,7 +37,9 @@
 			<div class="startScreen">
 
 				<div id="template">
+
 					<span data-bind="greeting">You don't have javascript enabled</span>
+					
 					<form>
 
 						<fieldset class="placeDistanceBlock">
@@ -85,10 +87,10 @@
 								</select>
 								<img src="img/dropdown.svg" class="dropdownImg">
 							</div>
+
 							<div class="dropdownAll">
 								<label for="tillBudget">tot</label>
 								<select id="tillBudget" name="priceMax">
-									
 									<option value="75000">€ 75.000</option>
 									<option value="100000">€ 100.000</option>
 									<option value="125000">€ 125.000</option>
@@ -98,7 +100,7 @@
 									<option value="225000">€ 225.000</option>
 									<option value="250000">€ 250.000</option>
 									<option value="275000">€ 275.000</option>
-									<option value="300000" >€ 300.000</option>
+									<option value="300000" selected="">€ 300.000</option>
 									<option value="350000">€ 350.000</option>
 									<option value="400000">€ 400.000</option>
 									<option value="500000">€ 500.000</option>
@@ -135,6 +137,7 @@
 									</select>
 									<img src="img/dropdown.svg" class="dropdownImg">
 								</div>
+
 								<div class="dropdownAll">
 									<label for="sleepingRooms">Slaapkamer(s)</label>
 									<select id="sleepingRooms" name="sleepingRooms">
@@ -203,8 +206,6 @@
 					</form>
 				</div>
 
-
-				
 				<article id="resultsBlock" class="invisible">
 					
 						<h3>Resultaten</h3>	
@@ -214,7 +215,8 @@
 							<div class="double-bounce2"></div>
 						</div>
 
-						<div id="results">		
+						<div id="results">
+
 							<img data-bind="imageUrl">
 
 							<div class="properties">
@@ -242,33 +244,13 @@
 								</div>
 								<p data-bind="Koopprijs"></p>
 							</div>
+
 						</div>	
+
 						<img src="img/up.svg" class="up">
-						
-
-					
+	
 				</article>
-				
 			</div>	
-		</section>
-		
-
-		<section id="info" class="invisible">
-			<div class="info" id="moreInfo">
-
-				<div class="infoBlock">
-					<a href="#art" class="back">
-						<img src="img/back.png">
-					</a>
-					<p data-bind="longTitle"></p>
-					
-				</div>
-
-				<div class="imgScroll">
-					<img data-bind="img">
-				</div>
-				
-			</div>
 		</section>
 
 		<section id="error" class='invisible'>
