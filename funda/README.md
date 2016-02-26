@@ -1,7 +1,7 @@
 # Web App From Scratch
 
-
-[week 4: Search application Funda](http://linda2912.github.io/webAppFromScratch/funda)
+###Funda
+[week 4: Quick, Hack, Prototyping](http://linda2912.github.io/funda)
 
 
 
