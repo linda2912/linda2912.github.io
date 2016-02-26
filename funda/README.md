@@ -1,6 +1,5 @@
-# Project week 1
+# Project week 1 - Funda
 
-###Funda
 [week 4: Quick, Hack, Prototyping](http://linda2912.github.io/funda)
 
 
