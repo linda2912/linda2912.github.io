@@ -11,26 +11,24 @@ The issue is
 * custom fonts are awesome and we want to use them 
 * custom fonts slow down our pages by being large additional resources.
 
+~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+
 #####Mogelijke oplossingen:
 * only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/onlyLargeScreens.png "Only for large screens")
 
 
-*Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
+* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
 
+* Tip: use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
-#####~37% of top 300K sites are using web fonts as of early 2014
+⋅⋅* Audit your font usage and keep it lean.
+⋅⋅* Make sure font resources are optimized - see Google Web Fonts tricks.
+⋅⋅* Instrument your font resources with Resource Timing: measure → optimize.
+⋅⋅* Optimize the transfer latency and time of initial fetch for each font.
+⋅⋅* Optimize your critical rendering path, eliminate unnecessary JS, etc.
+⋅⋅* Spend some time playing with the Font Load Events API.
 
-Tip: use web fonts, but audit your font usage periodically and try to keep it lean.
-
-* Audit your font usage and keep it lean.
-* Make sure font resources are optimized - see Google Web Fonts tricks.
-* Instrument your font resources with Resource Timing: measure → optimize.
-* Optimize the transfer latency and time of initial fetch for each font.
-* Optimize your critical rendering path, eliminate unnecessary JS, etc.
-* Spend some time playing with the Font Load Events API.
-
-[(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 
 
@@ -44,5 +42,5 @@ De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maak
 [http://www.innovationstudio.ninja/]
 
 
-###Muis/ Trackpad
+###2) Muis/ Trackpad
 
