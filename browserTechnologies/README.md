@@ -5,7 +5,7 @@
 ######Problemen Custom fonts
 
 "It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
-- throwaway420 [bron](https://news.ycombinator.com/item?id=7244465)
+*throwaway420* [(Bron)](https://news.ycombinator.com/item?id=7244465)
 
 The issue is 
 * custom fonts are awesome and we want to use them 
@@ -16,15 +16,15 @@ The issue is
 
 ![alt text](https://linda2912.github.io/browserTechnologies/onlyLargeScreens.png "Only for large screens")
 
-[bron](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/)
+[(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/)
 
 
 #####Mogelijke oplossing
 *Using visibility: hidden while the fonts load.
 
-![alt text](https://linda2912.github.io/browserTechnologies/visibelHidden.png "Ovisibility is hidden by onloaded fonts")
+![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
-[bron](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/)
+[(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/)
 
 #####~37% of top 300K sites are using web fonts as of early 2014
 
@@ -37,7 +37,7 @@ Tip: use web fonts, but audit your font usage periodically and try to keep it le
 * Optimize your critical rendering path, eliminate unnecessary JS, etc.
 * Spend some time playing with the Font Load Events API.
 
-[bron](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+[(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 
 
