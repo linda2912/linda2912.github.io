@@ -22,19 +22,13 @@ The issue is
 
 * Tip: use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
-⋅⋅* Audit your font usage and keep it lean.
-⋅⋅* Make sure font resources are optimized - see Google Web Fonts tricks.
-⋅⋅* Instrument your font resources with Resource Timing: measure → optimize.
-⋅⋅* Optimize the transfer latency and time of initial fetch for each font.
-⋅⋅* Optimize your critical rendering path, eliminate unnecessary JS, etc.
-⋅⋅* Spend some time playing with the Font Load Events API.
+1. Audit your font usage and keep it lean.
+2. Make sure font resources are optimized - see Google Web Fonts tricks.
+3. Instrument your font resources with Resource Timing: measure → optimize.
+4. Optimize the transfer latency and time of initial fetch for each font.
+5. Optimize your critical rendering path, eliminate unnecessary JS, etc.
+6. Spend some time playing with the Font Load Events API.
 
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
 
 
 #####Eigen ervaring
