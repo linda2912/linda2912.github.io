@@ -35,7 +35,12 @@ The issue is
 
 De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel.
 
-| ![alt text](https://linda2912.github.io/browserTechnologies/noWebFont.png "disabled webfont") | ![alt text](https://linda2912.github.io/browserTechnologies/webFont.png "abled webfont") |
+![alt text](https://linda2912.github.io/browserTechnologies/noWebFont.png "disabled webfont")
+
+![alt text](https://linda2912.github.io/browserTechnologies/webFont.png "abled webfont")
+
+#####Op deze website vallen de icons wel weg maar als je er overheen hovered is zichtbaar wat voor icoon het is.
+![alt text](https://linda2912.github.io/browserTechnologies/mouseOver.png "mouse over")
 
 [http://www.innovationstudio.ninja/]
 
