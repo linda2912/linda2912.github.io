@@ -37,8 +37,17 @@ The issue is
 
 * Op deze website vallen de icons wel weg maar als je er overheen hovered is zichtbaar wat voor icoon het is. [(Bron)](https://bootstrapbay.com/blog/built-with-bootstrap/) ![alt text](https://linda2912.github.io/browserTechnologies/img/mouseOver.png "mouse over event")
 
+#####Mogelijke oplossingen
+
+* gebruik svg's ipv webicons
+* Gebruik geen letters als benaming voor de icons maar voorzich sprekende namen zodat de gebruiks kan zien waar het op slaat.
 
 
+###2) Muis/Trackpad
 
-###2) Muis/ Trackpad
+######Websites testen zonder muis/trackpad
+* [Whatsapp](https://web.whatsapp.com/)
+ De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is.
+
+
 
