@@ -20,7 +20,7 @@ The issue is
 * Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
 
-* Tip: use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+* Use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 1. Audit your font usage and keep it lean.
 2. Make sure font resources are optimized - see Google Web Fonts tricks.
@@ -35,8 +35,7 @@ The issue is
 
 De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel.
 
-![alt text](https://linda2912.github.io/browserTechnologies/noWebFont.png "disabled webfont")
-![alt text](https://linda2912.github.io/browserTechnologies/webFont.png "abled webfont")
+| ![alt text](https://linda2912.github.io/browserTechnologies/noWebFont.png "disabled webfont") | ![alt text](https://linda2912.github.io/browserTechnologies/webFont.png "abled webfont") |
 
 [http://www.innovationstudio.ninja/]
 
