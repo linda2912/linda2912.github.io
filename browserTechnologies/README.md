@@ -12,19 +12,12 @@ The issue is
 * custom fonts slow down our pages by being large additional resources.
 
 #####Mogelijke oplossingen:
-* only loading @font-face on large screens
-
-![alt text](https://linda2912.github.io/browserTechnologies/onlyLargeScreens.png "Only for large screens")
-
-[(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/)
+* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/onlyLargeScreens.png "Only for large screens")
 
 
-#####Mogelijke oplossing
-*Using visibility: hidden while the fonts load.
+*Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
-![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
-[(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/)
 
 #####~37% of top 300K sites are using web fonts as of early 2014
 
