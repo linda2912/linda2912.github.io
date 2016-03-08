@@ -14,10 +14,10 @@ The issue is
 ~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 #####Mogelijke oplossingen:
-* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/onlyLargeScreens.png "Only for large screens")
+* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/img/onlyLargeScreens.png "Only for large screens")
 
 
-* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
+* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/img/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
 
 
 * Use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
@@ -35,12 +35,12 @@ The issue is
 
 De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel. [(Bron)](http://www.innovationstudio.ninja/)
 
-![alt text](https://linda2912.github.io/browserTechnologies/noWebFont.png "disabled webfont")
+![alt text](https://linda2912.github.io/browserTechnologies/img/noWebFont.png "disabled webfont")
 
-![alt text](https://linda2912.github.io/browserTechnologies/webFont.png "abled webfont")
+![alt text](https://linda2912.github.io/browserTechnologies/img/webFont.png "abled webfont")
 
 Op deze website vallen de icons wel weg maar als je er overheen hovered is zichtbaar wat voor icoon het is. [(Bron)](https://bootstrapbay.com/blog/built-with-bootstrap/)
-![alt text](https://linda2912.github.io/browserTechnologies/mouseOver.png "mouse over event")
+![alt text](https://linda2912.github.io/browserTechnologies/img/mouseOver.png "mouse over event")
 
 
 
