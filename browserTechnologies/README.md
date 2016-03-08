@@ -29,7 +29,12 @@ The issue is
 ⋅⋅* Optimize your critical rendering path, eliminate unnecessary JS, etc.
 ⋅⋅* Spend some time playing with the Font Load Events API.
 
-
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
 
 
 #####Eigen ervaring
