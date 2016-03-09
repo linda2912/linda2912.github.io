@@ -13,9 +13,9 @@ The issue is
 
 ~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
-##### > Mogelijke oplossingen:
-* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/img/onlyLargeScreens.png "Only for large screens")
+> Mogelijke oplossingen:
 
+* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
 
 ```bash
 @font-face {
@@ -36,8 +36,18 @@ body {
 ```
 
 
-* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/img/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
-
+* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+```bash
+<script type="text/javascript" src="http://use.typekit.com/xxxxxxx.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<style type="text/css">
+  .wf-loading .blog-title,
+  .wf-loading .post-title {
+    /* Hide the blog title and post titles while web fonts are loading */
+    visibility: hidden;
+  }
+</style>
+```
 
 * Use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
