@@ -101,12 +101,17 @@ En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's.
 
 * [Whatsapp](https://web.whatsapp.com/): De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is. Dat de focus niet zichtbaar is hebben ze gedaan door middel van de CSS styling ``` outline: none ``` waardoor en geen blauw blok om het focus punt wordt getoont.
 
-* [Gmail](https://mail.google.com): 
+* [H&M](http://www.hm.com/): alle links hebben een ``` outline: none ``` en is dus niet te gebruiken met alleen een toetsenbord.
+
+
 
 
 > Cases van mensen die echt geen muis/ trackpad kunnen gebruiken
 
 "Navigating Microsoft Windows using the keyboard for many commonly performed tasks can dramatically increase your productivity. Also, a situation may arise when the mouse stops functioning or you need to work on a computer without one." [(bron)](http://www.computerhope.com/issues/ch000791.htm)
+
+"A lot of times, outline: none is used to hide the focus rectangle on certain elements. This is bad for accessibility, as sighted keyboard users aren't able to tell which elements have focus on the page. Perhaps a rule should be to disallow outline: none under a new category of "accessibility"?" 
+"If outline: 0 or outline: none are applied within a :focus pseudo selector, it should throw a warning." [(bron)](https://github.com/CSSLint/csslint/issues/138)
 
 > Oplossingen
 
