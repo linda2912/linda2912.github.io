@@ -54,7 +54,8 @@ Voorbeeld:
 ```
 
 > Nadelen webfonts
-* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. ![webfont](/readmeImg/webfont.png) Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
+
+* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. ![webfont](/img/webfont2.png) Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
 * Opera Mini ondersteund geen iconfonts en heeft 350 miljoen+ gebruikers.
 
 voordelen Icon Fonts:
