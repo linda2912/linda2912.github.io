@@ -105,9 +105,11 @@ En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's.
 
 
 > Cases van mensen die echt geen muis/ trackpad kunnen gebruiken
+
 "Navigating Microsoft Windows using the keyboard for many commonly performed tasks can dramatically increase your productivity. Also, a situation may arise when the mouse stops functioning or you need to work on a computer without one." [(bron)](http://www.computerhope.com/issues/ch000791.htm)
 
 > Oplossingen
+
 * Zet de ``` outline ``` nooit op ``` none ``` of zorg voor een goede vervanging
 * Zorg dat alle links worden herkend als er door de pagina heen wordt getapped
 * Zorg voor een logische volgorde zodat de gebruiker eerst langs de belangrijke elementen op de pagina wordt genavigeerd.
