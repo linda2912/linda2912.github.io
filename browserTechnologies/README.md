@@ -7,14 +7,13 @@
 ##### *"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."*
 *-throwaway420* [(Bron)](https://news.ycombinator.com/item?id=7244465)
 
-Feiten
 * Custom fonts are awesome and we want to use them 
 * Custom fonts slow down our pages by being large additional resources.
 * ~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 > Mogelijke oplossingen:
 
-* Laad alleen @font-face op grote schermen [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
+* #####Laad alleen @font-face op grote schermen [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
 
 Voorbeeld:
 
@@ -37,7 +36,7 @@ body {
 ```
 
 
-* Gebruik ``` visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+* #####Gebruik ``` visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
 
 Voorbeeld:
 
@@ -53,18 +52,23 @@ Voorbeeld:
 </style>
 ```
 
-> Nadelen web fonts
+> Voor en nadelen web fonts
 
-* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
+* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. 
+
 ![webfont](img/webfont2.png)
+
+* Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
+
+
 * Opera Mini ondersteund geen iconfonts en heeft 350 miljoen+ gebruikers.
 
-voordelen Icon Fonts:
+> voordelen Icon Fonts:
 * Ze zijn schaalbaar
 * Ze kunnen gestyled worden
 * Vermindering van het aantal HTTP-verzoeken
 
-Alernatief? Ja, SVG. 
+> Alernatief? Ja, SVG. 
 Voordelen:
 * Toegankelijkheid
 * Betere beschrijving
