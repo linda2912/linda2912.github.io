@@ -13,8 +13,27 @@ The issue is
 
 ~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
-#####Mogelijke oplossingen:
+##### > Mogelijke oplossingen:
 * only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) ![alt text](https://linda2912.github.io/browserTechnologies/img/onlyLargeScreens.png "Only for large screens")
+
+
+```bash
+@font-face {
+  font-family: 'Dr Sugiyama';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Dr Sugiyama Regular"), local("DrSugiyama-Regular"), url(http://themes.googleusercontent.com/static/fonts/drsugiyama/v2/rq_8251Ifx6dE1Mq7bUM6brIa-7acMAeDBVuclsi6Gc.woff) format("woff");
+}
+
+body {
+  font-family: sans-serif;
+}
+@media (min-width: 1000px) {
+  body {
+    font-family: 'Dr Sugiyama', sans-serif;
+  }
+}
+```
 
 
 * Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) ![alt text](https://linda2912.github.io/browserTechnologies/img/visibleHidden.png "Ovisibility is hidden by onloaded fonts")
@@ -49,14 +68,6 @@ The issue is
 * [Whatsapp](https://web.whatsapp.com/): De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is.
 
 
-
-```bash
-$ joe ls    # OR `joe list`
-```
-
-Output:
-
-> actionscript,
 
 
 
