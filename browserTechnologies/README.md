@@ -4,13 +4,13 @@
 
 > Problemen Custom fonts
 
-####"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
+#####"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
 *throwaway420* [(Bron)](https://news.ycombinator.com/item?id=7244465)
 
-* custom fonts are awesome and we want to use them 
-* custom fonts slow down our pages by being large additional resources.
-
-####~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+Feiten
+* Custom fonts are awesome and we want to use them 
+* Custom fonts slow down our pages by being large additional resources.
+* ~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 > Mogelijke oplossingen:
 
@@ -37,8 +37,10 @@ body {
 ```
 
 
-* Gebruik ```bash visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+* Gebruik ``` visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+
 Voorbeeld:
+
 ```bash
 <script type="text/javascript" src="http://use.typekit.com/xxxxxxx.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -59,14 +61,15 @@ Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en ge
 
 #Eigen ervaring
 
-* De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel. [(Bron)](http://www.innovationstudio.ninja/) ![alt text](https://linda2912.github.io/browserTechnologies/img/noWebFont.png "disabled webfont") ![alt text](https://linda2912.github.io/browserTechnologies/img/webFont.png "abled webfont")
+> De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel. [(Bron)](http://www.innovationstudio.ninja/) ![alt text](https://linda2912.github.io/browserTechnologies/img/noWebFont.png "disabled webfont") ![alt text](https://linda2912.github.io/browserTechnologies/img/webFont.png "abled webfont")
 
-* Op deze website vallen de icons wel weg maar als je er overheen hovered is zichtbaar wat voor icoon het is. [(Bron)](https://bootstrapbay.com/blog/built-with-bootstrap/) ![alt text](https://linda2912.github.io/browserTechnologies/img/mouseOver.png "mouse over event")
+> Op deze website vallen de icons wel weg maar als je er overheen hovered is zichtbaar wat voor icoon het is. [(Bron)](https://bootstrapbay.com/blog/built-with-bootstrap/) ![alt text](https://linda2912.github.io/browserTechnologies/img/mouseOver.png "mouse over event")
 
-#####Mogelijke oplossingen
+> Mogelijke oplossingen
 
-* gebruik svg's ipv webicons
+* gebruik svg's in plaats van webicons
 * Gebruik geen letters als benaming voor de icons maar voorzich sprekende namen zodat de gebruiks kan zien waar het op slaat.
+
 
 
 ###2) Muis/Trackpad
