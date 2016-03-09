@@ -13,7 +13,7 @@
 
 > Mogelijke oplossingen:
 
-##### * Laad alleen @font-face op grote schermen [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
+* Laad alleen @font-face op grote schermen [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
 
 Voorbeeld:
 
@@ -36,7 +36,7 @@ body {
 ```
 
 
-##### * Gebruik ``` visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+* Gebruik ``` visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
 
 Voorbeeld:
 
@@ -52,7 +52,7 @@ Voorbeeld:
 </style>
 ```
 
-> Voor en nadelen web fonts
+> Nadelen web fonts
 
 * Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. 
 
