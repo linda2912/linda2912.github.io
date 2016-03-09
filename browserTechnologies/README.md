@@ -37,7 +37,7 @@ body {
 ```
 
 
-* Gebruik visibility: hidden als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+* Gebruik ```bash visibility: hidden ``` als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
 Voorbeeld:
 ```bash
 <script type="text/javascript" src="http://use.typekit.com/xxxxxxx.js"></script>
@@ -51,12 +51,13 @@ Voorbeeld:
 </style>
 ```
 > Conclusie
+
 Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 
 
 
-######Eigen ervaring
+#Eigen ervaring
 
 * De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel. [(Bron)](http://www.innovationstudio.ninja/) ![alt text](https://linda2912.github.io/browserTechnologies/img/noWebFont.png "disabled webfont") ![alt text](https://linda2912.github.io/browserTechnologies/img/webFont.png "abled webfont")
 
