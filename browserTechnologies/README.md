@@ -4,7 +4,7 @@
 
 > Problemen Custom fonts
 
-##### "It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
+##### *"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."*
 *-throwaway420* [(Bron)](https://news.ycombinator.com/item?id=7244465)
 
 Feiten
@@ -108,10 +108,11 @@ En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's.
 
 > Cases van mensen die echt geen muis/ trackpad kunnen gebruiken
 
-"Navigating Microsoft Windows using the keyboard for many commonly performed tasks can dramatically increase your productivity. Also, a situation may arise when the mouse stops functioning or you need to work on a computer without one." [(bron)](http://www.computerhope.com/issues/ch000791.htm)
+*"Navigating Microsoft Windows using the keyboard for many commonly performed tasks can dramatically increase your productivity. Also, a situation may arise when the mouse stops functioning or you need to work on a computer without one."* [(bron)](http://www.computerhope.com/issues/ch000791.htm)
 
-"A lot of times, outline: none is used to hide the focus rectangle on certain elements. This is bad for accessibility, as sighted keyboard users aren't able to tell which elements have focus on the page. Perhaps a rule should be to disallow outline: none under a new category of "accessibility"?" 
-"If outline: 0 or outline: none are applied within a :focus pseudo selector, it should throw a warning." [(bron)](https://github.com/CSSLint/csslint/issues/138)
+*"A lot of times, outline: none is used to hide the focus rectangle on certain elements. This is bad for accessibility, as sighted keyboard users aren't able to tell which elements have focus on the page. Perhaps a rule should be to disallow outline: none under a new category of "accessibility"?"*
+
+*"If outline: 0 or outline: none are applied within a :focus pseudo selector, it should throw a warning."* [(bron)](https://github.com/CSSLint/csslint/issues/138)
 
 > Oplossingen
 
