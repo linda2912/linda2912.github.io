@@ -53,9 +53,10 @@ Voorbeeld:
 </style>
 ```
 
-> Nadelen webfonts
+> Nadelen web fonts
 
-* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. ![webfont](img/webfont2.png)
+* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
+![webfont](img/webfont2.png)
 * Opera Mini ondersteund geen iconfonts en heeft 350 miljoen+ gebruikers.
 
 voordelen Icon Fonts:
@@ -76,7 +77,7 @@ Voordelen:
 > Conclusie
 
 Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. Als je ze gebruikt zorg voor een goede fallback font. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
-En Gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's. 
+En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's. 
 
 
 
@@ -104,3 +105,12 @@ En Gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's.
 
 
 > Cases van mensen die echt geen muis/ trackpad kunnen gebruiken
+"Navigating Microsoft Windows using the keyboard for many commonly performed tasks can dramatically increase your productivity. Also, a situation may arise when the mouse stops functioning or you need to work on a computer without one." [(bron)](http://www.computerhope.com/issues/ch000791.htm)
+
+> Oplossingen
+* Zet de ``` outline ``` nooit op ``` none ``` of zorg voor een goede vervanging
+* Zorg dat alle links worden herkend als er door de pagina heen wordt getapped
+* Zorg voor een logische volgorde zodat de gebruiker eerst langs de belangrijke elementen op de pagina wordt genavigeerd.
+
+
+
