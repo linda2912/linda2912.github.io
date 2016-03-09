@@ -46,8 +46,17 @@ The issue is
 ###2) Muis/Trackpad
 
 ######Websites testen zonder muis/trackpad
-* [Whatsapp](https://web.whatsapp.com/)
- De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is.
+* [Whatsapp](https://web.whatsapp.com/): De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is.
+
+
+
+```bash
+$ joe ls    # OR `joe list`
+```
+
+Output:
+
+> actionscript,
 
 
 
