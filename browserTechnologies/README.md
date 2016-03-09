@@ -2,20 +2,21 @@
 
 ###1) Custom fonts
 
-######Problemen Custom fonts
+> Problemen Custom fonts
 
-"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
+####"It is very frustrating when loading up a website and seeing a mostly blank page because the fonts are still downloading. This is especially frustrating on a slow internet connection or on mobile."
 *throwaway420* [(Bron)](https://news.ycombinator.com/item?id=7244465)
 
-The issue is 
 * custom fonts are awesome and we want to use them 
 * custom fonts slow down our pages by being large additional resources.
 
-~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+####~37% of top 300K sites are using web fonts as of early 2014 [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
 > Mogelijke oplossingen:
 
-* only loading @font-face on large screens [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
+* Laad alleen @font-face op grote schermen [(bron)](https://css-tricks.com/preventing-the-performance-hit-from-custom-fonts/) 
+
+Voorbeeld:
 
 ```bash
 @font-face {
@@ -36,7 +37,8 @@ body {
 ```
 
 
-* Using visibility: hidden while the fonts load. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+* Gebruik visibility: hidden als de webfont aan het laden is. [(bron)](http://blog.typekit.com/2010/10/29/font-events-controlling-the-fout/) 
+Voorbeeld:
 ```bash
 <script type="text/javascript" src="http://use.typekit.com/xxxxxxx.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -48,15 +50,9 @@ body {
   }
 </style>
 ```
+> Conclusie
+Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
 
-* Use web fonts, but audit your font usage periodically and try to keep it lean. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
-
-1. Audit your font usage and keep it lean.
-2. Make sure font resources are optimized - see Google Web Fonts tricks.
-3. Instrument your font resources with Resource Timing: measure → optimize.
-4. Optimize the transfer latency and time of initial fetch for each font.
-5. Optimize your critical rendering path, eliminate unnecessary JS, etc.
-6. Spend some time playing with the Font Load Events API.
 
 
 
