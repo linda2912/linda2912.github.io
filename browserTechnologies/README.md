@@ -64,11 +64,13 @@ Voorbeeld:
 * Opera Mini ondersteund geen iconfonts en heeft 350 miljoen+ gebruikers.
 
 > voordelen Icon Fonts:
+
 * Ze zijn schaalbaar
 * Ze kunnen gestyled worden
 * Vermindering van het aantal HTTP-verzoeken
 
 > Alernatief? Ja, SVG. 
+
 Voordelen:
 * Toegankelijkheid
 * Betere beschrijving
