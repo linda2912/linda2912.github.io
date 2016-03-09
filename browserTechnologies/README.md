@@ -52,9 +52,30 @@ Voorbeeld:
   }
 </style>
 ```
+
+> Nadelen webfonts
+* Mensen met dyslectie (1 op de 10) kunnen webfonts vaak nog moeilijker lezen omdat de letters vaak net even anders er uit zien dan een standaard font als Times of Helvetica. ![webfont](/readmeImg/webfont.png) Dyslecten zetten daarom vaak de webfonts uit. Maar het probleem dat er dan volgt is dat icon fonts ook niet getoond worden waardoor ze alles moeten lezen omdat er overal nietszeggende blokjes staan. 
+* Opera Mini ondersteund geen iconfonts en heeft 350 miljoen+ gebruikers.
+
+voordelen Icon Fonts:
+* Ze zijn schaalbaar
+* Ze kunnen gestyled worden
+* Vermindering van het aantal HTTP-verzoeken
+
+Alernatief? Ja, SVG. 
+Voordelen:
+* Toegankelijkheid
+* Betere beschrijving
+* Schaalbaar
+* Kan in meerdere kleuren gestyled worden
+* Kan geanimeerd worden
+* Wordt ondersteund in moderne browsers
+
+
 > Conclusie
 
-Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. Als je ze gebruikt zorg voor een goede fallback font. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
+En Gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's. 
 
 
 
@@ -74,10 +95,11 @@ Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en ge
 
 ###2) Muis/Trackpad
 
-###### Websites testen zonder muis/trackpad
-* [Whatsapp](https://web.whatsapp.com/): De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is.
+> Websites testen zonder muis/trackpad
+
+* [Whatsapp](https://web.whatsapp.com/): De website van Whatsapp is niet te gebruiken zonder muis of trackpad. Het is namelijk niet mogelijk om een chat te openen. Ook wordt er totaal niet aangegeven wat het focus punt is. Dat de focus niet zichtbaar is hebben ze gedaan door middel van de CSS styling ``` outline: none ``` waardoor en geen blauw blok om het focus punt wordt getoont.
+
+* [Gmail](https://mail.google.com): 
 
 
-
-
-
+> Cases van mensen die echt geen muis/ trackpad kunnen gebruiken
