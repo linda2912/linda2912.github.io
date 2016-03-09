@@ -82,13 +82,13 @@ Voordelen:
 
 > Conclusie
 
-Gebruik web fonts, maar controleer ze regelmatig of ze goed bruikbaar zijn en gebruik ze niet te vaak. Als je ze gebruikt zorg voor een goede fallback font. [(bron)](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/)
-En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's. 
+* Als je web fonts gebruikt, controleer ze regelmatig of ze goed bruikbaar zijn voor iedereen. Gebruik ze niet te vaak. Als je ze gebruikt zorg voor een goede fallback font. 
+* En gebruik voor icons nooit icon fonts maar bijvoorbeeld SVG's. Deze zijn in vele opzichten beter toegangelijk voor iedere gebuiker.
 
 
 
 
-# Eigen ervaring
+## Eigen ervaring
 
 * De website Innovation Studio is gemaakt met een Bootstrap layout. Bootstrap maakt veel gebruik van icon fonts. Een groot deel van de website breekt dan ook wanneer ik de webfonts uitschakel. [(Bron)](http://www.innovationstudio.ninja/) ![alt text](img/noWebFont.png "disabled webfont") ![alt text](https://linda2912.github.io/browserTechnologies/img/webFont.png "abled webfont")
 
