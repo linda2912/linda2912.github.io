@@ -17,19 +17,19 @@ Ik ga de volgende 13 features testen op mijn [Funda website](http://linda2912.gi
 13. Css doet het niet
 14. Screen reader
 ```
-> 1 Afbeeldingen
+``` 1 Afbeeldingen ```
 
 * De plaatjes van de huizen tonen niet
 * De icoontjes van de filters zijn niet zichtbaar maar zijn alsnog duidelijk door de tekst die wel zichtbaar is
 * Het logo is niet meer zichtbaar
 
 **Aangepast:**
-* Logo naar inline SVG
+* Funda logo naar inline SVG
 
 **Aanbeveling:**
 * Alle iconen inline svg maken (maar dit is helaas niet mogelijk bij het gebruik van de plugin Transparancy dus dan zou hier een andere plugin voor gebruikt moeten worden)
 
-> 2 Custom fonts
+``` 2 Custom fonts ```
 
 * Ik had gebruik gemaakt van het web font Lato en als fallback font sans-serif. 
 
@@ -87,6 +87,6 @@ Zonder CSS gaat de hele website kapot.
 
 Niet alle velden hebben een goede beschrijving voor screen readers
 
-Aangepast:
+**Aangepast:**
 * Alt attributen aangepast
 
