@@ -57,7 +57,7 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 **Aangepast:**
 * Ik heb de loader buiten de article results gezet zodat hij ook aangeroepen kan worden als er nog geen resultaten zijn.
 
-``` bash
+``` 
 6 Cookies
 7 JavaScript deels - Wifi hotspot
 8 Javascript deels - Content blockers
