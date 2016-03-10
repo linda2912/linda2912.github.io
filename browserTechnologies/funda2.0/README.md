@@ -1,6 +1,7 @@
 ##Progressive Enhancement toepassen op de Funda website
 
 Ik ga de volgende 14 features testen op mijn [Funda website](http://linda2912.github.io/funda)
+
 Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnologies/funda2.0)
 ```
 1. Afbeeldingen
