@@ -1,7 +1,7 @@
 ##Progressive Enhancement toepassen op de Funda website
 
-Ik ga de volgende 13 features testen op mijn [Funda website](browserTechnologies/funda2.0)
-
+Ik ga de volgende 13 features testen op mijn [Funda website](http://linda2912.github.io/browserTechnologies/funda2.0/#home)
+```
 1. Afbeeldingen
 2. Custom fonts
 3. Javascript (volledig)
@@ -15,7 +15,7 @@ Ik ga de volgende 13 features testen op mijn [Funda website](browserTechnologies
 11. Ad blockers (privacy)
 12. Muis/Trackpad doet het niet
 13. Css doet het niet
-
+```
 > 1 Afbeeldingen
 
 * De plaatjes van de huizen tonen niet
