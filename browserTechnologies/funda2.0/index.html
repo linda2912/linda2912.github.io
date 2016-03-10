@@ -1,0 +1,264 @@
+<!doctype html>
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	    <title>Web App from Scratch</title>
+
+	    <link rel="stylesheet" href="css/style.css">
+
+    	<script src="javascript/libs/hammer.min.js"></script>
+		<script src="javascript/libs/pegasus.js"></script>
+		<script src="javascript/libs/routie.min.js"></script>
+		<script src="javascript/libs/transparency.min.js"></script>
+		<script src="javascript/libs/underscore.js"></script>
+
+		<script src="javascript/gestures.js"></script>
+		<script src="javascript/loader.js"></script>
+		<script src="javascript/data.js"></script>
+		<script src="javascript/sections.js"></script>
+		<script src="javascript/routes.js"></script>
+		<script src="javascript/filter.js"></script>
+		<script src="javascript/searchForm.js"></script>
+
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>			
+	</head>
+
+	<body>
+
+		<header>
+			<a href="#">
+				<img src="img/funda-logo.svg">
+			</a>	
+		</header>
+
+		<section id="home" class="invisible">
+
+			<div class="startScreen">
+
+				<div id="template">
+
+					<span data-bind="greeting">You don't have javascript enabled</span>
+					
+					<form>
+
+						<fieldset class="placeDistanceBlock">
+							<div class="search">
+								<input placeholder="Plaats" id="place" type="text" name="place"> 
+							</div>
+							
+							<div class="dropdownDistance">
+								<select name="km" class="distance" name="distance">
+									<option value="0" selected>+ 0 km</option>
+									<option value="+1">+ 1 km</option>
+									<option value="+2">+ 2 km</option>
+									<option value="+5">+ 5 km</option>
+									<option value="+10">+ 10 km</option>
+									<option value="+15">+ 15 km</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+						</fieldset>
+
+						<fieldset class="budgetBlock">
+							<div class="dropdownAll">
+								<label for="fromBudget">van</label>
+								<select id="fromBudget" name="priceMin" class="leftSelect">
+									<option value="0" selected>€ 0</option>
+									<option value="50000">€ 50.000</option>
+									<option value="75000">€ 75.000</option>
+									<option value="100000">€ 100.000</option>
+									<option value="125000">€ 125.000</option>
+									<option value="250000">€ 150.000</option>
+									<option value="175000">€ 175.000</option>
+									<option value="200000">€ 200.000</option>
+									<option value="225000">€ 225.000</option>
+									<option value="250000">€ 250.000</option>
+									<option value="275000">€ 275.000</option>
+									<option value="300000">€ 300.000</option>
+									<option value="350000">€ 350.000</option>
+									<option value="400000">€ 400.000</option>
+									<option value="500000">€ 500.000</option>
+									<option value="600000">€ 600.000</option>
+									<option value="700000">€ 700.000</option>
+									<option value="800000">€ 800.000</option>
+									<option value="900000">€ 900.000</option>
+									<option value="1000000">€ 1.000.000</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+
+							<div class="dropdownAll">
+								<label for="tillBudget">tot</label>
+								<select id="tillBudget" name="priceMax">
+									<option value="75000">€ 75.000</option>
+									<option value="100000">€ 100.000</option>
+									<option value="125000">€ 125.000</option>
+									<option value="150000">€ 150.000</option>
+									<option value="175000">€ 175.000</option>
+									<option value="200000">€ 200.000</option>
+									<option value="225000">€ 225.000</option>
+									<option value="250000">€ 250.000</option>
+									<option value="275000">€ 275.000</option>
+									<option value="300000" selected="">€ 300.000</option>
+									<option value="350000">€ 350.000</option>
+									<option value="400000">€ 400.000</option>
+									<option value="500000">€ 500.000</option>
+									<option value="600000">€ 600.000</option>
+									<option value="700000">€ 700.000</option>
+									<option value="800000">€ 800.000</option>
+									<option value="900000">€ 900.000</option>
+									<option value="1000000">€ 1.000.000</option>
+									<option value="+">Geen maximum</option>
+								</select>
+								<img src="img/dropdown.svg" class="dropdownImg">
+							</div>
+						</fieldset>
+						
+						<h3>Gericht zoeken?</h3>
+
+						<div class="specific">
+
+							<figure class="roomButton">
+								<img src="img/room.svg">
+								<figcaption>Kamers</figcaption>
+								<img src="img/plus.svg" class="roomImg">
+							</figure>
+
+							<fieldset id="roomFilter" class="invisible">
+								<div class="dropdownAll">
+									<label for="rooms">Kamer(s)</label>
+									<select id="rooms" class="roomSelect" name="rooms">
+										<option value="1+" selected >1</option>
+										<option value="2+">2 +</option>
+										<option value="3+">3 +</option>
+										<option value="4+">4 +</option>
+										<option value="5+">5 +</option>
+									</select>
+									<img src="img/dropdown.svg" class="dropdownImg">
+								</div>
+
+								<div class="dropdownAll">
+									<label for="sleepingRooms">Slaapkamer(s)</label>
+									<select id="sleepingRooms" name="sleepingRooms">
+										<option value="1+" selected>1</option>
+										<option value="2+">2 +</option>
+										<option value="3+">3 +</option>
+										<option value="4+">4 +</option>
+										<option value="5+">5 +</option>
+									</select>
+									<img src="img/dropdown.svg" class="dropdownImg">
+								</div>
+							</fieldset>
+
+							<figure class="areaButton">
+								<img src="img/perceel.svg">
+								<figcaption>Oppervlakte</figcaption>
+								<img src="img/plus.svg" class="areaImg">
+							</figure>
+
+							<fieldset id="areaFilter" class="invisible">
+								<div class="dropdownAll">
+									<label for="livingArea">Woonoppervlakte</label>
+									<select id="livingArea" name="livingArea">
+										<option value="50" selected>50+ m²</option>
+										<option value="75">75+ m²</option>
+										<option value="100">100+ m²</option>
+										<option value="150">150+ m²</option>
+										<option value="250">250+ m²</option>
+									</select>
+									<img src="img/dropdown.svg" class="dropdownImg">
+								</div>
+
+								<div class="dropdownAll">
+									<label for="perceelArea">Perceeloppervlakte</label>
+									<select id="perceelArea" name="percelArea">
+										<option value="250" selected>250+ m²</option>
+										<option value="500">500+ m²</option>
+										<option value="1000">1000+ m²</option>
+										<option value="2500">2500+ m²</option>
+										<option value="5000">5000+ m²</option>
+									</select>
+									<img src="img/dropdown.svg" class="dropdownImg">
+								</div>
+							</fieldset>
+
+							<figure class="oustsideButton">
+								<img src="img/tree.svg">
+								<figcaption>Buitenruimte</figcaption>
+								<img src="img/plus.svg" class="outsideImg">
+							</figure>
+
+							<fieldset id="outsideFilter" class="invisible">
+								<div class="dropdownAll">
+									<label for="outsideArea">Buitenruimte</label>
+									<select id="outsideArea" name="outside">
+										<option value="balkon" selected>Balkon </option>
+										<option value="dakterras">Dakterras</option>
+										<option value="tuin">Tuin</option>
+									</select>
+									<img src="img/dropdown.svg" class="dropdownImg">
+								</div>
+							</fieldset>
+						</div>
+
+						<button role="button" type="submit" id="searchGo">Zoek</button>
+					</form>
+				</div>
+
+				<article id="resultsBlock" class="invisible">
+					
+						<h3>Resultaten</h3>	
+
+						<div class="spinner invisible" >
+							<div class="double-bounce1"></div>
+							<div class="double-bounce2"></div>
+						</div>
+
+						<div id="results">
+
+							<img data-bind="imageUrl">
+
+							<div class="properties">
+								<div>
+									<img src="img/area.svg">
+									<p data-bind="Woonoppervlakte"></p> 
+								</div>
+								<div>
+									<img src="img/perceel.svg">
+									<p data-bind="Perceeloppervlakte"></p>
+								</div>
+								<div>
+									<img src="img/room.svg">
+									<p data-bind="AantalKamers"></p>
+								</div>
+							</div>
+
+							<div class="addressPrice">
+								<div>
+									<p data-bind="Adres"></p>
+									<div class="address">
+										<p data-bind="Postcode"></p>
+										<p data-bind="Woonplaats"></p>
+									</div>	
+								</div>
+								<p data-bind="Koopprijs"></p>
+							</div>
+
+						</div>	
+
+						<img src="img/up.svg" class="up">
+	
+				</article>
+			</div>	
+		</section>
+
+		<section id="error" class='invisible'>
+			<h1>Error</h1>
+		</section>
+
+		<main></main>
+	
+		<script src="javascript/app.js"></script>
+	</body>
+</html>
