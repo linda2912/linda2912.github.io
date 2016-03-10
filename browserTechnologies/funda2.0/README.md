@@ -15,6 +15,7 @@ Ik ga de volgende 13 features testen op mijn [Funda website](http://linda2912.gi
 11. Ad blockers (privacy)
 12. Muis/Trackpad doet het niet
 13. Css doet het niet
+14. Screen reader
 ```
 > 1 Afbeeldingen
 
@@ -82,8 +83,7 @@ Aanbevelingen
 * De SVG's inline zetten en daar een grootte aan meegeven
 * Niet de sections via javaScript in de main willen kopiëren
 
-
-#### Screen reader
+> 14 Screen reader
 
 Niet alle velden hebben een goede beschrijving voor screen readers
 
