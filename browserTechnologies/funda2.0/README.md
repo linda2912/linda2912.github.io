@@ -1,6 +1,6 @@
 ##Progressive Enhancement toepassen op de Funda website
 
-Ik ga de volgende 13 features testen op mijn [Funda website](http://linda2912.github.io/browserTechnologies/funda2.0/#home)
+Ik ga de volgende 14 features testen op mijn [Funda website](http://linda2912.github.io/browserTechnologies/funda2.0/#home)
 ```
 1. Afbeeldingen
 2. Custom fonts
@@ -57,14 +57,14 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 **Aangepast:**
 * Ik heb de loader buiten de article results gezet zodat hij ook aangeroepen kan worden als er nog geen resultaten zijn.
 
-``` 
-6 Cookies
-7 JavaScript deels - Wifi hotspot
-8 Javascript deels - Content blockers
-9 Local Storage
-10 CDN
-11 Ad blockers (privacy)
-```
+ 
+``` 6 Cookies```
+``` 7 JavaScript deels - Wifi hotspot```
+``` 8 Javascript deels - Content blockers```
+``` 9 Local Storage```
+``` 10 CDN```
+``` 11 Ad blockers (privacy)```
+
 Al deze features heb ik helaas niet kunnen testen omdat ze geen invloed hebben op mijn website.
 
 ``` 12 Muis/Trackpad doet het niet ```
