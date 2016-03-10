@@ -476,7 +476,7 @@ form > h3 {
 		flex-wrap: wrap;
 	}
 	
-	.specific figure {
+	.specific button {
 		width: 32%;
 		order: 1;
 	}
@@ -506,7 +506,7 @@ form > h3 {
 		margin-top: 3em;
 	}
 	
-	.specific figure {
+	.specific button {
 		width: 100%;
 		order: unset;
 	}
@@ -527,7 +527,7 @@ form > h3 {
 		width: 100%;
 	}
 	
-	header img {
+	header svg {
 		padding: .8em;
 		width: 8em;
 		transition: .5s ease-in-out all;
