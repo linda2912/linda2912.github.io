@@ -60,3 +60,9 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 > 13. Css doet het niet
 
 * zonder CSS gaat de hele website kapot. Het grootste probleem zijn de grote plaatjes. 
+
+
+#### Screen reader
+
+* Niet alle invulvelden hebben een goede beschrijving
+* De beschrijvingen van de huizen worden niet voorgelezen
