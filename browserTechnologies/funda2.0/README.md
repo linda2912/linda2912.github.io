@@ -43,7 +43,7 @@ Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnol
 * Als Javascript is uitgeschakelt, wordt er geen content getoond doordat de content wordt aangeroepen met Javascript..
 
 **Aanbeveling:**
-* De werking omdraaien door die sections standaard te tonen en met JavaScript deze onzichtbaar te maken zodat de gebruiker altijd alles te zien krijgt als JavaScript uit staat.
+* De werking omdraaien door de sections standaard te tonen en met JavaScript onzichtbaar te maken zodat de gebruiker altijd alles te zien krijgt als JavaScript uit staat.
 
 ``` 4 Kleur ```
 
@@ -57,7 +57,7 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 * De website gaat niet kapot bij 50kb/s het laden van de plaatjes van de huizen duurt alleen heel lang. 
 
 **Aangepast:**
-* Ik heb de loader buiten de article results gezet zodat hij ook aangeroepen kan worden als er nog geen resultaten zijn.
+* Ik heb de loader buiten het article results gezet zodat hij ook aangeroepen kan worden als er nog geen resultaten zijn.
 
  
 ``` 6 Cookies```
@@ -69,27 +69,27 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 
 Al deze features heb ik helaas niet kunnen testen omdat ze geen invloed hebben op mijn website.
 
-``` 12 Muis/Trackpad doet het niet ```
+``` 12 Muis/Trackpad ```
 
 * De filter knoppen hebben geen focus omdat het geen buttons zijn. Als ik ze verander in buttons werken ze wel.
 
 **Aangepast:**
 * buttons gemaakt van de figures
 
-``` 13 Css doet het niet ```
+``` 13 Css ```
 
 Zonder CSS gaat de hele website kapot. 
 * Alle icons worden heel groot getoond
 * de zoek section wordt twee keer getoond
 
 **Aanbevelingen**
-* De SVG's inline zetten en daar een grootte aan meegeven
-* Niet de sections via javaScript in de main willen kopiëren
+* De SVG's inline zetten en daar een grootte aan meegeven (zelfde als de afbeelding issue)
+* Niet de sections via javaScript in de main willen kopiëren (zelfde als javascript issue)
 
 ``` 14 Screen reader ```
 
 Niet alle velden hebben een goede beschrijving voor screen readers
 
 **Aangepast:**
-* Alt attributen aangepast
+* Alt attributen toegevoegd en aangepast
 
