@@ -19,7 +19,7 @@ Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnol
 13. Css
 14. Screen reader
 ```
-``` 1 Afbeeldingen ```
+``` 1 Afbeeldingen uitzetten```
 
 * De plaatjes van de huizen tonen niet
 * De icoontjes van de filters zijn niet zichtbaar maar zijn alsnog duidelijk door de tekst die wel zichtbaar is
@@ -31,21 +31,21 @@ Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnol
 **Aanbeveling:**
 * Alle iconen inline svg maken (maar dit is helaas niet mogelijk bij het gebruik van de plugin Transparancy dus dan zou hier een andere plugin voor gebruikt moeten worden)
 
-``` 2 Custom fonts ```
+``` 2 Custom fonts uitzetten```
 
 * Ik had gebruik gemaakt van het web font Lato en als fallback font sans-serif. 
 
 **Aangepast:**
 * Ik heb nog een fallback font toegevoegd ```Helvetica``` omdat dat lettertype bijna iedereen wel heeft en dichtbij het font Lato in de buurt komt.
 
-``` 3 Javascript (volledig) ```
+``` 3 Javascript (volledig) uitzetten ```
 
 * Als Javascript is uitgeschakelt, wordt er geen content getoond doordat de content wordt aangeroepen met Javascript..
 
 **Aanbeveling:**
 * De werking omdraaien door de sections standaard te tonen en met JavaScript onzichtbaar te maken zodat de gebruiker altijd alles te zien krijgt als JavaScript uit staat.
 
-``` 4 Kleur ```
+``` 4 Kleur uitzetten```
 
 Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleurenblinden. 
 
@@ -69,14 +69,14 @@ Met de tool Sim Daltonism heb ik getest of de website toegankelijk is voor kleur
 
 Al deze features heb ik helaas niet kunnen testen omdat ze geen invloed hebben op mijn website.
 
-``` 12 Muis/Trackpad ```
+``` 12 Muis/Trackpad niet gebruiken```
 
 * De filter knoppen hebben geen focus omdat het geen buttons zijn. Als ik ze verander in buttons werken ze wel.
 
 **Aangepast:**
 * buttons gemaakt van de figures
 
-``` 13 Css ```
+``` 13 Css uitzetten```
 
 Zonder CSS gaat de hele website kapot. 
 * Alle icons worden heel groot getoond
