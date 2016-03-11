@@ -15,8 +15,8 @@ Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnol
 9. Local Storage
 10. CDN
 11. Ad blockers (privacy)
-12. Muis/Trackpad doet het niet
-13. Css doet het niet
+12. Muis/Trackpad 
+13. Css
 14. Screen reader
 ```
 ``` 1 Afbeeldingen ```
@@ -26,7 +26,7 @@ Zie hier de [aangepaste Funda website](http://linda2912.github.io/browserTechnol
 * Het logo is niet meer zichtbaar
 
 **Aangepast:**
-* Funda logo naar inline SVG
+* Funda logo naar inline SVG omgezet
 
 **Aanbeveling:**
 * Alle iconen inline svg maken (maar dit is helaas niet mogelijk bij het gebruik van de plugin Transparancy dus dan zou hier een andere plugin voor gebruikt moeten worden)

@@ -216,6 +216,7 @@ fieldset {
 	width: 100%;
 }
 
+
 select {
 	font-size: 1em;
 	cursor: pointer;
@@ -277,6 +278,13 @@ form > h3 {
 	padding: .5em;
 	box-sizing: content-box;
 	transition: all .3s cubic-bezier(.42,1.71,1,1);
+}
+
+.roomButton img:last-of-type,
+.areaButton img:last-of-type,
+.oustsideButton img:last-of-type {
+	width: 1.5em;
+
 }
 
 .filter {
@@ -352,17 +360,13 @@ form > h3 {
 }
 
 [data-bind="Koopprijs"] {
+	margin: 0 .3em;
+}
+
+.price {
+	display: flex;
 	font-weight: 700;
 }
-
-[data-bind="Koopprijs"]:before {
-	content: "€ ";
-}
-
-[data-bind="Koopprijs"]:after {
-	content: " k.k."
-}
-
 .address {
 	display: flex;
 }
@@ -371,13 +375,10 @@ form > h3 {
 	margin: 0 .5em 1em 0;
 }
 
-[data-bind="Woonoppervlakte"]:after, 
-[data-bind="Perceeloppervlakte"]:after {
-	content: " m²";
-}
-
-[data-bind="AantalKamers"]:after {
-	content: " kamers";
+[data-bind="Woonoppervlakte"], 
+[data-bind="Perceeloppervlakte"],
+[data-bind="AantalKamers"] {
+	margin: 0 .3em;
 }
 
 .properties {

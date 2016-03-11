@@ -124,9 +124,9 @@
 						<div class="specific">
 
 							<button class="roomButton">
-								<img src="img/room.svg" alt="icoon kamers">
+								<img src="img/room.svg" alt="icoon">
 								<figcaption>Kamers</figcaption>
-								<img src="img/plus.svg" class="roomImg" alt="icoon plus teken">
+								<img src="img/plus.svg" class="roomImg" alt="toevoegen">
 							</button>
 
 							<fieldset id="roomFilter" class="invisible">
@@ -155,10 +155,10 @@
 								</div>
 							</fieldset>
 
-							<button class="areaButton" alt="icoon perceeloppervlakte">
+							<button class="areaButton" alt="icoon">
 								<img src="img/perceel.svg">
 								<figcaption>Oppervlakte</figcaption>
-								<img src="img/plus.svg" class="areaImg" alt="icoon plus teken">
+								<img src="img/plus.svg" class="areaImg" alt="toevoegen">
 							</button>
 
 							<fieldset id="areaFilter" class="invisible">
@@ -188,9 +188,9 @@
 							</fieldset>
 
 							<button class="oustsideButton">
-								<img src="img/tree.svg" alt="icoon buitenruimte">
+								<img src="img/tree.svg" alt="icoon">
 								<figcaption>Buitenruimte</figcaption>
-								<img src="img/plus.svg" class="outsideImg" alt="icoon plus teken">
+								<img src="img/plus.svg" class="outsideImg" alt="toevoegen">
 							</button>
 
 							<fieldset id="outsideFilter" class="invisible">
@@ -222,21 +222,24 @@
 
 						<div id="results">
 
-							<img data-bind="imageUrl">
+							<img data-bind="imageUrl" alt="Foto van het huis">
 
 							<div class="properties">
 								<div>
-									<img src="img/area.svg">
+									<img src="img/area.svg" alt="Woonoppervlakte">
 									<p data-bind="Woonoppervlakte"></p>
+									<p> m²</p>
 
 								</div>
 								<div>
-									<img src="img/perceel.svg">
+									<img src="img/perceel.svg" alt="Perceeloppervlakte">
 									<p data-bind="Perceeloppervlakte"></p>
+									<p> m²</p>
 								</div>
 								<div>
-									<img src="img/room.svg">
+									<img src="img/room.svg" alt="Aantal kamers">
 									<p data-bind="AantalKamers"></p>
+									<p> kamers</p>
 								</div>
 							</div>
 
@@ -248,7 +251,12 @@
 										<p data-bind="Woonplaats"></p>
 									</div>	
 								</div>
-								<p data-bind="Koopprijs"></p>
+								<div class="price">
+									<p>€ </p>
+									<p data-bind="Koopprijs"></p>
+									<p> k.k.</p>
+								</div>
+								
 							</div>
 
 						</div>	
