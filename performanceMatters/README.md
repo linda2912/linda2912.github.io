@@ -1,5 +1,5 @@
 #Progressive Web App
-
+Een Web App die door middel van een Service Worker een Native App nadoet.
 
 #####Voordelen
 * Mogelijkheid tot pushnotificaties
@@ -26,7 +26,7 @@ app-like-experience?
 ![Service Worker](serviceWorker.png)
 
 #####Bevindingen
-De Progressive Web App is nog niet optimaal maar zeker een goede nieuwe manier om apps te ontwikkelen. Aan native en web apps zitten beide nadelen verbonden. De Progressive Web App kan veel van deze nadelen opvangen.
+De Progressive Web App is nog niet optimaal maar zeker een goede nieuwe manier om apps te ontwikkelen. Aan native en web apps zitten beide nadelen verbonden. De Progressive Web App kan veel van deze nadelen opvangen en creëert een nieuwe interessante manier van apps maken.
 
 
 #####Bronnen
