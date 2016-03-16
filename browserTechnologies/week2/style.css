@@ -9,34 +9,53 @@ body {
 	margin: 0 auto;
 	background-color: #ecf0f1;
 }
-section {
-	background-color: white;
-}
 
+article {
+	margin-bottom: 2em;
+	background-color: white;
+	padding: 1em;
+}
 h1 {
-	font-size: 1.4em;
+	font-size: 1.5em;
 	background-color: #2c3e50;
 	color: white;
 	padding: .3em .5em;
 	font-weight: 300;
 }
 h2 {
-	font-size: 1.2em;
-	padding: .5em;
+	font-size: 1.3em;
 }
 p {
 	padding: .5em;
 }
 
 form {
-	background-color: #ecf0f1;
-	padding: .5em;
+	background-color: #3498DB;
+	padding: 1em;
 	margin: .5em;
-	width: 20em;
-}
-.css {
-	display: flex;
+	width: 23em;
+	margin: 0 auto;
 	color: white;
+}
+input {
+	font-size: 1.2em;
+	margin-left: .5em;
+	padding: .3em;
+	border: none;
+	color: grey;
+}
+img {
+	width: 100%;
+}
+section {
+	padding: 1em;
+	margin-bottom: 2em;
+}
+.htmlExplain,
+.cssExplain {
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #ecf0f1;
 }
 
 .block1 {
@@ -47,6 +66,37 @@ form {
 .block2 {
 	background-color: #2980b9;
 	width: 50%;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	padding: 1em;
+	width: 10em;
+	margin: 0 auto;
+	display: block;
+	color: white;
+	font-size: 1.2em;
+	border: none;
+}
+.button1 {
+	background-color: #3498DB;
+	background-image: url(img/buttonBackground.png);
+	background-image: linear-gradient(to top right, #3498DB, #2c3e50);
+}
+.button2:hover {
+	background-color: #3498DB;
+}
+.button2 {
+	background-color: #99CCED;
+	background-color: rgba(52, 152, 219, .5);
+}
+ul {
+	margin-left: 3em;
+	padding: .5em;
 }
 
 @supports not (display: flex) {
