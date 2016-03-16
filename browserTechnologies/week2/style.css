@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", Helvetica;
+}
+
+body {
+	width: 50em;
+	margin: 0 auto;
+	background-color: #ecf0f1;
+}
+section {
+	background-color: white;
+}
+
+h1 {
+	font-size: 1.4em;
+	background-color: #2c3e50;
+	color: white;
+	padding: .3em .5em;
+	font-weight: 300;
+}
+h2 {
+	font-size: 1.2em;
+	padding: .5em;
+}
+p {
+	padding: .5em;
+}
+
+form {
+	background-color: #ecf0f1;
+	padding: .5em;
+	margin: .5em;
+	width: 20em;
+}
+.css {
+	display: flex;
+	color: white;
+}
+
+.block1 {
+	background-color: #3498DB;
+	width: 50%;
+}
+
+.block2 {
+	background-color: #2980b9;
+	width: 50%;
+}
+
+@supports not (display: flex) {
+	.block1 {
+		float: left;
+	}
+	.block2 {
+		float: right;
+	}
+}
+
+
+
