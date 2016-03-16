@@ -23,9 +23,9 @@ app-like-experience?
 * Momenteel werken PWA's alleen op Android apparaten. Op Safari en iOS wordt de Service Worker (nog) niet ondersteund. 
 
 
-![Service Worker](/serviceWorker.png)
+![Service Worker](serviceWorker.png)
 
 #####Bronnen
-[https://developers.google.com/web/progressive-web-apps](https://developers.google.com/web/progressive-web-apps)
-[http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps](http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps)
-[http://caniuse.com/#search=service%20worker](http://caniuse.com/#search=service%20worker)
+* [https://developers.google.com/web/progressive-web-apps](https://developers.google.com/web/progressive-web-apps)
+* [http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps](http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps)
+* [http://caniuse.com/#search=service%20worker](http://caniuse.com/#search=service%20worker)
