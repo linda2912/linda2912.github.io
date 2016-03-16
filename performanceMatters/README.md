@@ -25,6 +25,10 @@ app-like-experience?
 
 ![Service Worker](serviceWorker.png)
 
+#####Bevindingen
+De Progressive Web App is nog niet optimaal maar zeker een goede nieuwe manier om apps te ontwikkelen. Aan native en web apps zitten beide nadelen verbonden. De Progressive Web App kan veel van deze nadelen opvangen.
+
+
 #####Bronnen
 * [https://developers.google.com/web/progressive-web-apps](https://developers.google.com/web/progressive-web-apps)
 * [http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps](http://www.emerce.nl/achtergrond/progressive-web-apps-de-toekomst-van-mobiele-apps)
