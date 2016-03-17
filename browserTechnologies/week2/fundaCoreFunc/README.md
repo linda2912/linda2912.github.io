@@ -4,8 +4,9 @@ De Core Functionaliteit die ik heb opgepakt is het filteren van de zoekresultate
 
 #### De problemen die ik ondervond waren
 * Bij het uitzetten van de JavaScript toonde de website helemaal geen content doordat JavaScript alle elementen ```visible``` maakten.
+```
 ![zonder JavaScript](readMeImg/noJs.png) ![zonder JavaScript](readMeImg/noJsFix.png)
-
+```
 ##### Oplossing: Het filter formulier direct laten zien op de pagina
 
 * Als de JavaScript uitstaan kan de gebruiker de gericht zoeken velden niet gebruiker doordat deze ```visible``` worden gemaakt met JavaScript
