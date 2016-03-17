@@ -1,0 +1,551 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Lato", Helvetiva, sans-serif;
+	box-sizing: border-box;
+}
+
+.invisible {
+	display: none;
+}
+.background {
+	background-color: rgba(250,250,250,.2);
+}
+
+/*header*/
+
+header svg {
+	width: 6em;
+	display: block;
+	padding: .3em;
+	transition: .5s ease-in-out all;
+}
+header {
+	background-color: #E7F1F5;
+	border-bottom: 2px solid #6EC8E5;
+	position: fixed;
+	width: 100vw;
+	z-index: 20;
+	display: flex;
+	justify-content: center;
+}
+
+/*startscreen*/
+
+[data-bind="greeting"] {
+	font-size: 1.2em;
+	margin: .5em 0;
+	padding-bottom: .5em;
+	color: white;
+	font-weight: 600;
+}
+
+.startScreen {
+	background-color: #fff;
+	padding-top: 2.65em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#template {
+	width: 100vw;
+	background-color: #F8B000;
+	padding: 1em;
+	color: white;
+	animation: slideTop 1s ease;
+
+}
+
+@keyframes slideTop {
+	0% {
+		opacity: 0;
+		transform: translateY(100vh);
+		position: 
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+fieldset {
+	border: none;
+}
+
+/*place and Distance Block*/
+
+#place {
+	width: 100%;
+	font-size: 1em;
+	padding: .82em 0 .82em .5em;
+	border: none;
+	display: inline-block;
+	font-weight: 300;
+	color: #3888C5;
+}
+
+.search {
+	background-color: white;
+	cursor: pointer;
+	width: 63.8%;
+	margin: .7em 0 .5em 0;
+	display: inline-block;
+	box-sizing: content-box;
+	border: 1px solid white;
+}
+
+.dropdownDistance {
+	background-color: white;
+	cursor: pointer;
+	width: 33.5%;
+	float: right;
+	display: inline-block;
+	padding: .1em 0;
+	margin-top: .7em;
+	position: relative;
+}
+
+.dropdownAll {
+	background-color: white;
+	padding: .1em 0;
+	cursor: pointer;
+	width: 49%;
+	margin: .3em 0;
+	display: inline-block;
+	box-sizing: content-box;
+	position: relative;
+}
+
+.budgetBlock .dropdownAll:last-of-type {
+	float: right;
+}
+#roomFilter .dropdownAll:last-of-type {
+	float: right;
+}
+
+.dropdownAll:first-of-type {
+	margin-right: 1%;
+}
+
+.dropdownAll label {
+	color: #3888C5;
+	padding: .7em 0 0 .7em;
+	overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
+#fromBudget, 
+#tillBudget, 
+#livingArea, 
+#outsideArea, 
+#rooms, 
+#sleepingRooms, 
+#perceelArea,
+.distance {
+	border: 1px solid white;
+	background-color: white;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: .7em 0;
+	cursor: pointer;
+	overflow: visible;
+	z-index: 1;
+	width: 100%;
+}
+
+#fromBudget,
+#tillBudget {
+	padding-left: 3em;
+}
+ #rooms {
+	padding-left: 5.5em;
+}
+
+#sleepingRooms {
+	padding-left: 7.5em;
+}
+
+#livingArea {
+	padding-left: 10em;
+}
+
+#perceelArea {
+	padding-left: 10.5em;
+}
+
+#outsideArea {
+	padding-left: 8em;
+}
+
+.distance {
+	padding-left: .6em;
+}
+
+.dropdownImg {
+	position: absolute;
+    width: 1em;
+    height: 1em;
+    right: .6em;
+    bottom: .75em;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.leftSelect {
+	right: 1rem;
+}
+
+#roomFilter, #areaFilter, #outsideFilter {
+	animation: slideLeft 1s ease;
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-100vw);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+#outsideFilter .dropdownAll, 
+#areaFilter .dropdownAll {
+	width: 100%;
+}
+
+
+select {
+	font-size: 1em;
+	cursor: pointer;
+}
+
+option {
+	font-size: 1em;
+}
+
+form > h3 {
+	margin: 1em 0;
+}
+
+[role="button"] {
+	width: 100%;
+	font-size: 1.3em;
+	padding: .7em;
+	border: none;
+	background-color: #3888C5;
+	color: white; 
+	margin-top: .5em;
+	cursor: pointer;
+}
+[role="button"]:hover {
+	background-color: #317FAF;
+}
+
+.roomButton,
+.areaButton,
+.oustsideButton {
+	background-color: #E8A000;
+	border: none;
+	color: white;
+	width: 100%;
+	font-size: 1em;
+	margin: .8em 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.bold {
+	font-weight: 700;
+	transition: .5s all ease;
+}
+
+.roomButton:hover,
+.areaButton:hover,
+.oustsideButton:hover {
+	background-color: rgba(250,250,250,.2);
+}
+
+.roomButton img,
+.areaButton img,
+.oustsideButton img {
+	width: 2.5em;
+	height: 2.5em;
+	padding: .5em;
+	box-sizing: content-box;
+	transition: all .3s cubic-bezier(.42,1.71,1,1);
+}
+
+.roomButton img:last-of-type,
+.areaButton img:last-of-type,
+.oustsideButton img:last-of-type {
+	width: 1.5em;
+
+}
+
+.filter {
+	display: flex;
+	justify-content: space-between;
+}
+
+.turn {
+	transform: rotate(45deg);
+	transition: all .3s cubic-bezier(.42,1.71,1,1);
+}
+
+[type="radio"] {
+	width: .5em;
+	margin: .3em 1em;
+	font-size: 1.5em;
+}
+
+/*Results*/
+
+#resultsBlock {
+	width: 100vw;
+	padding: 1em 1em 0 1em;
+	line-height: 1.5em;
+	background-color: white;
+	
+}
+#results {
+	animation: results .5s ease;
+}
+
+@keyframes results {
+	0% {
+		transform: scale(.6);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+#resultsBlock h3 {
+	font-size: .8em;
+	font-weight: 200;
+	display: block;
+	border-bottom: 2px solid #E8A000;
+	padding: .5em 0;
+	margin-bottom: 1em;
+}
+
+[data-bind="imageUrl"] {
+	width: 100%;
+	margin-top: 1.7em;
+}
+
+[data-bind="imageUrl"]:first-of-type {
+	margin-top: 1em;
+}
+
+.addressPrice {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #bdc3c7;
+}
+
+.addressPrice:last-of-type {
+	border-bottom: none;
+}
+
+[data-bind="Adres"] {
+	font-weight: 700;
+	color: #3888C5;
+}
+
+[data-bind="Koopprijs"] {
+	margin: 0 .3em;
+}
+
+.price {
+	display: flex;
+	font-weight: 700;
+}
+.address {
+	display: flex;
+}
+
+[data-bind="Postcode"] {
+	margin: 0 .5em 1em 0;
+}
+
+[data-bind="Woonoppervlakte"], 
+[data-bind="Perceeloppervlakte"],
+[data-bind="AantalKamers"] {
+	margin: 0 .3em;
+}
+
+.properties {
+	display: flex;
+	background-color: #E8A000;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1em;
+	color: white;
+	margin-top: -.4em;
+	margin-bottom: .7em;
+}
+
+.properties img {
+	max-width: 2em;
+	height: 2em;
+	margin-right: .2em;	
+}
+
+.properties div {
+	display: flex;
+	align-items: center;
+}
+
+.up {
+	width: 2em;
+	padding: 1em;
+	margin: 0 auto;
+	display: block;
+	background-color: #3888C5;
+	box-sizing: content-box;
+	cursor: pointer;
+	animation: up 1s infinite ease-in-out;
+	margin-top: 4em;
+}
+
+@keyframes up {
+	0%, 100% {
+		transform: translateY(-1em);
+ 
+	}
+	50% {
+		transform: translateY(0);
+	}
+}
+
+/*Loader*/
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #3888C5;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@media (min-width: 40em) {
+
+	.specific {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	
+	.specific button {
+		width: 32%;
+		order: 1;
+	}
+	
+	.specific fieldset {
+		order: 2;
+		width: 100%;
+	}
+	
+	.specific #areaFilter .dropdownAll,
+	.specific #roomFilter .dropdownAll,
+	.specific #outsideFilter .dropdownAll {
+		width: 49%;
+	}
+
+	.specific #areaFilter .dropdownAll:last-of-type {
+		float: right;
+	}
+
+}
+@media (min-width: 50em) {
+	
+	#template {
+		width: 51.5em;
+
+		margin-top: 3em;
+	}
+	
+	/*.specific button {
+		width: 100%;
+		order: unset;
+	}
+	
+	.specific fieldset {
+		order: unset;
+	}
+	
+	#resultsBlock {
+		width: 55%;
+		max-width: 40em;
+		margin-top: 2em;
+	}
+	
+	.specific #areaFilter .dropdownAll,
+	.specific #roomFilter .dropdownAll,
+	.specific #outsideFilter .dropdownAll {
+		width: 100%;
+	}*/
+	
+	header svg {
+		padding: .8em;
+		width: 8em;
+		transition: .5s ease-in-out all;
+	}
+	
+	@keyframes slideLeft {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		
+		}
+	}
+
+}
+
+
+
+
+
