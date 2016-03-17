@@ -5,6 +5,11 @@
 	var app = { // literal object
 		
 		init: function() { 
+
+			document.getElementById('roomButton').classList.remove('invisible');
+			document.getElementById('areaButton').classList.remove('invisible');
+			document.getElementById('outsideButton').classList.remove('invisible');
+
 			document.getElementById('roomFilter').classList.add('invisible');
 			document.getElementById('areaFilter').classList.add('invisible');
 			document.getElementById('outsideFilter').classList.add('invisible');
