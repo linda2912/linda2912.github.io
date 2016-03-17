@@ -2,6 +2,8 @@
 
 De Core Functionaliteit die ik heb opgepakt is het filteren van de zoekresultaten.
 
+[Bekijk hier de online versie](http://linda2912.github.io/browserTechnologies/week2/fundaCoreFunc/)
+
 #### De problemen die ik ondervond waren
 * Bij het uitzetten van de JavaScript toonde de website helemaal geen content doordat JavaScript alle elementen ```visible``` maakten.
 
