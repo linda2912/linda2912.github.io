@@ -11,7 +11,6 @@ De Core Functionaliteit die ik heb opgepakt is het filteren van de zoekresultate
 
 ![zonder JavaScript](readMeImg/noJs.png) ![zonder JavaScript gefixed](readMeImg/noJsFix.png)
 
-*Zonder JavaScript wordt niets getoond*
 ___
 
 **2)** Als de JavaScript uitstaat, kan de gebruiker de gericht zoeken velden niet gebruiken doordat deze ```visible``` worden gemaakt met JavaScript
@@ -20,7 +19,6 @@ ___
 
 ![toon alles zonder js](readMeImg/noJs2Fix.png)
 
-*Zonder JavaScript wordt alles getoond*
 
 ___
 
@@ -30,4 +28,3 @@ ___
 
 ![button verdwijnen zonder js](readMeImg/noJs3Fix.png)
 
-*Zonder JavaScript worden de buttons weggehaald*
