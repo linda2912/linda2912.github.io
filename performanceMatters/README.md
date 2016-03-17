@@ -26,7 +26,7 @@ app-like-experience?
 ![Service Worker](serviceWorker.png)
 
 #####Bevindingen
-De Progressive Web App is nog niet optimaal maar zeker een goede nieuwe manier om apps te ontwikkelen. Aan native en web apps zitten beide nadelen verbonden. De Progressive Web App kan veel van deze nadelen opvangen en creëert een nieuwe interessante manier van apps maken.
+De Progressive Web App is nog niet optimaal maar zeker een goede nieuwe manier om apps te ontwikkelen. Aan native en web apps zitten beide nadelen verbonden. De Progressive Web App kan veel van deze nadelen opvangen en creëert een nieuwe interessante manier van apps maken. Wat ik voornamelijk een groot voordeel vind van een Progressive Web App is dat je de mogelijk hebt om pushnotifications te sturen. Hopelijk gaan iOS en Safari ook binnenkort de Service Worker ondersteunen. Alleen denk ik dat Apple niet erg blij is met deze innovatie aangezien de native apps hierdoor onaantrekkelijker worden.
 
 
 #####Bronnen
