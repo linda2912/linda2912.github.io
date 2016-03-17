@@ -3,6 +3,7 @@ var filter = (function() {
 	return {
 	
 		search: function(button, input, img) { 
+
 			
 			document.querySelector(button).onclick = function() { //Execute this function onclick
 				document.querySelector(button).classList.toggle('background') //change the background
@@ -13,6 +14,11 @@ var filter = (function() {
 			}
 		}
 	}
+
+	document.querySelector('form').submit(function () {
+	 sendContactForm();
+	 return false;
+	});
 	
 }());
 
