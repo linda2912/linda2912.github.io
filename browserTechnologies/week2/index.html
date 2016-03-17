@@ -98,9 +98,36 @@
 
 			<article>
 				<h2>JavaScript</h2>
-				<section class="js"></section>
+				<section>
+						<h3>input type=date</h3>
+						<p>Wordt niet ondersteund door</p>
+						<ul>
+							<li>Firefox</li>
+							<li>Safari</li>
+						</ul>
+						<form>
+							<label for="date">Selecteer een datum</label>
+							<input type="date" min=2016-03-15 id="myData"></input>
+						</form>
+						<p>Fallback</p>
+						<ul>
+							<li>Modernizr kijkt of de browser type="date" ondersteund, zo niet dan voegt Modernizr het toe.</li>
+						</ul>
+					</section>
+
 			</article>
 		</section>
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
