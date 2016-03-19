@@ -14,7 +14,7 @@ section{
     -webkit-column-gap: 2em;
        -moz-column-gap: 2em;
             column-gap: 2em;
-    margin: 8em 5em 3em 5em;
+    margin: 7em 5em 3em 5em;
 }
 article{
 	margin: 1em;
@@ -87,6 +87,9 @@ a{
 }
 .img4{
 	background: url("img/niels.jpg");
+}
+.img5{
+	background: url("img/peterpaul.png");
 }
 
 .bron{
