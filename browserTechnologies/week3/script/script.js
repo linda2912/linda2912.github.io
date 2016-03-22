@@ -85,6 +85,13 @@ ride.onclick = function() {
 	rideFunction();
 };
 
+var fastclick = function() {
+	if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+}
 
 // var drumAudio = new Audio('sound/drum.wav');
 // var guitarAudio = new Audio('sound/guitar.wav');
