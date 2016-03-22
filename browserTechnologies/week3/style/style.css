@@ -24,6 +24,10 @@ section {
 
 h2 {
 	color: #c0392b;
+	margin-left: 1em;
+}
+h1 {
+	margin-left: 1em;
 }
 button {
 	border: none;
@@ -34,6 +38,7 @@ button {
 	font-size: 1em;
 	font-weight: 600;
 	cursor: pointer;
+	width: 100%;
 }
 button:hover {
 	background-color: #1abc9c;
@@ -44,3 +49,22 @@ button:hover {
 .invisible {
 	display: none;
 }
+
+@media (min-width: 37em) {
+	button {
+		width: auto;
+	}
+}
+@media (min-width: 37em) and (max-width: 48em) {
+	#buttons {
+		justify-content: flex-start;
+	}
+}
+
+
+
+
+
+
+
+
