@@ -36,7 +36,6 @@ window.onkeydown = function(event) {
 		case (71): //g
 		   	rideFunction();
 		   	break;
-
 	}
 };
 
@@ -44,7 +43,6 @@ var crashFunction = function() {
 	crashAudio.play();
 	crashAudio.currentTime = 0;
 	crash.classList.add('glow');
-	crash.classList.remove('glow');
 };
 
 var clapFunction = function() {
@@ -71,26 +69,46 @@ var rideFunction = function() {
 	ride.classList.add('glow');
 }
 
-crash.onclick = function() {
+crash.addEventListener('animationend', function() {
+	this.classList.remove('glow')
+});
+
+clap.addEventListener('animationend', function() {
+	this.classList.remove('glow')
+});
+
+hihat.addEventListener('animationend', function() {
+	this.classList.remove('glow')
+});
+
+snare.addEventListener('animationend', function() {
+	this.classList.remove('glow')
+});
+
+ride.addEventListener('animationend', function() {
+	this.classList.remove('glow')
+});
+
+
+crash.addEventListener('click', function() {
 	crashFunction();
-};
+});
 
-clap.onclick = function() {
+clap.addEventListener('click', function() {
 	clapFunction();
-};
+});
 
-hihat.onclick = function() {
+hihat.addEventListener('click', function() {
 	hihatFunction();
-	
-};
+});
 
-snare.onclick = function() {
+snare.addEventListener('click', function() {
 	snareFunction();
-};
+});
 
-ride.onclick = function() {
+ride.addEventListener('click', function() {
 	rideFunction();
-};
+});
 
 
 // var drumAudio = new Audio('sound/drum.wav');

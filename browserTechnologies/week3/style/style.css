@@ -44,13 +44,11 @@ button {
 	cursor: pointer;
 	width: 100%;
 }
-/*button:hover {
-	background-color: #1abc9c;
-}*/
 
 .glow {
-	animation: glow 500ms ease;
+	animation: glow 100ms ease;
 }
+
 @keyframes glow {
 	0% {
 		background-color: #c0392b;
@@ -66,10 +64,36 @@ button {
 .invisible {
 	display: none;
 }
+.subtitle {
+	display: flex;
+	align-items: center;
+}
+
+svg {
+	width: 1em;
+	height: 1em;
+	margin-left: .5em;
+	transform: skew(10deg);
+	animation: dance 300ms infinite;
+	animation-direction: alternate;
+	
+}
+@keyframes dance {
+	0% {
+    	transform: skewY(10deg);
+  	}
+  	100% {
+    	transform: skewY(-10deg);
+  	}
+}
 
 @media (min-width: 37em) {
 	button {
 		width: auto;
+	}
+	h1,
+	h2 {
+		font-size: 1.7em;
 	}
 }
 @media (min-width: 37em) and (max-width: 48em) {
