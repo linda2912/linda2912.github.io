@@ -43,25 +43,32 @@ window.onkeydown = function(event) {
 var crashFunction = function() {
 	crashAudio.play();
 	crashAudio.currentTime = 0;
+	crash.classList.add('glow');
+	crash.classList.remove('glow');
 };
 
 var clapFunction = function() {
 	clapAudio.play();
 	clapAudio.currentTime = 0;
+	clap.classList.add('glow');
 }
 
 var hihatFunction = function() {
 	hihatAudio.play();
 	hihatAudio.currentTime = 0;
+	hihat.classList.add('glow');
 }
+
 var snareFunction = function() {
 	snareAudio.play();
 	snareAudio.currentTime = 0;
+	snare.classList.add('glow');
 }
 
 var rideFunction = function() {
 	rideAudio.play();
 	rideAudio.currentTime = 0;
+	ride.classList.add('glow');
 }
 
 crash.onclick = function() {
@@ -85,13 +92,6 @@ ride.onclick = function() {
 	rideFunction();
 };
 
-var fastclick = function() {
-	if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-}
 
 // var drumAudio = new Audio('sound/drum.wav');
 // var guitarAudio = new Audio('sound/guitar.wav');
