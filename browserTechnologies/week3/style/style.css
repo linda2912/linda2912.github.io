@@ -22,13 +22,17 @@ section {
 	flex-wrap: wrap;
 }
 
+h1 {
+	font-size: 1em;
+	margin-left: 1em;
+}
+
 h2 {
+	font-size: 1em;
 	color: #c0392b;
 	margin-left: 1em;
 }
-h1 {
-	margin-left: 1em;
-}
+
 button {
 	border: none;
 	padding: 2em;
