@@ -70,8 +70,6 @@ button {
 }
 
 svg {
-	width: 1em;
-	height: 1em;
 	margin-left: .5em;
 	transform: skew(10deg);
 	animation: dance 300ms infinite;
