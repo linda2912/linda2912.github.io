@@ -3,7 +3,9 @@
 #### Use case: Beatbox
 
 [Online Demo](http://linda2912.github.io/browserTechnologies/week3/)
+
 ![](img/js.png)
+
 ##Keyboard fallback
 
 ```<button></button>```
@@ -11,6 +13,7 @@
 ##JavaScript fallback
 
 ```<audio></audio>```
+
 ![](img/nojs.png)
 
 ##Audio element fallback
@@ -39,6 +42,7 @@
 
 
 ##Linear-gradient fallback
+
 ![](img/gradient.png)
 
 ```background-color: #c0392b;```
