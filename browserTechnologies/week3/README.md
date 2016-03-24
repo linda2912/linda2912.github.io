@@ -8,11 +8,15 @@
 
 ##Keyboard fallback
 
-```<button></button>```
+```
+<button></button>
+```
 
 ##JavaScript fallback
 
-```<audio></audio>```
+``` 
+<audio></audio> 
+```
 
 ![](img/nojs.png)
 
