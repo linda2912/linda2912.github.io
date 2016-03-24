@@ -5,9 +5,11 @@
 [Online Demo](http://linda2912.github.io/browserTechnologies/week3/)
 ![](img/js.png)
 ##Keyboard fallback
+
 ```<button></button>```
 
 ##JavaScript fallback
+
 ```<audio></audio>```
 ![](img/nojs.png)
 
@@ -38,7 +40,9 @@
 
 ##Linear-gradient fallback
 ![](img/gradient.png)
+
 ```background-color: #c0392b;```
+
 ```background: linear-gradient(to bottom right, #c0392b , #e74c3c);```
 
 ![](img/gradientyes.png)![](img/gradientno.png)
