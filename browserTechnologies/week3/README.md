@@ -26,6 +26,9 @@ JavaScript maakt de buttons zichtbaar en de audio elementen onzichtbaar.
 var buttons = document.getElementById('buttonBox').classList.remove('invisible');
 var audioControls = document.getElementById('audioControls').classList.add('invisible');`
 ```
+##CSS & JavaScript fallback
+
+![nocss](img/nocss.png)
 
 ##Audio element fallback
 
