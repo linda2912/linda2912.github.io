@@ -7,11 +7,11 @@ var hihat = document.getElementById('hihatButton');
 var snare = document.getElementById('snareButton');
 var ride = document.getElementById('rideButton');
 
-var crashAudio = new Audio('beat/crash.wav');
-var clapAudio = new Audio('beat/clap.wav');
-var hihatAudio = new Audio('beat/hihat.wav');
-var snareAudio = new Audio('beat/snare.wav');
-var rideAudio = new Audio('beat/ride.wav');
+var crashAudio = new Audio('beat/crash.mp3');
+var clapAudio = new Audio('beat/clap.mp3');
+var hihatAudio = new Audio('beat/hihat.mp3');
+var snareAudio = new Audio('beat/snare.mp3');
+var rideAudio = new Audio('beat/ride.mp3');
 
 
 window.onkeydown = function(event) {
@@ -110,9 +110,12 @@ ride.addEventListener('click', function() {
 	rideFunction();
 });
 
+var button = document.querySelector( "button" )
+        delay;
 
-// var drumAudio = new Audio('sound/drum.wav');
-// var guitarAudio = new Audio('sound/guitar.wav');
-// var saxophoneAudio = new Audio('sound/saxophone.wav');
-// var tromboneAudio = new Audio('sound/trombone.wav');
-// var djembeAudio = new Audio('sound/djembe.mp3');
+    button.addEventListener( "touchend", function() {
+        delay = Date.now();
+    });
+    button.addEventListener( "click", function() {
+        span.innerHTML = Date.now() - delay;
+    });
