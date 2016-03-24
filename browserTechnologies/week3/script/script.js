@@ -110,12 +110,3 @@ ride.addEventListener('click', function() {
 	rideFunction();
 });
 
-var button = document.querySelector( "button" )
-        delay;
-
-    button.addEventListener( "touchend", function() {
-        delay = Date.now();
-    });
-    button.addEventListener( "click", function() {
-        span.innerHTML = Date.now() - delay;
-    });
