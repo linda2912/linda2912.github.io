@@ -49,8 +49,9 @@
 
 ![](img/gradient.png)
 
-```background-color: #c0392b;```
-
-```background: linear-gradient(to bottom right, #c0392b , #e74c3c);```
+```
+background-color: #c0392b;
+background: linear-gradient(to bottom right, #c0392b , #e74c3c);
+```
 
 ![](img/gradientyes.png)![](img/gradientno.png)
