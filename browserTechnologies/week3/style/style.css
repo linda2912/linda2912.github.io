@@ -14,16 +14,13 @@ body {
 	align-items: center;
 }
 
-section {
-	background-color: white;
+#audioControls {
+	
 	margin-top: 2em;
 	padding: 1em;
-}
-
-#buttons {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -38,19 +35,32 @@ h2 {
 	margin-left: 1em;
 }
 
+.js p {
+	display: none;
+}
+
+div {
+	width: 100%;
+	margin-bottom: .3em;
+}
+
 button {
+	width: 100%;
 	border: none;
 	padding: 2em;
-	margin: .5em;
 	background-color: #c0392b;
 	background: linear-gradient(to bottom right, #c0392b , #e74c3c);
 	color: white;
 	font-size: 1em;
 	font-weight: 600;
 	cursor: pointer;
-	width: 100%;
 	border-radius: 1em;
-	border-bottom: #c0392b solid 5px;
+	border-bottom: #c0392b solid 7px;
+}
+
+.press {
+	border-bottom: none;
+	margin-top: 5px;
 }
 
 .glow {
@@ -68,14 +78,6 @@ button {
 	}
 }
 
-.green {
-	background-color: #1abc9c;
-}
-
-.invisible {
-	display: none;
-}
-
 .subtitle {
 	display: flex;
 	align-items: center;
@@ -88,6 +90,7 @@ svg {
 	animation-direction: alternate;
 	
 }
+
 @keyframes dance {
 	0% {
     	transform: skewY(10deg);
@@ -98,6 +101,10 @@ svg {
 }
 
 @media (min-width: 37em) {
+	div {
+		width: auto;
+		margin: .15em;
+	}
 	button {
 		width: auto;
 	}
@@ -108,7 +115,7 @@ svg {
 }
 
 @media (min-width: 37em) and (max-width: 48em) {
-	#buttons {
+	#audioControls {
 		justify-content: flex-start;
 	}
 }
