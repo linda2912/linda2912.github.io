@@ -4,7 +4,7 @@
     'use strict';
     
     var div = document.querySelectorAll('div');
-    var audio = document.querySelectorAll('audio');
+    var audios = document.querySelectorAll('audio');
     var handler = 'click';
     var keys = {}
     
@@ -21,29 +21,27 @@
         button.innerHTML = div[i].querySelector('p').innerHTML + ' (' + keyString + ')'; //add html into the button
         div[i].appendChild(button); //append an button element into all divs
         button.addEventListener(handler, play, false); //onclick exescute the play function
-        audio[i].removeAttribute('controls'); //remove all the controls from the audio elements
-        
+        audios[i].removeAttribute('controls'); //remove all the controls from the audio elements  
     }
 
     function play(evt, button) {
         
-        if(this) button = this;
+        if(this) button = this; 
         
-        var audio = button.parentNode.querySelector('audio');
+        var audio = button.parentNode.querySelector('audio'); 
+        var style = button.classList;
 
         if(audio.paused) {
             
             audio.play();
             audio.currentTime = 0;
-            button.classList.add('glow');
-            button.classList.add('press');
+            style.add('glow');
+            style.add('press');
             return;
         } 
-        
         audio.pause();
-        button.classList.remove('glow');
-        button.classList.remove('press');
+        style.remove('glow');
+        style.remove('press');
     };
-    
     
 }());
