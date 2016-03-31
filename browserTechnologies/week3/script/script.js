@@ -3,11 +3,28 @@
 (function () {
     'use strict';
     
-    var audios = document.querySelectorAll('audio');
-    var divs = document.querySelectorAll('div');
-    var handler;
+    var div = document.querySelectorAll('div');
+    var audio = document.querySelectorAll('audio');
+    var handler = 'click';
     var keys = {}
     
+    window.addEventListener('keydown', function(evt) {
+        if(keys[evt.keyCode]) play(null, keys[evt.keyCode]);
+    });
+    
+    for (var i = 0; i < div.length; i += 1) {
+
+        document.body.classList.add('js'); //by adding this class the p element will change to display:block
+        var dataKey = div[i].querySelector('audio').getAttribute('data-key'); //pick all data-key's  
+        var keyString = String.fromCharCode(dataKey); //converts Unicode values into characters.
+        var button = document.createElement('button'); //create button element
+        button.innerHTML = div[i].querySelector('p').innerHTML + ' (' + keyString + ')'; //add html into the button
+        div[i].appendChild(button); //append an button element into all divs
+        button.addEventListener(handler, play, false); //onclick exescute the play function
+        audio[i].removeAttribute('controls'); //remove all the controls from the audio elements
+        
+    }
+
     function play(evt, button) {
         
         if(this) button = this;
@@ -28,25 +45,5 @@
         button.classList.remove('press');
     };
     
-    window.addEventListener('keydown', function(evt) {
-        if(keys[evt.keyCode]) play(null, keys[evt.keyCode]);
-    });
-    
-    if ('ontouchstart' in document.documentElement) handler = 'touchstart';
-    else handler = 'click';
-    
-    for (var i = 0; i < divs.length; i += 1) {
-        var dataKey = divs[i].querySelector('audio').getAttribute('data-key');
-        var keyString = String.fromCharCode(dataKey);
-        var button = document.createElement('button');
-        button.innerHTML = divs[i].querySelector('p').innerHTML + ' (' + keyString + ')';
-        divs[i].appendChild(button);
-        button.addEventListener(handler, play, false);
-        audios[i].removeAttribute('controls');
-        keys[dataKey] = button;
-
-    }
-
-    document.body.classList.add('js');
     
 }());
