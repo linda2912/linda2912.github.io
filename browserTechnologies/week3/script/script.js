@@ -22,6 +22,7 @@
         div[i].appendChild(button); //append an button element into all divs
         button.addEventListener(handler, play, false); //onclick exescute the play function
         audios[i].removeAttribute('controls'); //remove all the controls from the audio elements  
+        keys[dataKey] = button; 
     }
 
     function play(evt, button) {
@@ -43,5 +44,5 @@
         style.remove('glow');
         style.remove('press');
     };
-    
+
 }());
