@@ -8,25 +8,26 @@
 
 ##Keyboard fallback
 
-```
-<button></button>
-```
+```<button></button>```
+
 Als de gebruiker geen gebruik kan maken van een keyboard, kan er ook op de buttons geklikt worden.
 
 ##JavaScript fallback
 
-``` 
-<audio></audio> 
-```
-JavaScript maakt de buttons zichtbaar en de audio elementen onzichtbaar. Zodra er geen JavaScript beschikbaar is laat de browser alleen de audio elementen zien.
-
-
-```
-var buttons = document.getElementById('buttonBox').classList.remove('invisible');
-var audioControls = document.getElementById('audioControls').classList.add('invisible');`
-```
+``` <audio></audio> ```
 
 ![](img/nojs.png)
+
+JavaScript maakt de buttons aan voor ieder audio element. Zodra er geen JavaScript beschikbaar is worden er ook geen `<button>` elementen aangemaakt.
+
+##ClassList && audio
+
+```if (classListAvailable && mediaSupport) {...}```
+
+Als er geen ClassList en/of audio wordt ondersteund wordt de JavaScript code ook niet uitgevoerd.
+
+
+
 
 ##JavaScript & CSS fallback
 
@@ -43,11 +44,13 @@ Het audio element wordt niet ondersteund door IE8 en Opera Mini. Op deze browser
 **Oplossing:**
 
 ```
-<audio controls>
-	<source src="beat/crash.mp3" type="audio/mp3">
-	<p>Your browser does not support the audio element.</p>
-	<a href="beat/crash.mp3">Play Crash</a>
-</audio>
+<div>
+	<p>Crash</p>
+	<audio id="crashButton" src="beat/crash.mp3" type="audio/mp3" data-key="65" controls preload="auto" loop>
+		<p>Your browser does not support the audio element. </p>
+		<a href="beat/crash.mp3">Play Crash</a>
+	</audio>
+</div>
 ```
 **IE8:**
 ![](img/ie8.png)
