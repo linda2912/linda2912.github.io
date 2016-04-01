@@ -8,14 +8,12 @@
     var handler = 'click';
     var keys = {}
     var mediaSupport = false;
-    
     var classListAvailable = document.querySelector('body').classList;
     var audioAvailable = document.createElement("audio");
+
     if (audioAvailable.play) {
         var mediaSupport = true;
     } 
-    console.log(classListAvailable);
-    console.log(mediaSupport);
 
     if (classListAvailable && mediaSupport) {
 
