@@ -8,13 +8,17 @@
 
 ##Keyboard fallback
 
-```<button></button>```
+```
+<button></button>
+```
 
 Als de gebruiker geen gebruik kan maken van een keyboard, kan er ook op de buttons geklikt worden.
 
 ##JavaScript fallback
 
-``` <audio></audio> ```
+```
+<audio></audio>
+```
 
 ![](img/nojs.png)
 
@@ -22,7 +26,9 @@ JavaScript maakt de buttons aan voor ieder audio element. Zodra er geen JavaScri
 
 ##ClassList && audio
 
-```if (classListAvailable && mediaSupport) {...}```
+```
+if (classListAvailable && mediaSupport) {...}
+```
 
 Als er geen ClassList en/of audio wordt ondersteund wordt de JavaScript code ook niet uitgevoerd.
 
