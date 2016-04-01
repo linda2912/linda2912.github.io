@@ -7,10 +7,17 @@
     var audios = document.querySelectorAll('audio');
     var handler = 'click';
     var keys = {}
+    var mediaSupport = false;
     
     var classListAvailable = document.querySelector('body').classList;
+    var audioAvailable = document.createElement("audio");
+    if (audioAvailable.play) {
+        var mediaSupport = true;
+    } 
+    console.log(classListAvailable);
+    console.log(mediaSupport);
 
-    if (classListAvailable) {
+    if (classListAvailable && mediaSupport) {
 
         window.addEventListener('keydown', function(evt) {
             if(keys[evt.keyCode]) play(null, keys[evt.keyCode]);
@@ -49,12 +56,5 @@
             style.remove('press');
         };
     }
-
-    var test_audio= document.createElement("audio") //try and create sample audio element 
-    // var test_video= document.createElement("video") //try and create sample video element
-    var mediasupport={audio: (test_audio.play)? true : false}
-
-    alert("Audio Element support: " + mediasupport.audio)
-
 
 }());
