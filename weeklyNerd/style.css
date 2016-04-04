@@ -83,13 +83,21 @@ a{
 	background: url("img/marrije.jpg");
 }
 .img3{
-	background: url("img/donny.jpg");
+	background: url("img/donny.jpeg");
 }
 .img4{
 	background: url("img/niels.jpg");
 }
 .img5{
 	background: url("img/peterpaul.png");
+}
+
+.img6{
+	background: url("img/mattijs.jpeg");
+}
+
+.img7{
+	background: url("img/ron.jpg");
 }
 
 .bron{
