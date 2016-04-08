@@ -15,7 +15,7 @@ int status = WL_IDLE_STATUS;
 WiFiClient  client;
 
 unsigned long myChannelNumber = 106583;
-const char * myWriteAPIKey = "EZGGXKFWCPY1UM9F";
+const char * myWriteAPIKey = "**KEY**";
 
 void setup() {
  

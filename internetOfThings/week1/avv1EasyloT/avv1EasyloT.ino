@@ -48,7 +48,7 @@ void loop() {
   valuePot = valuePot / 100;
   Serial.println(valuePot);
 
-  eiotcloud.sendParameter("5703b4e3c943a0661cf314a5/biQ2JZ8N9Ip0N6ta", valueSensor);
-  eiotcloud.sendParameter("5703b4e3c943a0661cf314a5/q6THM15scqvwtwLD", valuePot);
+  eiotcloud.sendParameter("**KEY**", valueSensor);
+  eiotcloud.sendParameter("**KEY**", valuePot);
  }
 
