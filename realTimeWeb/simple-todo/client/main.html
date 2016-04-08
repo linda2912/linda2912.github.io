@@ -1,0 +1,37 @@
+<head>
+    <title>tasklist</title>
+</head>
+
+<body>
+    {{>tasks}}
+</body>
+
+<template name="tasks">
+    <div class="container">
+        <div class="login">
+            {{> loginButtons}}
+        </div>
+
+        <h1>What-To-Do</h1>  
+    
+        <header>
+        
+
+        {{#if currentUser}} 
+            <form class="add-task">
+                <input type="text" name="name" placeholder="Add here your tasks" />
+                <button type="submit">Add</button>
+            </form>
+        {{else}}
+            <p>Please log in to add tasks</p>
+        {{/if}}
+        </header>
+    
+        <ul>
+            {{#each tasks}}
+                <li>{{name}} {{#if currentUser}} <a href="#" class="delete-task">x</a>{{/if}}</li>
+            {{/each}}
+        </ul>
+
+    </div>
+</template>
