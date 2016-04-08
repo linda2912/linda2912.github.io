@@ -3,7 +3,7 @@
 ###### Week 1
 
 #####Databron
-Ik ga gebruik maken van de API van KNVB met de data van mijn voetbalclub ZVVZaandijk. Met deze data kan deze data ophalen:
+Ik ga gebruik maken van de API van KNVB met de data van mijn voetbalclub ZVVZaandijk. Met deze API kan de volgende data ophalen:
 
 * Teams
 * Uitslagen
@@ -24,9 +24,9 @@ Het idee van het concept is dat een speler van een specifiek team een duidelijk 
 
 Features
 
-* Uitslagen
-* Programma
-* Stand
+* Real-time uitslagen
+* Real-time programma
+* Real-time stand
 
 Zodra er uitslagen bekend zijn, veranderen de drie velden(uitslagen, programma en stand) automatisch zonder de pagina opnieuw te moeten laden (reactiveness)
 
@@ -36,6 +36,7 @@ Zodra er uitslagen bekend zijn, veranderen de drie velden(uitslagen, programma e
 * Een ander team kunnen selecteren
 * Een detail pagina voor ieder onderdeel (uitslagen, programma en stand)
 
-##### Ideeën voor aanvulling van klasgenoten
+##### Ideeën voor aanvulling van andere
 
 Martijn: pushnotifacties sturen zodra er een uitslag bekend is.
+ 
