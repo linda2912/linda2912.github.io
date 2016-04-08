@@ -33,6 +33,7 @@ Zodra er uitslagen bekend zijn, veranderen de drie velden(uitslagen, programma e
 ##### Wishlist
 
 * Een melding ontvangen als er iets voor jouw gekozen team veranderd
+* Swipen door de drie elementen om zo voorgaande uitslagen, komende wedstrijden en de standen van andere teams te kunnen bekijken.
 * Een ander team kunnen selecteren
 * Een detail pagina voor ieder onderdeel (uitslagen, programma en stand)
 
