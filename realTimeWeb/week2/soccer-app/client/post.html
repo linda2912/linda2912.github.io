@@ -1,0 +1,12 @@
+<template name="post">
+  <h1>Edit</h1> 
+  {{#autoForm collection="Posts" id="updatePostForm" type="update" doc=this}}
+    <fieldset>
+      {{> afQuickField name='place'}}
+      {{> afQuickField name='against'}}
+      {{> afQuickField name='date'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+  <a class="btn" href="/">Back</a>
+</template>
