@@ -3,7 +3,7 @@
 ###### Week 1
 
 #####Databron
-Ik ga gebruik maken van de API van KNVB met de data van mijn voetbalclub ZVVZaandijk. Met deze API kan de volgende data ophalen:
+Ik wilden gebruik gaan maken van de API van KNVB met de data van mijn voetbalclub ZVVZaandijk. Met deze API kan de volgende data ophalen:
 
 * Teams
 * Uitslagen
@@ -12,32 +12,31 @@ Ik ga gebruik maken van de API van KNVB met de data van mijn voetbalclub ZVVZaan
 * Wedstrijden
 * Competities
 
-Deze data is Betrouwbaar en selectief voor mij een maand vrijgesteld.
+Deze data is Betrouwbaar en selectief voor mij een maand vrijgesteld. Maar helaas heb ik de API niet aan de praat gekregen en ben ik opzoek gegaan naar een andere oplossing.
 
 ##### Concept idee
 
-Het idee van het concept is dat een speler van een specifiek team een duidelijk overzicht van de uitslagen, programma en stand kan zien.
+Het idee van het concept is dat een speler van een specifiek team een duidelijk overzicht van de uitslagen, programma en stand kan zien en zich kan aanmelden voor een wedstrijd.
 
 <img src="img/schets.png" width="200px">
+
+Nu het niet mogelijk is om gebruik te maken van de API wil ik een formulier maken waarin een wedstrijd handmatig kan worden toegevoegd waar de spelers zich vervolgens voor kunnen 'aanmelden'.
+
+
 
 ##### MVP versie
 
 Features
 
-* Real-time uitslagen
-* Real-time programma
-* Real-time stand
+* Inlogsysteem
+* Formulier
+* Aanmeld mogelijkheid
 
-Zodra er uitslagen bekend zijn, veranderen de drie velden(uitslagen, programma en stand) automatisch zonder de pagina opnieuw te moeten laden (reactiveness)
+Zodra iemand zich aanmeld voor een wedstrijd is dat direct te zien. (reactiveness)
 
 ##### Wishlist
 
-* Een melding ontvangen als er iets voor jouw gekozen team veranderd
-* Swipen door de drie elementen om zo voorgaande uitslagen, komende wedstrijden en de standen van andere teams te kunnen bekijken.
-* Een ander team kunnen selecteren
-* Een detail pagina voor ieder onderdeel (uitslagen, programma en stand)
+* Een chatsysteem
+* Pushnotificaties een paar dagen voor de wedstrijd
 
-##### Ideeën voor aanvulling van andere
 
-Martijn: pushnotifacties sturen zodra er een uitslag bekend is.
- 
