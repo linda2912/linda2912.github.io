@@ -30,10 +30,10 @@
             button.innerHTML = div[i].querySelector('p').innerHTML + ' (' + keyString + ')'; //add html into the button
             div[i].appendChild(button); //append an button element into all divs
             button.addEventListener(handler, play, false); //onclick execute the play function
+            audios[i].removeAttribute('controls'); //remove all the controls from the audio elements  
             keys[dataKey] = button;
 
-            audios[i].removeAttribute('controls'); //remove all the controls from the audio elements  
-             
+            
         }
 
         function play(event, button) {
