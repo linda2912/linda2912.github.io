@@ -1,24 +1,18 @@
 <?php header('Access-Control-Allow-Origin: *');?>
 
-<?php
-
-if(isset($_POST['on']))
-{
-        $file = 'lampje.txt';
-        $previous = file_get_contents($file);
-        file_put_contents($file, '1');
-    }
+<?php  
+$light = $_GET['light'];
+if($light == "on") {  
+    $file = fopen("lampje.txt", "w") or die("can't open file");
+    fwrite($file, '1');
+    fclose($file);
+} 
+else if ($light == "off") {  
+    $file = fopen("lampje.txt", "w") or die("can't open file");
+    fwrite($file, '0');
+    fclose($file);
+}
 ?>
-
-<?php
-if(isset($_POST['off']))
-{
-        $file = 'lampje.txt';
-        $previous = file_get_contents($file);
-        file_put_contents($file, '0');
-    }
-?> 
-
 <html>
     <head>
         <style>
@@ -31,7 +25,7 @@ if(isset($_POST['off']))
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                padding: 10em;
+                padding: 10em 0;
             }
             h1 {
                 font-family: "Lato";
@@ -64,16 +58,36 @@ if(isset($_POST['off']))
                 border-bottom: none;
                 transform: translateY(5px);
             }
+            a {
+                text-decoration: none;
+                margin: .5em;
+            }
+            .turn {
+                font-family: 'Lato';
+                color: white;
+                width: 100%;
+                text-align: center;
+            }
 
         </style>
     </head>
     <body>
-    <h1>Turn the lights!</h1>
-    	<form action="" method="post">
-    		<?php echo $message; ?>
-    		<input type="submit" name="on" value="On" class="on" />
-    		<input type="submit" name="off" value="Off" class="off" />
-    	</form>    
+        <h1>Turn the lights!</h1>
+        <a href="?light=on" class="on">Turn On</a>  
+        <a href="?light=off" class="off">Turn Off</a>  
+        <div class="turn">  
+            <?php
+                if($light=="on") {
+                    echo("Turn LED on.");
+                }
+                else if ($light=="off") {
+                    echo("Turn LED off.");
+                }
+                else {
+                    echo ("Do something.");
+                }
+            ?>
+        </div>              
     </body>
 </html>
 
