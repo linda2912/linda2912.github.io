@@ -41,6 +41,17 @@ JavaScript vervangt op een dynamische manier de ```audio``` elementen door ```bu
 ![](img2/js.png)
 
 ####ClassList && audio Fallback
+
+[ClassList](http://caniuse.com/#search=classlist) wordt niet ondersteund door:
+
+* IE 8, 9, 11(gedeeltelijk)
+* Opera Mini
+
+[Audio](http://caniuse.com/#search=audio) wordt niet ondersteund door:
+
+* IE 8
+* Opera Mini
+
 Als de browser geen classlist en/of audio ondersteund dan krijgt de gebruiker de versie zonder JavaScript te zien.
 
 ```
