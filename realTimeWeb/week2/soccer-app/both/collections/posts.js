@@ -22,5 +22,9 @@ Posts.attachSchema(new SimpleSchema({
                 type: "datetime-local"
             }
         }
+    },
+    attendees: {
+        type: [String],
+        optional: true
     }
 }));

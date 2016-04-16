@@ -1,17 +1,47 @@
 <template name="posts">
-    <h1>Voeg een wedstrijd toe</h1>
-    {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
-        <fieldset>
-            {{> afQuickField name='place'}}
-            {{> afQuickField name='against'}}
-            {{> afQuickField name='datetime'}}
-        </fieldset>
-        <button type="submit" class="btn btn-primary">+</button>
-    {{/autoForm}}
+    <div class="addGameBlock">
+        <h2>Voeg een wedstrijd toe</h2>
+        {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
+            <fieldset>
+                {{> afQuickField name='place'}}
+                {{> afQuickField name='against'}}
+                {{> afQuickField name='datetime'}}
 
+            </fieldset>
+            <button type="submit" class="btn btn-primary">+</button>
+        {{/autoForm}}
+    </div>
+    <div class="games">
+        <h3>Geplande wedstrijden:</h3>
+        <ul>
+            {{#each posts}} 
+                <li>
+                    <div class="placeBLock">
+                        <h4>{{datetime}}</h4>
+                        <div><a href="{{pathFor 'post.show'}}"> Bewerk</a> | <a href="#" class="delete">Verwijder</a></div>
+                    </div>
+                    <p>{{place}} Tegen {{against}}</p>
+                    {{#if currentUser}}
+                        <button id="join" class="btn btn-primary">Ik doe mee!</button>
+                    {{else}}
+                        <p>Log in om deel te nemen</p>
+                    {{/if}}
+                    <div class="participants">
+                        <p>Deelnemers: {{> list data = attendees}} </p>
+                    </div>
+                    
+                </li>
+                <hr/>
+            {{/each}}
+        </ul>
+    </div>
+    
+</template>
+
+<template name="list">
     <ul>
-        {{#each posts}} 
-            <li>{{place}} Tegen {{against}} op {{datetime}}<a href="{{pathFor 'post.show'}}"></a><p id="join">ik doe mee!</p></li>
+        {{#each person in data}}
+            <li>{{person}}</li>
         {{/each}}
     </ul>
 </template>

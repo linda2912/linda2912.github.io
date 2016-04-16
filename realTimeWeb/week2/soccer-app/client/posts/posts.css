@@ -1,0 +1,30 @@
+li {
+	list-style: none;
+}
+.placeBLock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: 300;
+}
+h3 {
+	font-size: 1.5em;
+	font-weight: 200;
+	color: #1abc9c;
+}
+ul {
+	padding-left: 0;
+}
+label {
+	font-weight: 400;
+	color: #1abc9c;
+}
+
+.participants {
+	background-color: #ecf0f1;
+	padding: .5em;
+	margin-top: 1em;
+}

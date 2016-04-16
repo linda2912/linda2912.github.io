@@ -1,1 +1,31 @@
-/* CSS declarations go here */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	padding: 1em;
+	background-image: -webkit-linear-gradient(top left, #1abc9c, #3498db 100%);
+	background-image: -o-linear-gradient(top left, #1abc9c, #3498db 100%);
+	background-image: linear-gradient(to bottom right, #1abc9c, #3498db 100%);
+}
+header > h1 {
+	font-size: 1.5em;
+	font-style: italic;
+	font-weight: 900;
+	margin: 0;
+	font-family: 'Lato';
+
+}
+header p {
+	margin: 0;
+}
+header a {
+	color: #ecf0f1;
+}
+.addGameBlock {
+	background-color: #ecf0f1;
+	padding: 15px;
+}
+.games {
+	padding: 15px;
+}
