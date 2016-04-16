@@ -84,7 +84,8 @@ Linkerkant is met linear-gradient, rechts zonder.
 ###Muis/Trackpad
 
 De gebruiker kan met zijn tab functie door de applicatie navigeren en de beatbox bedienen
-![](img2/muisTrackpad.png)
+
+<img src=img2/muisTrackpad.png width=350>
 
 ###JavaScript(volledig)
 De applicatie werkt zonder JavaScript doordat er een ```preload="auto"``` op het audio element in de html zit.
@@ -94,10 +95,12 @@ De app werkt ook zonder CSS doordat de HTML opzichzelf al functioneel is.
 
 ###Kleur
 * Het contrast ratio van de applicatie is hoog genoeg. 
-<img src=img2/ratio.png width=300>
+
+<img src=img2/ratio.png width=350>
 
 * Ook in zwart/ wit is de app goed leesbaar
-![](img2/kleur.png)
+
+<img src=img2/kleur.png width=350>
 
 ###Breedband internet
 Netwerk: 2G: 250kb/s
