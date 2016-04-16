@@ -20,3 +20,11 @@
 //     instance.counter.set(instance.counter.get() + 1);
 //   },
 // });
+
+import { Accounts } from 'meteor/accounts-base'
+
+Accounts.ui.config({
+   passwordSignupFields: 'USERNAME_ONLY'
+});
+
+

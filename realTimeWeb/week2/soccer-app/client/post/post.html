@@ -1,12 +1,15 @@
 <template name="post">
-    <h1>Edit</h1> 
-    {{#autoForm collection="Posts" id="updatePostForm" type="update" doc=this}}
-        <fieldset>
-            {{> afQuickField name='place'}}
-              {{> afQuickField name='against'}}
-              {{> afQuickField name='datetime'}}
-        </fieldset>
-        <button type="submit" class="btn btn-primary">+</button>
-    {{/autoForm}}
-    <a class="btn" href="/">Back</a>
+    <div class="editBlock">
+        <h1>Bewerk wedstrijd</h1> 
+        {{#autoForm collection="Posts" id="updatePostForm" type="update" doc=this}}
+            <fieldset>
+                {{> afQuickField name='place'}}
+                  {{> afQuickField name='against'}}
+                  {{> afQuickField name='datetime'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Opslaan</button>
+        {{/autoForm}}
+        <a class="btn" href="/">Terug naar overzicht</a>
+    </div>
+    
 </template>
