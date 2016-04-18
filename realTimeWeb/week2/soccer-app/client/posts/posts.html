@@ -1,15 +1,20 @@
 <template name="posts">
     <div class="addGameBlock">
         <h2>Voeg een wedstrijd toe</h2>
+        {{#if currentUser}}
         {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
             <fieldset>
                 {{> afQuickField name='place'}}
                 {{> afQuickField name='against'}}
                 {{> afQuickField name='datetime'}}
-
             </fieldset>
+            
             <button type="submit" class="btn btn-primary">+</button>
+            
         {{/autoForm}}
+        {{else}}
+                <p>Log in om een wedstrijd toe te voegen</p>
+            {{/if}}
     </div>
     <div class="games">
         <h3>Geplande wedstrijden:</h3>
@@ -18,7 +23,9 @@
                 <li>
                     <div class="placeBLock">
                         <h4>{{datetime}}</h4>
+                        {{#if currentUser}}
                         <div><a href="{{pathFor 'post.show'}}"> Bewerk</a> | <a href="#" class="delete">Verwijder</a></div>
+                        {{/if}}
                     </div>
                     <p>{{place}} Tegen {{against}}</p>
                     {{#if currentUser}}

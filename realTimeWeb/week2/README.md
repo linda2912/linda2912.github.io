@@ -30,3 +30,4 @@ soccer-app
 * wedstrijd verwijderen
 * aanwezigen tellen
 * verleden wedstrijden automatisch verwijderen
+* automatische gesorteerd op data

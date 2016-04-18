@@ -6,6 +6,15 @@ Template.posts.helpers({
 		const formattedPost = posts.map((post) => {
 			const time = moment(post.datetime).format('DD-MM-YY H:mm');
 			post.datetime = time;
+			
+			if(post.attendees) {
+				post.attendees.forEach(function(id) {
+					console.log(id);
+					Meteor.call('findUserName', id, function(data) {
+						console.log(data)
+					});
+				});
+			}
 			return post
 		});
 		return formattedPost;
@@ -16,11 +25,7 @@ Meteor.subscribe('posts');
 
 Template.posts.events({
 	'click #join': function() {
-		console.log('i want to join', this);
-		// Method call -> join Meteor.userId(), this._id
 		Meteor.call('join', Meteor.userId(), this._id);
-		console.log(this._id)
-		console.log(this._username)
 	}
 	,
 	'click .delete': function() {
@@ -30,3 +35,7 @@ Template.posts.events({
 	}
 
 });
+
+
+// template list
+
