@@ -10,22 +10,26 @@ Meteor.publish('join', function(){
 
 Meteor.publish('posts', function(){
 	return Posts.find();
-})
+});
+//currentUser.username
+Meteor.publish("users", function(){
+  return Meteor.users.find({},{fields:{username:1}})
+});
+
+
 
 Meteor.methods({
 	join: function(userId, gameId) {
-		Posts.update({_id: gameId}, {$push: { attendees: userId }});
+		Posts.update({_id: gameId}, {$addToSet: { attendees: userId }});
 	},
-	findUserName: function(id) {
-		console.log(Meteor.users.find({ "_id" : id }).fetch());
-		// Meteor.users.find({ "_id" : id }, function(err, data) {
-		// 	if(err) console.error(err);
-		// 	return data;
-		// });
-		return Meteor.users.find({ "_id" : id }).fetch();
-		
+	joinNot: function(userId, gameId) {
+		Posts.update({_id: gameId}, {$pull: { attendees: userId }});
 	}
-})
+	// ,
+	// findUserName: function(id) {
+	// 	Meteor.users.find({}, {fields: {'username': 1}});
+	// }
+});
 
 Posts.allow({
 	insert: function(userId, doc) {
@@ -37,5 +41,4 @@ Posts.allow({
 	update: function(userId, doc) {
 		return true;
 	}
-})
-
+});

@@ -30,6 +30,8 @@
                     <p>{{place}} Tegen {{against}}</p>
                     {{#if currentUser}}
                         <button id="join" class="btn btn-primary">Ik doe mee!</button>
+                        <button id="joinNot" class="btn btn-primary invisible">Ik doe toch niet mee</button>
+                        
                     {{else}}
                         <p>Log in om deel te nemen</p>
                     {{/if}}
@@ -48,7 +50,12 @@
 <template name="list">
     <ul>
         {{#each person in data}}
-            <li>{{person}}</li>
+            <!-- <li>{{person}}</li> -->
+            <li>{{username person}}</li>
+            
         {{/each}}
     </ul>
 </template>
+
+
+

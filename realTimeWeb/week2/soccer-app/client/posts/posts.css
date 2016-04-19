@@ -28,3 +28,6 @@ label {
 	padding: .5em;
 	margin-top: 1em;
 }
+.invisible {
+	display: none;
+}
