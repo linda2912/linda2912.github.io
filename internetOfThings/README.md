@@ -10,7 +10,7 @@ When you want to detect motion in your room you don't want to detect a bird who 
 
 But first I'll tell you a little bit more about how the PIR Sensor works. The module actually consists of a Pyroelectric sensor which generates energy when exposed to heat.That means when a body will get in the range of the sensor it will detect a movement because of the  heat energy.
 
-<img src=img/pyroelectricSensor.png width=350>
+<img src=img/PyroelectricSensor.png width=350>
 
 But note that is your PIR sensor standing on the 'non-repeatable trigger' mode that even if you move constantly the PIR sensor will turn off after the adjusted delay time is over. If you change the sensor with the jumper to the “repeatable trigger” mode and you constantly move, the PIR sensor will be constantly active and it will turn off after the movement is gone and the set delay time is over.
 
