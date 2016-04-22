@@ -21,14 +21,11 @@ Meteor.publish("users", function(){
 Meteor.methods({
 	join: function(userId, gameId) {
 		Posts.update({_id: gameId}, {$addToSet: { attendees: userId }});
+
 	},
 	joinNot: function(userId, gameId) {
 		Posts.update({_id: gameId}, {$pull: { attendees: userId }});
 	}
-	// ,
-	// findUserName: function(id) {
-	// 	Meteor.users.find({}, {fields: {'username': 1}});
-	// }
 });
 
 Posts.allow({

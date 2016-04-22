@@ -1,5 +1,6 @@
 <template name="post">
     <div class="editBlock">
+        <a class="btn" href="/">Terug naar overzicht</a>
         <h1>Bewerk wedstrijd</h1> 
         {{#autoForm collection="Posts" id="updatePostForm" type="update" doc=this}}
             <fieldset>
@@ -7,9 +8,9 @@
                   {{> afQuickField name='against'}}
                   {{> afQuickField name='datetime'}}
             </fieldset>
-            <button type="submit" class="btn btn-primary">Opslaan</button>
+            <button id="editSave" type="submit" class="btn btn-primary">Opslaan</button>
         {{/autoForm}}
-        <a class="btn" href="/">Terug naar overzicht</a>
+        
     </div>
     
 </template>

@@ -25,9 +25,20 @@ soccer-app
 				└── main.js
 ```
 
-* account username
-* aanwezig
-* wedstrijd verwijderen
-* aanwezigen tellen
-* verleden wedstrijden automatisch verwijderen
-* automatische gesorteerd op data
+#### Todo
+* Verleden wedstrijden automatisch verwijderen.
+* Wedstrijden automatische sorteren op data.
+
+#### Wishlist
+* Jezelf op een bepaalde plek in de opstelling zetten.
+
+#### User test
+
+######Testpersoon: Moeder
+
+* Aanmelden ging goed
+* Ging niet uit zichzelf aanmelden voor een wedstrijd omdat ze zich niet de doelgroep voelden. Evenals een wedstrijd toevoegen.
+* Snapten de knoppen 4-4-2 en 3-4-3 niet. Toen de testpersoon er op klikte werd dat wel duidelijk.
+* De knoppen aanpassen en verwijderen wist de testpersoon te vinden.
+* Vindt de knoppen 'Ik doe mee!' en 'Ik doe toch niet mee!' erg verwarrend.
+* Het is niet duidelijk dat bij Wedstrijd bewerken je eerst moet 'Opslaan' en dan pas 'Terug naar overzicht' moet gaan. 

@@ -1,31 +1,51 @@
 header {
 	display: flex;
+	z-index: 1;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 	color: white;
 	padding: 1em;
-	background-image: -webkit-linear-gradient(top left, #1abc9c, #3498db 100%);
-	background-image: -o-linear-gradient(top left, #1abc9c, #3498db 100%);
-	background-image: linear-gradient(to bottom right, #1abc9c, #3498db 100%);
+	background-image: linear-gradient(to right, #1abc9c, #3498db 100%);
 }
 header > h1 {
 	font-size: 1.5em;
 	font-style: italic;
 	font-weight: 900;
 	margin: 0;
-	font-family: 'Lato';
+	font-family: 'Lato', sans-serif;
 
 }
 header p {
-	margin: 0;
+	margin-left: 0;
 }
 header a {
-	color: #ecf0f1;
+	color: #ffffff;
 }
+
 .addGameBlock {
 	background-color: #ecf0f1;
 	padding: 15px;
 }
 .games {
 	padding: 15px;
+}
+#signup-link {
+	color: #3498db;
+}
+.dropdown-menu {
+	box-shadow: 0 20px 50px rgba(0,0,0,.4);
+	border: none;
+	margin: 1em 0 0 0;
+	border-radius: unset;
+	animation: slideRight 500ms cubic-bezier(.26,1.03,.67,.98);
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-100vw);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }

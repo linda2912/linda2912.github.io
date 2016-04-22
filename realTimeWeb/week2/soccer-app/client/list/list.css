@@ -1,0 +1,83 @@
+svg {
+	fill: #1abc9c;
+
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.list > li {
+	position: relative;
+	width: 8em;
+	height: 8em;
+	transition: ease-in-out 500ms;
+}
+
+.list p {
+	font-family: "Impact", "Oswald", sans-serif;
+	text-transform: uppercase;
+	color: white;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	animation: slide 500ms ease;
+}
+@keyframes slide {
+	0% {
+		opacity: 0;
+
+	}
+	100% {
+		opacity: 1;
+
+	}
+}
+.shirt {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.item:nth-child(-n+1) {
+	width: 100%;
+}
+.item:nth-child(n+2):nth-child(-n+4) {
+	width: 33.33%;
+}
+.item:nth-child(n+5):nth-child(-n+8) {
+	width: 25%;
+}
+.item:nth-child(n+9):nth-child(-n+11) {
+	width: 33.33%;
+}
+.item:nth-child(n+12) {
+	border-top: 1px solid #bdc3c7;
+	margin-top: 4em;
+}
+/*442*/
+.item2:nth-child(-n+1) {
+	width: 100%;
+}
+.item2:nth-child(n+2):nth-child(-n+5) {
+	width: 25%;
+}
+.item2:nth-child(n+6):nth-child(-n+9) {
+	width: 25%;
+}
+.item2:nth-child(n+10):nth-child(-n+11) {
+	width: 50%;
+}
+.item2:nth-child(n+12) {
+	border-top: 1px solid #bdc3c7;
+	margin-top: 4em;
+}
+.longName {
+	font-size: .8em;
+}
+
+
+
