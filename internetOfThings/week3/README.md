@@ -1,6 +1,6 @@
 #How to know exaclty when you have to repot your vegetable plot?
 
-<img src="img/project.jpg" height="300"><img src="img/screen.png" height ="300">
+<img src="img/project.jpg" height="350"><img src="img/screen.png" height ="350">
 
 
 This manual will explain how you can measure the length of your plants with a Wemos ESP and how you can do cool stuff with the data in a browser.
@@ -235,15 +235,18 @@ const int httpPort = 80;
   delay(500);
 ```
 
-* Be sure you defined the plant length in your void loop like this
+* Be sure you defined ```String plant``` and ```plant = "";``` in your void loop like this
 
 ```
+String plant;
+
 if (distance < 9) {
 	plant = "1"; //add this if you had not already
 	digitalWrite(led1, HIGH); 
-}  
+}
+etc.
 ```
-And create ```String plant;```
+
  
 To see how I did look in my [example above](https://github.com/linda2912/linda2912.github.io/tree/master/internetOfThings/week3#2-arduino-code)
 
@@ -277,22 +280,8 @@ To write down your data into a ```json``` file we have to write some code into t
 
 Now the data will send the time and length into the ```plant.json``` file wich will looks like this
 
-```
-[
-	{
-		time: "2016-04-21 15:19:33",
-		plant: "5"
-	},
-	{
-		time: "2016-04-21 15:19:40",
-		plant: "5"
-	},
-	{
-		time: "2016-04-21 15:19:47",
-		plant: "5"
-	}
-}
-```
+![](img/json.png)
+
 ##That's it!
 
 Now you can make some cool stuff! If you want to see how my cool stuff looks like you can visit my [website](http://lindavandijkdesign.nl/iot/eindopdracht). And to look at the code I used you can take a look in my files wich you can find [here](https://github.com/linda2912/linda2912.github.io/tree/master/internetOfThings/week3).
