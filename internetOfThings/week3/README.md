@@ -1,10 +1,8 @@
 #How to know exaclty when you have to repot your vegetable plot?
 
-<img src="img/project.jpg" height="350"><img src="img/screen.png" height ="350">
-
-
 This manual will explain how you can measure the length of your plants with a Wemos ESP and how you can do cool stuff with the data in a browser.
 
+<img src="img/project.jpg" height="400"><img src="img/screen.png" height ="400">
 
 ##What you need 
 * Breadboard
