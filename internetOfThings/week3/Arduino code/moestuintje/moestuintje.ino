@@ -130,7 +130,7 @@ void loop() {
     }
   }
 
- // POST code geïnspireerd door Leander
+ // POST code Inspired by Leander
  // Define data
  String data;
 

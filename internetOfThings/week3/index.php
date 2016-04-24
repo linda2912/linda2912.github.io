@@ -1,28 +1,30 @@
+
 <?php  
-$light = $_GET['light'];
-if($light == "day") {  
-  $file = fopen("output.txt", "w") or die("can't open file");
-  fwrite($file, 'day');
-  fclose($file);
-} 
-else if ($light == "night") {  
-  $file = fopen("output.txt", "w") or die("can't open file");
-  fwrite($file, 'night');
-  fclose($file);
-}
-
-// Get the first measurement of a value
-function getFirstMeasurement($array, $value) {
-    foreach ($array as $key => $measurement) {
-        if ($measurement['plant'] === $value) {
-            return $measurement;
-        }
+    //Inspired by http://blog.nyl.io/esp8266-led-arduino/ 
+    $light = $_GET['light'];
+    if($light == "day") {  
+      $file = fopen("output.txt", "w") or die("can't open file");
+      fwrite($file, 'day');
+      fclose($file);
     } 
-}
+    else if ($light == "night") {  
+      $file = fopen("output.txt", "w") or die("can't open file");
+      fwrite($file, 'night');
+      fclose($file);
+    }
 
+    // Get the first measurement of a value
+    function getFirstMeasurement($array, $value) {
+        foreach ($array as $key => $measurement) {
+            if ($measurement['plant'] === $value) {
+                return $measurement;
+            }
+        } 
+    }
 ?>
 
 <?php 
+//code Inspired by Leander
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
       
         $data = $_POST["plant"];
@@ -141,7 +143,7 @@ function getFirstMeasurement($array, $value) {
             <a href="?light=night" class="aOff"><button id="off-linda" class="off">Nachtstand</button></a>
             <a href="?light=day" class="aOn"><button id="on-linda" class="on">Dagstand</button></a>
         </div>
-        
+
     </body>
 </html>
 
