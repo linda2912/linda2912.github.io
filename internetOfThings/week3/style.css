@@ -1,36 +1,74 @@
 * {
     font-family: "Lato";
     color: white;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color: #2c3e50;
     background-image: -webkit-linear-gradient(top left, #1abc9c, #3498db 100%);
     background-image: -o-linear-gradient(top left, #1abc9c, #3498db 100%);
     background-image: linear-gradient(to bottom right, #1abc9c, #3498db 100%);
-    /*display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;*/
-    padding: 3em 0;
 }
 h1 {
-    
-    width: 100vw;
+    background-color: rgba(0,0,0,.3);
+    padding: 1em;
     text-align: center;
+    margin: 1em;
 }
 h2 {
     text-align: center;
 }
 h3 {
     text-align: center;
-    font-size: 10em;
+    font-size: 2em;
+    
+}
+h4 {
+    background-color: rgba(0,0,0,.3);
+    width: 10em;
+    padding: 1em;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+.ready {
+    background-color: white;
+    padding: .5em;
+    color: #1abc9c;
+    font-size: 2em;
+    text-align: center;
+    animation: down ease 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 1em 1em 1em;
+}
+@keyframes down {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.growed {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
 }
 .off, .on {
     border: none;
     border-bottom: 5px solid #ecf0f1;
     width: 10em;
     font-family: "Lato";
-    font-size: 2em;
+    font-size: 1.2em;
     background-color: white;
     border-radius: 10px;
     padding: .5em;
@@ -66,12 +104,38 @@ button {
     cursor: pointer;
 }
 .history {
-    color: white;
-    border-bottom: 3px solid white;
-    font-size: 1.3em;
-    padding-bottom: .2em;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    margin-top: -2.4em;
+    margin-bottom: 4em;
 }
-.history:hover {
-    border-bottom: 5px solid white;
-    transition: all ease 50ms;  
+
+.height {
+    background-color: #1abc9c;
+    border-radius: 5em;
+    border: 10px solid #3498db;
+    height: 3em;
+    width: 3em;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.date {
+    font-size: .8em;
+    margin-top: 2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+hr {
+    padding-top: 4em;
+    width: 100%;
+    border: none;
+    border-bottom: 10px solid white;
+    z-index: -1;
+    margin: 0 auto;
+}
+

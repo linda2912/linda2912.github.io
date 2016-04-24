@@ -1,7 +1,7 @@
 $("#on-linda").click(function(){
     $.get("http://lindavandijkdesign.nl/iot/index.php",
     {
-        light: "on"
+        light: "day"
     },
     function(data, status){
     	console.log(data + status)
@@ -10,7 +10,7 @@ $("#on-linda").click(function(){
 $("#off-linda").click(function(){
     $.get("http://lindavandijkdesign.nl/iot/index.php",
     {
-        light: "off"
+        light: "night"
     },
     function(data, status){
     	console.log(data + status)
