@@ -130,7 +130,7 @@ void loop() {
 
 To connect your Wemos with Wifi you have to put some code into your Arduino code.
 
-First you have to put code this on the top of your  ```Arduino file```.
+* First you have to put code this on the top of your  ```Arduino file```.
 
 ```
 //Arduino code
@@ -154,7 +154,8 @@ char pass[] = "Wifi password"; //change this into your own
 WiFiClient  client;
 
 ``` 
-Then put this into the ```void setup(){..}```
+
+* Then put this into the ```void setup(){..}```
 
 ```
 //Arduino code
@@ -194,7 +195,7 @@ yourServer.nl
 ####2. Arduino code
 Then you have to add some new code into your Arduino file to link your server and files.
 
-On the top of your ```Arduino code``` you have to add this
+* On the top of your ```Arduino code``` you have to add this
 
 ```
 //Arduino code
@@ -203,7 +204,8 @@ char* host = "www.yourServer.nl"; // change this into your own website name
 String path = "newDirectory/plant.json"; // change this if you have changed the directory map name.
 const int httpPort = 80;
 ```
-And in the ```void loop(){..}``` add this
+
+* And in the ```void loop(){..}``` add this
 
 ```
  // Arduino code
@@ -233,7 +235,7 @@ And in the ```void loop(){..}``` add this
   delay(500);
 ```
 
-Be sure you defined the plant length in your void loop like this
+* Be sure you defined the plant length in your void loop like this
 
 ```
 if (distance < 9) {
