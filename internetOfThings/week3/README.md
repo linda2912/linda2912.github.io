@@ -40,9 +40,11 @@ I used this ports, but you can also do it your own way. For more explaination us
 
 Now you have to write some Arduino code to control the hardware. [This tutorial](http://www.instructables.com/id/How-to-make-A-light-up-distance-sensor) explains exactly how to do that. It will explain how to make a sensor that will light up more lights the closer you are.
 
-This is how my code looks like after this tutorial:
+This is how my Arduino code looks like after this tutorial:
 
 ```
+//Arduino code
+
 int led1 = D0;
 int led2 = D5;
 int led3 = D6;
@@ -126,9 +128,9 @@ void loop() {
 
 ##Connect your Wifi
 
-To connect your Wemos with Wifi you have to put some code into your Arduino code.
+To connect your Wemos with Wifi you have to put some code into your Arduino file.
 
-* First you have to put code this on the top of your  ```Arduino file```.
+* First you have to put code this on the top.
 
 ```
 //Arduino code
