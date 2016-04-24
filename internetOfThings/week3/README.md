@@ -243,7 +243,11 @@ if (distance < 9) {
 ```
 And create ```String plant;```
  
-To see how I did look in my example in **Setup your hardware** Step 2.
+To see how I did look in my [example above](https://github.com/linda2912/linda2912.github.io/tree/master/internetOfThings/week3#2-arduino-code)
+
+```plant = "1";``` is equal to 1cm
+
+```plant = "2";``` is equal to 2cm etc.
 
 ####3. Getting the data in a json file
 
