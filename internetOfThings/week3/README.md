@@ -11,8 +11,8 @@ This manual will explain how you can measure the length of your plants with a We
 * HC-SR04 Ultrasonic Sensor 
 * 5 led's
 * 5 Resistors
-* A few cables
-* A URL and hosting
+* Few cables
+* URL and hosting
 
 ##Setup your hardware
 
