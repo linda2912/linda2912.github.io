@@ -1,0 +1,227 @@
+* {
+	margin: 0;
+	padding: 0;		
+	font-family: "Lato", sans-serif;
+}
+body {
+	width: 100vw;
+}
+header {
+	background-color: #c0392a;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: .5em 1.2em;
+}
+header h1 {
+	color: white;
+	font-weight: 700;
+	font-size: 1.2em;
+	margin-left: .5em;
+}
+header svg {
+	fill: white;
+}
+header div {
+	display: flex;
+	align-items: center;
+}
+header button {
+	cursor: pointer;
+	border: none;
+	background-color: unset;
+}
+article h2 {
+	text-transform: uppercase;
+	font-weight: 100;
+	padding-left: 15px;
+	font-size: 1.3em;
+	margin: 1em 0;
+}
+.street {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+}
+.street p {
+	font-size: 1.2em;
+}
+.greyBox {
+	background-color: #ecf0f1;
+	padding: 1em 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+	border-bottom: solid white 2px;
+}
+
+.time {
+	font-weight: 600;
+	color: #bec3c8;
+	font-size: .9em;
+	margin-top: .3em;
+}
+.mention {
+	fill: #c0392a;
+	margin-right: 1em;
+}
+.orange {
+	fill: #d65c18;
+}
+.describe {
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	background-color: #c0392a;
+	border: none;
+	cursor: pointer;
+}
+.describe svg {
+	fill: white;
+	padding: 1em;
+}
+
+/*form*/
+
+textarea {
+	display: block;
+	box-sizing: border-box;
+	margin-right: 15px;
+	border: none;
+	border-radius: 5px;
+	padding: 1em;
+	font-size: 1em;
+	font-weight: 300;
+	margin-top: 1em;
+	margin-bottom: 2.5em;
+	width: 100%;
+}
+.yes {
+	color: #52b36e;
+}
+.no {
+	color: #e84b3c;
+	padding-left: 2em;
+}
+.radioBlock p {
+	font-weight: 600;
+	margin-left: 1em;
+}
+.radioBlock {
+	display: flex;
+	margin-top: .7em;
+}
+[type="radio"] {
+	margin-right: .3em;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+[type="submit"] {
+	color: white;
+	font-weight: 500;
+	font-size: 1em;
+	padding: .7em;
+}
+
+
+/*loader*/
+
+#amsterdamSpinner {
+	display: block;
+	padding: 0 1.5em;
+	fill: #c0392a;
+	width: 1em;
+	margin: 0 auto;
+}
+#X1 {
+	animation: spinOne 3s cubic-bezier(.55,1.61,.83,.67) infinite both;
+}
+#X2 {
+	animation: spinTwo 6s cubic-bezier(.55,1.61,.83,.67) infinite both;
+}
+#X3 {
+	animation: spinThree 3s cubic-bezier(.55,1.61,.83,.67) infinite both;
+
+}
+@keyframes spinOne {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(17px, 17px);
+	}
+	50% {
+		transform: translate(0, 34px);
+	}
+	75% {
+		transform: translate(-17px, 17px);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
+
+@keyframes spinThree {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(-17px, -17px);
+	}
+	50% {
+		transform: translate(0, -34px);
+	}
+	75% {
+		transform: translate(17px, -17px);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}
+
+/*notification*/
+.notifications {
+	top: 0;
+	position: absolute;	
+	width: 100%;
+	box-shadow: 0px 0px 80px #333333;
+}
+.notification {	
+	background-color: rgba(192,57,42, .97);
+	width: 100%;
+	display: flex;
+	padding: 2em;
+	color: white;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	animation: slideDown 500ms ease;
+}
+.notification:nth-child(n+2) {
+	border-top: 1px solid white;
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.notification svg {
+	fill: white;
+}
+.notification p {
+	width: 60%;
+}
+.notification button {
+	border: none;
+	background-color: unset;
+	cursor: pointer;
+}
+.close {
+	fill: white;
+}
+
+
+
