@@ -106,6 +106,12 @@ a{
 .img9{
 	background: url("img/guido.jpg");
 }
+.img10{
+	background: url("img/github.png");
+}
+.img11{
+	background: url("img/thijs.png");
+}
 
 .bron{
 	color: #1abc9c;
@@ -142,4 +148,12 @@ h4{
 }
 .writeBy{
 	margin-top: 2em;
+}
+.position {
+	fill: white;
+	position: absolute;
+	opacity: .2;
+	transform: rotate(-30deg);
+	bottom: 2em;
+	left: 2em;
 }
