@@ -157,3 +157,11 @@ h4{
 	bottom: 2em;
 	left: 2em;
 }
+.githubDraw {
+	fill: white;
+	position: absolute;
+	opacity: .2;
+	transform: rotate(30deg);
+	right: 2em;
+	bottom: 2em;
+}
