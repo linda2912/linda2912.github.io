@@ -10,9 +10,33 @@
 header {
 	background-color: #20e2cf;
     background-image: linear-gradient(to left bottom, #20e2ca, #20dee2 100%);
-    height: 7em;
+    min-height: 7em;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
+header a {
+	color: white;
+	padding: 1em;
+	display: inline-block;
+	text-decoration: none;
+}
+header a:hover {
+	text-decoration: underline;
+	color: white;
+}
+header div {
+	width: 40em;
+}
+.on {
+	background-color: white;
+	color: #20e2cf;
+	font-weight: bold;
+	transition: 1s ease-in-out all;
+	pointer-events: none;
+}
+
 section {
 	margin: 5em 1em;
 	max-width: 40em;
@@ -37,6 +61,7 @@ h3 {
 }
 ul {
 	margin-left: 2em;
+	line-height: 1.4em;
 }
 .jsLanguage {
 	background-color: #333333;
@@ -61,4 +86,11 @@ a {
 }
 a:hover {
 	color: #cccccc;
+}
+.imgBox {
+	display: flex;
+}
+img {
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
