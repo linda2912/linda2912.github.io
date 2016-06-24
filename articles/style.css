@@ -27,8 +27,8 @@ h2 {
 	margin-top: 2em;
 }
 h3 {
-	font-size: 1em;
-	margin-top: 1em;
+	font-size: 1.2em;
+	margin-top: 2em;
 }
 .jsLanguage {
 	background-color: #333333;
@@ -37,6 +37,7 @@ h3 {
 	color: white;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	overflow: scroll;
 }
 a {
 	color: #1abc9c;

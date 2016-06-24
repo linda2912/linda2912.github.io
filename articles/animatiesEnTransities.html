@@ -12,6 +12,7 @@
 	<body>
 		<section>
 			<h1>CSS animaties & transities</h1>
+			<p>Geschreven door Linda van Dijk <br />Op 24 juni 2016</p>
 			<p>In dit artikel ga ik laten zien hoe makkelijk animeren is met CSS waar voorheen een programma zoals Flash of een andere taal als Javascript voor nodig was.  Tegenwoordig kan dit gemakkelijk met alleen HTML en CSS, dit scheelt veel regels code.</p>
 			<p>Eerst zal ik wat meer vertellen over de twee begrippen animaties en transities</p>
 			<h2>CSS Transities</h2>
@@ -19,21 +20,68 @@
 
 			<h3>transition-property</h3>
 			<p>Met transition-property kun je aangeven voor welk element de transitie bedoeld is.</p>
-			<pre class="jsLanguage">transition: width;</pre>
+			<pre class="jsLanguage">transition: width | opacity | all;</pre>
 			<h3>transition-duration</h3>
 			<p>Specificeert hoe lang de transitie moet duren.</p>
-			<pre class="jsLanguage">transition: width 1s;</pre>
+			<pre class="jsLanguage">transition: 1s | 14ms;</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="rLjLpa" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/rLjLpa/">transition-duration</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 			
 			<h3>transition-timing-function</h3>
 			<p>Specificeert de snelheidscurve van de transitie. Met <a href="http://cubic-bezier.com/#.17,.67,.83,.67">cubic-bezier</a> kun je zelf een curve creeën. Ook kun je kiezen uit standaard curven op <a href="http://easings.net/nl">Easing Functions Cheat Sheet</a></p>
-			<pre class="jsLanguage">transition-timing-function: ease;</pre>
+			<pre class="jsLanguage">transition-timing-function: ease | ease-in | ease-out | ease-in-out | linear | step-start | step-end | cubic-bezier(0.1, 0.7, 1.0, 0.1) | steps(4, end);</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="MeJedw" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/MeJedw/">transition-timing-function</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 			<h3>transition-delay</h3>
 			<p>Specificeert na hoeveel seconde de transitie moet beginnen.</p>
-			<pre class="jsLanguage">transition-delay: 1s;</pre>
+			<pre class="jsLanguage">transition-delay: 1s | 14ms;</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="jryrog" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/jryrog/">transition-delay</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+			<h2>CSS animaties</h2>
+			<p>Met CSS animaties kun je verschillende transities achter elkaar uitvoeren. Dit maakt het mogelijk om hele vette animaties te maken met relatief weinig code. CSS animaties maak je met keyframes en animations</p>
+		
+			<h3>animation</h3>
+			<p>Animation eigenschappen worden gebruikt om @keyframes toe te wijzen aan een specifiek element om te bepalen hoe het element wordt geanimeerd.</p>
+			<pre class="jsLanguage">body { animation: element; }</pre>
+
+			<h3>keyframes</h3>
+			<p>Keyframes worden gebruikt om de stijlen aan een element op verschillende tijden te definiëren.</p>
+			<pre class="jsLanguage">@keyframes element { .. }</pre>
+
+			<p>De sub-eigenschappen van de animatie-eigenschap zijn:</p>
+			<h3>animation-delay</h3>
+			<p>Geeft aan na hoeveel seconde de animatie moet beginnen.</p>
+			<pre class="jsLanguage">animation-delay: 1s | 14ms;</pre>
+			<h3>animation-direction</h3>
+			<p>Geeft aan in welke richting een animatie om gaan.</p>
+			<pre class="jsLanguage">animation-direction: normal | reverse | alternate | alternate-reverse;</pre>
+
+			<h3>animation-duration</h3>
+			<p>Geeft aan hoe lang een animatie moet duren.</p>
+			<pre class="jsLanguage">animation-duration: 6s | 120ms | 1s, 15s | 10s, 30s, 230ms;</pre>
+
+			<h3>animation-fill-mode</h3>
+			<p>Specificeerd een stijl voor het element als de animatie klaar is of nog niet begonnen is.</p>
+			<pre class="jsLanguage">animation-fill-mode: none | forwards | backwards | both;</pre>
+			<h3>animation-iteration-count</h3>
+			<p>Geeft aan hoeveel keer de animatie moet afspelen. Dit kan een nummer zijn of eindeloos (infinite).</p>
+			<pre class="jsLanguage">animation-iteration-count: 1 | 23 | infinite | 2, 0, infinite;</pre>
+			<h3>animation-name</h3>
+			<p>Specificeerd de naam van de @keyframes animatie.</p>
+			<pre class="jsLanguage">animation-name: eigenNaam;</pre>
+			
+			<h3>animation-play-state</h3>
+			<p>Bepaalt of de animatie wordt uitgevoerd of is onderbroken.</p>
+			<pre class="jsLanguage">animation-play-state: running | paused;</pre>
+
+			<h3>animation-timing-function</h3>
+			<p>Specificeert de snelheidscurve van de animatie.</p>
+			<pre class="jsLanguage">animation-timing-function: ease | ease-in | ease-out | ease-in-out | linear | step-start | step-end | cubic-bezier(0.1, 0.7, 1.0, 0.1) | steps(4, end);</pre>
+
+			<h2>Voorbeelden</h2>
+	
+			<p>Bronnen</p>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations</a>
 		</section>
 	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 	</body>
