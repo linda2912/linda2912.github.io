@@ -15,22 +15,24 @@
 			<p>In dit artikel ga ik laten zien hoe makkelijk animeren is met CSS waar voorheen een programma zoals Flash of een andere taal als Javascript voor nodig was.  Tegenwoordig kan dit gemakkelijk met alleen HTML en CSS, dit scheelt veel regels code.</p>
 			<p>Eerst zal ik wat meer vertellen over de twee begrippen animaties en transities</p>
 			<h2>CSS Transities</h2>
-			<p>Met CSS transities kun je de waardes van elementen veranderen in de loop van een bepaalde tijd. Er zijn vier verschillende eigenschappen </p>
+			<p>Met CSS transities kun je de waardes van elementen veranderen in de loop van een bepaalde tijd. Er zijn vier verschillende eigenschappen.</p>
 
 			<h3>transition-property</h3>
-			<p>Specificeert de naam waar de transitie voor bedoeld is.</p>
-		
+			<p>Met transition-property kun je aangeven voor welk element de transitie bedoeld is.</p>
+			<pre class="jsLanguage">transition: width;</pre>
 			<h3>transition-duration</h3>
-			<p>Specificeert hoe lang de transitie duurt.</p>
+			<p>Specificeert hoe lang de transitie moet duren.</p>
+			<pre class="jsLanguage">transition: width 1s;</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="rLjLpa" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/rLjLpa/">transition-duration</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
 			
-			<h3>transition-timing-functionp</h3>
-			<p>Specificeert de snelheidscurve van de transitie.</p>
+			<h3>transition-timing-function</h3>
+			<p>Specificeert de snelheidscurve van de transitie. Met <a href="http://cubic-bezier.com/#.17,.67,.83,.67">cubic-bezier</a> kun je zelf een curve creeën. Ook kun je kiezen uit standaard curven op <a href="http://easings.net/nl">Easing Functions Cheat Sheet</a></p>
+			<pre class="jsLanguage">transition-timing-function: ease;</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="MeJedw" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/MeJedw/">transition-timing-function</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 			<h3>transition-delay</h3>
 			<p>Specificeert na hoeveel seconde de transitie moet beginnen.</p>
+			<pre class="jsLanguage">transition-delay: 1s;</pre>
 			<p data-height="265" data-theme-id="dark" data-slug-hash="jryrog" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/jryrog/">transition-delay</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 		</section>
 	<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

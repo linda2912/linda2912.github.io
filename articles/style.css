@@ -8,9 +8,10 @@ body {
 	justify-content: center;
 }
 section {
+	padding: 1em;
 	margin-top: 5em;
 	margin-bottom: 5em;
-	width: 40em;
+	max-width: 40em;
 	font-size: 1em;
 	color: #333333;
 }
@@ -28,4 +29,18 @@ h2 {
 h3 {
 	font-size: 1em;
 	margin-top: 1em;
+}
+.jsLanguage {
+	background-color: #333333;
+	padding: 1em;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	color: white;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+a {
+	color: #1abc9c;
+}
+a:hover {
+	font-weight: bold;
 }
