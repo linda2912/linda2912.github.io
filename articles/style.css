@@ -10,7 +10,22 @@ body {
 section {
 	margin-top: 5em;
 	margin-bottom: 5em;
-	width: 30em;
+	width: 40em;
 	font-size: 1em;
 	color: #333333;
+}
+p {
+	margin-top: 1em;
+	line-height: 1.4em;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+	margin-top: 2em;
+}
+h3 {
+	font-size: 1em;
+	margin-top: 1em;
 }
