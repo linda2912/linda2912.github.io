@@ -77,8 +77,18 @@
 			<p>Specificeert de snelheidscurve van de animatie.</p>
 			<pre class="jsLanguage">animation-timing-function: ease | ease-in | ease-out | ease-in-out | linear | step-start | step-end | cubic-bezier(0.1, 0.7, 1.0, 0.1) | steps(4, end);</pre>
 
-			<h2>Voorbeelden</h2>
-	
+			<h2>Voorbeeld</h2>
+			<p>Om een animatie te maken moet je eerst bepalen welk element je wilt animeren. Vervolgens zet je op dat element de CSS stijl <span class="inlineJs">animation: animeerDitElement;</span>. Deze naam mag je zelf verzinnen en ga je straks gebruiken om hem met @keyframes aan te roepen. Het is makkelijker en sneller om andere eigenschappen in dezelfde regel te definiëren en komt er dan zo uit te zien:</p>
+			<pre class="jsLanguage">animation: animeerDitElement 1s ease;</pre>
+			Vervolgens ga je met @keyframes de animatie maken. Dit zal er ongeveer zo uit zien:
+			<pre class="jsLanguage">
+@keyframes animeerDitElement {
+	0% { .. }
+	100% { .. }
+}</pre>		
+			<p>Nu kun je bepalen welke transities de animatie achter elkaar moet doen.</p>
+			<p data-height="265" data-theme-id="dark" data-slug-hash="jryMYW" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/jryMYW/">animation-delay</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
 			<p>Bronnen</p>
 			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a>
 			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations</a>

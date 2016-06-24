@@ -39,9 +39,15 @@ h3 {
 	margin-bottom: 1em;
 	overflow: scroll;
 }
+.inlineJs {
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	background-color: #efefef;
+	padding-left: .3em;
+	padding-right: .3em;
+}
 a {
 	color: #1abc9c;
 }
 a:hover {
-	font-weight: bold;
+	color: grey;
 }
