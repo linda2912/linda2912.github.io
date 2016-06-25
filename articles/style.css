@@ -91,6 +91,9 @@ a {
 a:hover {
 	color: #cccccc;
 }
+.bronnen a {
+	word-break: break-all;
+}
 .imgBox {
 	display: flex;
 }
@@ -154,3 +157,4 @@ img {
 .back-end-developer {
 	background-color: #20dee2;
 }
+
