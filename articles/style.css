@@ -61,8 +61,11 @@ h3 {
 	margin-top: 2em;
 }
 ul {
-	margin-left: 2em;
+	margin-left: 3em;
 	line-height: 1.4em;
+}
+li {
+	margin-bottom: .5em;
 }
 .jsLanguage {
 	background-color: #333333;
@@ -94,4 +97,60 @@ a:hover {
 img {
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+.front-end-designer-img {
+	display: flex;
+	justify-content: center;
+	margin-top: 3em;
+}
+.front-end-designer-img > div {
+	color: white;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10em;
+	height: 10em;
+	border-radius: 10em;
+	text-align: center;
+	opacity: .6;	
+}
+.designer {
+	background-color: #20e2ca;
+}
+.front-end-designer {
+	background-image: linear-gradient(to right, #20e2ca, #20dee2 100%);
+	margin-left: -5em;
+	margin-right: -5em;
+	animation: grow 5s ease-in-out infinite;
+}
+@keyframes grow {
+	0% {
+		transform: scale(0);
+		margin-left: -5em;
+		margin-right: -5em;
+	}
+	40% {
+		transform: scale(0);
+		margin-left: -5em;
+		margin-right: -5em;
+	}
+	70% {
+		transform: scale(1);
+		margin-left: -2em;
+		margin-right: -2em;
+	}
+	90% {
+		transform: scale(1);
+		margin-left: -2em;
+		margin-right: -2em;
+	}
+	100% {
+		transform: scale(0);
+		margin-left: -5em;
+		margin-right: -5em;
+	}
+}
+.back-end-developer {
+	background-color: #20dee2;
 }
