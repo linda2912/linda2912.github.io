@@ -23,7 +23,7 @@
 			
 				<h1>CSS animaties & transities</h1>
 				<p class="writer">Geschreven door Linda van Dijk Op 24 juni 2016</p>
-				<p>In dit artikel ga ik laten zien hoe makkelijk animeren kan zijn met CSS waar voorheen een programma zoals Flash of een andere taal als Javascript voor nodig was.  Tegenwoordig kan dit gemakkelijk met alleen HTML en CSS, dit scheelt veel regels code. Eerst zal ik wat meer vertellen over de twee begrippen animaties en transities</p>
+				<p>In dit artikel ga ik laten zien hoe makkelijk animeren kan zijn met CSS waar voorheen een programma zoals Flash of een andere taal als Javascript voor nodig was.  Tegenwoordig kan dit gemakkelijk met alleen HTML en CSS, dit scheelt veel regels code schrijven. Eerst zal ik wat meer vertellen over de twee begrippen animaties en transities</p>
 				<h2>CSS Transities</h2>
 				<p>Met CSS transities kun je de waardes van elementen veranderen in de loop van een bepaalde tijd. Er zijn vier verschillende eigenschappen:</p>
 
@@ -46,7 +46,7 @@
 				<p data-height="265" data-theme-id="dark" data-slug-hash="jryrog" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/jryrog/">transition-delay</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 				<h2>CSS animaties</h2>
-				<p>Met CSS animaties kun je verschillende transities achter elkaar uitvoeren. Dit maakt het mogelijk om hele vette animaties te maken met relatief weinig code. CSS animaties maak je met keyframes en animations</p>
+				<p>Met CSS animaties kun je verschillende transities achter elkaar uitvoeren. Dit maakt het mogelijk om hele vette animaties te maken met relatief weinig code. CSS animaties maak je met animations en keyframes</p>
 			
 				<h3>animation</h3>
 				<p>Animation eigenschappen worden gebruikt om @keyframes toe te wijzen aan een specifiek element om te bepalen hoe het element wordt geanimeerd.</p>
@@ -56,7 +56,7 @@
 				<p>Keyframes worden gebruikt om de stijlen aan een element op verschillende tijden te definiëren.</p>
 				<pre class="jsLanguage">@keyframes element { .. }</pre>
 
-				<p>De sub-eigenschappen van de animatie-eigenschap zijn:</p>
+				<p>Animations en @keyframes werken samen om de animatie te kunnen maken. De naam die wordt gebruikt moet dan ook overeen komen. In het voorbeeld dat ik hierboven gebruikt hebt zou dat dus <span class="inlineJs">element</span> zijn. Je kan verschillende eigenschappen aan een animatie meegeven. De sub-eigenschappen van de animatie-eigenschap zijn:</p>
 				<h3>animation-delay</h3>
 				<p>Geeft aan na hoeveel seconde de animatie moet beginnen.</p>
 				<pre class="jsLanguage">animation-delay: 1s | 14ms;</pre>
@@ -95,7 +95,7 @@
 	0% { .. }
 	100% { .. }
 }</pre>		
-				<p>Nu kun je bepalen welke transities de animatie achter elkaar moet doen.</p>
+				<p>Nu kun je bepalen welke transities de animatie per tijdsfragment moet uitvoeren.</p>
 				<p data-height="265" data-theme-id="dark" data-slug-hash="jryMYW" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/jryMYW/">animation-delay</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 				<p>Zoals je ziet kun je op een vrij makkelijke manier animaties maken. Als je dit toepast op je website, wordt je website net even mooier en aantrekkelijker om naar te kijken. Vaak maakt een animatie het ook sneller duidelijker wat de gebruiker ergens mee kan. Als bijvoorbeeld een hamburger menu veranderd in een kruisje, is het direct duidelijk dat daar het menu weer gesloten kan worden. Als dit gedaan wordt met een animatie valt het direct op voor de gebruiker en ziet hij sneller dat het icoontje veranderd is.</p>
 
@@ -108,7 +108,10 @@
 					</ul>
 				</p>
 
-				<p>Deze animatie heb ik zelf gemaakt voor het laatste project tijdens mijn minor.</p>
+				<p>Onderstaande animatie heb ik gemaakt voor een project. Deze animatie is bedoeld als introscherm van een festival applicatie die ik mede heb ontwikkeld. Ik heb deze animatie gemaakt met een SVG door middel van @keyframes en animation. De lijn om de N animeer ik door middel van de <span class="inlineJs">stroke-dashoffset: 200;</span> te veranderen. Zie hier een eenvoudiger voorbeeld:
+				<p data-height="265" data-theme-id="dark" data-slug-hash="zBNPyq" data-default-tab="html,result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/zBNPyq/">Basic Example of SVG Line Drawing, Backward and Forward</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+				De <span class="inlineJs">stroke-dasharray: 160;</span> bepaald de ruimte tussen de strepen. Vervolgens maak ik de stroke transparant en de fill white. Daarna laat ik de <span class="inlineJs">h1</span> tekst van rechts inkomen met <span class="inlineJs">transform: translateX</span> en als laatst gaat de onderste regel van <span class="inlineJs">opacity: 0;</span> naar <span class="inlineJs">opacity: 1;</span></p>
 
 				<p data-height="709" data-theme-id="dark" data-slug-hash="JKbGxw" data-default-tab="result" data-user="Lindavandijk" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/Lindavandijk/pen/JKbGxw/">N-FESTIVAL</a> by Linda (<a href="http://codepen.io/Lindavandijk">@Lindavandijk</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -121,6 +124,8 @@
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a></li>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations</a></li>
 						<li><a href="https://robots.thoughtbot.com/css-animation-for-beginners">https://robots.thoughtbot.com/css-animation-for-beginners</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray">https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray</a></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset</a></li>
 					</ul>
 				</p>
 				
