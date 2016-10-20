@@ -1,5 +1,8 @@
 var sections = (function() { 
 
+	var moreInfo = document.getElementById('moreInfo');
+	var ul = document.getElementById('ul');
+
 	return {
 	
 		toggle: function(data) { // toggle between the sections
@@ -59,7 +62,7 @@ var sections = (function() {
 	    		}
 	    	};
 
-	    	Transparency.render(document.getElementById('ul'), data, directives); //render the template
+	    	Transparency.render(ul, data, directives); //render the template
 	    	sections.toggle(collection); //run sections.toggle and take collection with it
 		},
 
@@ -84,7 +87,7 @@ var sections = (function() {
 			  	}
 			};
 
-	    	Transparency.render(document.getElementById('moreInfo'), detail, directives); //render the template
+	    	Transparency.render(moreInfo, detail, directives); //render the template
 	    	sections.toggle(detail); //run section.toggle and take detail with it
 		}
 	}
